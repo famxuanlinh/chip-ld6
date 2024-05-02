@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>You class</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/css/uikit.min.css"
+    />
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body>
+    <div class="uk-flex uk-flex-wrap">
+      <!-- Left menu -->
+      <div
+        style="
+          width: 340px;
+          height: 100vh;
+          border-right: 1px solid #e7e8ea;
+          padding: 0 24px;
+        "
+      >
+        <img
+          style="height: 48px; margin-top: 16px"
+          src="public/logo.png"
+          alt="logo"
+        />
+        <ul class="uk-list" uk-margin>
+          <li class="uk-navbar-left uk-text-center nav_button_active">
+            <a class="uk-link-reset" style="color: #1a1d1f" href="index.html">
+              <img src="public/icon/home.svg" width="24" height="24" uk-svg />
+              <span style="margin-left: 8px">Trang chủ</span>
+            </a>
+          </li>
+          <li class="uk-navbar-left uk-text-center nav_button">
+            <a class="uk-link-reset" style="color: #535557" href="course.html">
+              <img
+                src="public/icon/book-outline.svg"
+                width="24"
+                height="24"
+                uk-svg
+              />
+              <span style="margin-left: 8px">Khoá học</span>
+            </a>
+          </li>
+          <li class="uk-navbar-left uk-text-center nav_button">
+            <a
+              class="uk-link-reset"
+              style="color: #535557"
+              href="schedule.html"
+            >
+              <img
+                src="public/icon/calendar-outline.svg"
+                width="24"
+                height="24"
+                uk-svg
+              />
+              <span style="margin-left: 8px">Lịch học</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Content right -->
+      <div class="uk-width-expand uk-card-body" style="padding-top: 8px">
+        <div class="uk-flex uk-flex-between uk-text-center">
+          <div class="uk-inline">
+            <button
+              class="uk-text-center"
+              style="
+                padding: 8px;
+                border-radius: 12px;
+                background-color: #efefef;
+                cursor: pointer;
+              "
+            >
+              <a
+                class="uk-link-reset uk-flex uk-text-center"
+                style="color: #1a1d1f"
+                href="#"
+              >
+                <img
+                  style="flex: none; height: fit-content"
+                  src="public/avatar.png"
+                  width="48"
+                />
+                <div
+                  style="
+                    margin-left: 12px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                  "
+                >
+                  <div style="color: #535557; text-align: justify">
+                    Xin chào 👋
+                  </div>
+                  <div>Hồ Trung Dũng</div>
+                </div>
+              </a>
+            </button>
+            <div
+              class="uk-card uk-card-default"
+              style="padding: 4px; border-radius: 12px"
+              uk-drop="mode: click"
+            >
+              <ul class="uk-list uk-margin-remove">
+                <li class="uk-navbar-left uk-text-center nav_button">
+                  <a class="uk-link-reset" href="index.html">
+                    <img
+                      src="public/icon/person.svg"
+                      width="24"
+                      height="24"
+                      uk-svg
+                    />
+                    <span style="margin-left: 8px"
+                      >Chỉnh sửa hồ sơ cá nhân</span
+                    >
+                  </a>
+                </li>
+                <li class="uk-navbar-left uk-text-center nav_button">
+                  <a class="uk-link-reset" style="color: #535557" href="#">
+                    <img
+                      src="public/icon/logout.svg"
+                      width="24"
+                      height="24"
+                      uk-svg
+                    />
+                    <span style="margin-left: 8px">Khoá học</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="uk-inline uk-flex uk-flex-middle">
+            <div class="uk-flex uk-flex-middle px-3" style="margin-right: 24px">
+              <img src="public/icon/medal.svg" width="24" height="24" />
+              <p class="text-xl text-black" style="margin-left: 4px">54</p>
+            </div>
+            <button
+              class="rounded-full"
+              style="width: 48px; height: 48px; cursor: pointer"
+              type="button"
+            >
+              <img src="public/icon/bell.svg" width="24" height="24" />
+            </button>
+            <div
+              uk-dropdown="mode: click; pos: bottom-right"
+              style="width: 392px; border-radius: 16px"
+              class="uk-padding-remove"
+            >
+              <p class="p-4 text-main text-left text-xl">Thông báo</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit-icons.min.js"></script>
+  </body>
+</html>
