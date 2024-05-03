@@ -18,11 +18,22 @@
   padding: 40px;
 }
 
+.pt-4 {
+  padding-top: 16px;
+}
+
+.pb-3 {
+  padding-bottom: 12px;
+}
 .pb-4 {
   padding-bottom: 16px;
 }
 
 /* Padding Utilities */
+.px-0 {
+  padding-left: 0;
+  padding-right: 0;
+}
 .px-3 {
   padding-left: 12px;
   padding-right: 12px;
@@ -328,4 +339,18 @@
 .rounded-b-4 {
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }

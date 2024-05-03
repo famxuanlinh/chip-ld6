@@ -68,13 +68,8 @@
         <div class="uk-flex uk-flex-between uk-text-center">
           <div class="uk-inline">
             <button
-              class="uk-text-center"
-              style="
-                padding: 8px;
-                border-radius: 12px;
-                background-color: #efefef;
-                cursor: pointer;
-              "
+              class="uk-text-center btn_profile"
+              style="padding: 8px; border-radius: 12px; cursor: pointer"
             >
               <div class="uk-flex uk-text-center" style="color: #1a1d1f">
                 <img
@@ -127,14 +122,14 @@
                       height="24"
                       uk-svg
                     />
-                    <span style="margin-left: 8px">Khoá học</span>
+                    <span style="margin-left: 8px">Đăng xuất</span>
                   </a>
                 </li>
               </ul>
             </div>
 
             <!-- Modal profile -->
-            <div id="modal-profile" uk-modal style="z-index: 9999999">
+            <div id="modal-profile" uk-modal>
               <div
                 class="uk-modal-dialog uk-margin-auto-vertical rounded-4"
                 style="max-height: 580px"
@@ -345,7 +340,7 @@
               <p class="text-xl text-black" style="margin-left: 4px">54</p>
             </div>
             <button
-              class="rounded-full"
+              class="rounded-full btn_profile"
               style="width: 48px; height: 48px; cursor: pointer"
               type="button"
             >
@@ -354,9 +349,164 @@
             <div
               uk-dropdown="mode: click; pos: bottom-right"
               style="width: 392px; border-radius: 16px"
-              class="uk-padding-remove"
+              class="py-4 px-0"
             >
-              <p class="p-4 text-main text-left text-xl">Thông báo</p>
+              <p
+                class="text-main text-left text-xl px-4"
+                style="padding-bottom: 28px"
+              >
+                Thông báo
+              </p>
+              <div style="max-height: 568px; overflow: auto">
+                <div class="noti_item px-4">
+                  <div class="noti_item_icon" style="background-color: #ef8869">
+                    <img src="public/icon/message.svg" width="24" height="24" />
+                  </div>
+                  <div class="noti_item_content">
+                    <div class="noti_item_title">
+                      <p>
+                        Tin nhắn mới từ
+                        <span style="color: #067ff3">Thầy Edward</span>
+                      </p>
+                      <div class="noti_item_time">
+                        1h
+                        <p class="noti_item_active"></p>
+                      </div>
+                    </div>
+                    <p class="noti_item_desc line-clamp-1">
+                      Xin chào học viên đến với khoá học phát âm cơ bản đến với
+                      khoá học phát âm cơ bản
+                    </p>
+                  </div>
+                </div>
+                <hr />
+                <div class="noti_item px-4">
+                  <div class="noti_item_icon" style="background-color: #63cc79">
+                    <img
+                      src="public/icon/calendar-outline_white.svg"
+                      width="24"
+                      height="24"
+                    />
+                  </div>
+                  <div class="noti_item_content">
+                    <div class="noti_item_title">
+                      <p>Lớp học sẽ sớm bắt đầu</p>
+                      <div class="noti_item_time">
+                        1h
+                        <p class="noti_item_active"></p>
+                      </div>
+                    </div>
+                    <div class="noti_item_desc_block">
+                      <p class="noti_item_desc_block_title">
+                        Buổi 3 | Khoá học Ngữ pháp cơ bản
+                      </p>
+                      <p class="noti_item_desc_block_content">
+                        What’s the weather like today?
+                      </p>
+                      <button
+                        class="uk-button uk-button-primary rounded-10px px-4 uk-width-expand mt-2"
+                        style="height: 44px; text-transform: inherit"
+                      >
+                        <img
+                          src="public/icon/logout-outline_white.svg"
+                          width="24"
+                          height="24"
+                          uk-svg
+                        />
+                        Vào lớp
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <hr />
+                <div class="noti_item px-4">
+                  <div class="noti_item_icon" style="background-color: #f74a4a">
+                    <img
+                      src="public/icon/calendar-outline_white.svg"
+                      width="24"
+                      height="24"
+                    />
+                  </div>
+                  <div class="noti_item_content">
+                    <div class="noti_item_title">
+                      <p>Lớp học sẽ sớm bắt đầu</p>
+                      <div class="noti_item_time">1h</div>
+                    </div>
+                    <div class="noti_item_desc_block">
+                      <p class="noti_item_desc_block_title">
+                        Buổi 3 | Khoá học Ngữ pháp cơ bản
+                      </p>
+                      <p class="noti_item_desc_block_content">
+                        What’s the weather like today?
+                      </p>
+                      <button
+                        class="mt-2"
+                        style="
+                          color: #067ff3;
+                          font-size: 14px;
+                          font-weight: 600;
+                          cursor: pointer;
+                        "
+                      >
+                        Xem nội dung
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <hr />
+                <div class="noti_item px-4">
+                  <div class="noti_item_icon" style="background-color: #ef8869">
+                    <img src="public/icon/message.svg" width="24" height="24" />
+                  </div>
+                  <div class="noti_item_content">
+                    <div class="noti_item_title">
+                      <p>Báo cáo học tập tuần 2 tháng 4</p>
+                      <div class="noti_item_time">
+                        1h
+                        <p class="noti_item_active"></p>
+                      </div>
+                    </div>
+                    <p class="noti_item_desc">
+                      Đã có báo cáo học tập tuần 2 tháng 4 (từ 07/04 -> 15/04)
+                    </p>
+                    <button
+                      class="uk-button uk-button-default rounded-10px px-4 uk-width-expand mt-2"
+                      style="
+                        height: 44px;
+                        text-transform: inherit;
+                        background-color: #f9f9f9;
+                      "
+                    >
+                      Xem báo cáo
+                    </button>
+                  </div>
+                </div>
+                <hr class="mx-3" />
+                <div class="noti_item px-4">
+                  <div class="noti_item_icon" style="background-color: #7d5dff">
+                    <img
+                      src="public/icon/volume-outline.svg"
+                      width="24"
+                      height="24"
+                    />
+                  </div>
+                  <div class="noti_item_content">
+                    <div class="noti_item_title">
+                      <p>Thông báo: Thay đổi hệ thống</p>
+                      <div class="noti_item_time">
+                        1h
+                        <p class="noti_item_active"></p>
+                      </div>
+                    </div>
+                    <p class="noti_item_desc">
+                      Chúng tôi xin thông báo, hệ thống sẽ được cập nhật trong
+                      khoảng thời gian từ 00:00 tới 03:00 ngày 12/03/2024. Hệ
+                      thống sẽ tạm thời bị gián đoạn và không thể đăng nhập
+                      trong khoảng thời gian này
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

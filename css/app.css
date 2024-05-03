@@ -6,6 +6,19 @@
   box-sizing: border-box;
 }
 
+:root {
+  --title-neutral-07-color: #1a1d1f;
+  --title-neutral-06-color: #272b30;
+  --title-neutral-04-color: #7f868d;
+  --title-neutral-02-color: #f4f4f4;
+  --primary-color-blue: #067ff3;
+}
+
+p {
+  margin: 0;
+}
+
+/* Header */
 .nav_button_active {
   padding: 12px;
   border-radius: 12px;
@@ -50,4 +63,103 @@
 
 #modal-profile .uk-modal-body {
   max-height: 510px !important;
+}
+
+.btn_profile {
+  background-color: transparent;
+}
+
+.btn_profile:hover {
+  background-color: #efefef;
+}
+
+/* Header notification */
+.noti_item {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.noti_item_icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex: none;
+}
+
+.noti_item_content {
+  margin-left: 12px;
+  width: 100%;
+}
+
+.noti_item_title {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+  padding-bottom: 4px;
+  color: var(--title-neutral-07-color);
+  display: flex;
+  justify-content: space-between;
+}
+
+.noti_item_desc_block {
+  padding: 12px;
+  border-radius: 8px;
+  background-color: var(--title-neutral-02-color);
+  margin-top: 4px;
+  text-align: left;
+}
+
+.noti_item_desc_block_title {
+  color: var(--title-neutral-06-color);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: left;
+}
+.noti_item_desc_block_content {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  margin-top: 4px;
+  color: var(--title-neutral-07-color);
+}
+
+.noti_item_time {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--title-neutral-04-color);
+}
+
+.noti_item_active {
+  content: "";
+  width: 10px;
+  height: 10px;
+  display: flex;
+  flex: none;
+  border-radius: 100%;
+  margin-left: 8px;
+  background-color: var(--primary-color-blue);
+  color: var(--primary-color-blue);
+}
+
+.noti_item_desc {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--title-neutral-06-color);
+  text-align: left;
+}
+
+#modal-profile {
+  z-index: 9999999;
 }
