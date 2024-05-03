@@ -9,6 +9,7 @@
       href="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/css/uikit.min.css"
     />
     <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
     <div class="uk-flex uk-flex-wrap">
@@ -75,11 +76,7 @@
                 cursor: pointer;
               "
             >
-              <a
-                class="uk-link-reset uk-flex uk-text-center"
-                style="color: #1a1d1f"
-                href="#"
-              >
+              <div class="uk-flex uk-text-center" style="color: #1a1d1f">
                 <img
                   style="flex: none; height: fit-content"
                   src="public/avatar.png"
@@ -98,7 +95,7 @@
                   </div>
                   <div>Hồ Trung Dũng</div>
                 </div>
-              </a>
+              </div>
             </button>
             <div
               class="uk-card uk-card-default"
@@ -106,8 +103,11 @@
               uk-drop="mode: click"
             >
               <ul class="uk-list uk-margin-remove">
-                <li class="uk-navbar-left uk-text-center nav_button">
-                  <a class="uk-link-reset" href="index.html">
+                <li
+                  class="uk-navbar-left uk-text-center nav_button"
+                  uk-toggle="target: #modal-profile"
+                >
+                  <a class="uk-link-reset">
                     <img
                       src="public/icon/person.svg"
                       width="24"
@@ -131,6 +131,212 @@
                   </a>
                 </li>
               </ul>
+            </div>
+
+            <!-- Modal profile -->
+            <div id="modal-profile" uk-modal style="z-index: 9999999">
+              <div
+                class="uk-modal-dialog uk-margin-auto-vertical rounded-4"
+                style="max-height: 580px"
+              >
+                <button
+                  class="uk-modal-close-default"
+                  type="button"
+                  style="background-color: transparent; cursor: pointer"
+                >
+                  <img src="public/icon/x.svg" width="24" height="24" />
+                </button>
+
+                <p
+                  class="text-xl p-6 pb-4 mb-0 text-black"
+                  style="font-weight: 600"
+                >
+                  Thông tin cá nhân
+                </p>
+
+                <div
+                  class="uk-modal-body p-6 rounded-b-4"
+                  style="padding-top: 0; margin-top: 0; max-height: 510px"
+                  uk-overflow-auto
+                >
+                  <div class="uk-text-center" style="cursor: pointer">
+                    <div
+                      class="uk-flex uk-text-center uk-flex-middle"
+                      style="color: #1a1d1f"
+                    >
+                      <img
+                        style="flex: none; height: fit-content"
+                        src="public/avatar.png"
+                        width="96"
+                      />
+                      <div
+                        style="margin-left: 32px; display: flex"
+                        class="uk-text-center"
+                      >
+                        <button
+                          class="uk-button uk-button-primary rounded-10px px-4"
+                          style="height: 44px; text-transform: inherit"
+                        >
+                          <img
+                            src="public/icon/plus.svg"
+                            width="24"
+                            height="24"
+                            uk-svg
+                          />
+                          Tải lên ảnh mới
+                        </button>
+
+                        <button
+                          class="uk-button uk-button-default rounded-10px px-4 mx-3"
+                          style="
+                            height: 44px;
+                            text-transform: inherit;
+                            background-color: #f9f9f9;
+                          "
+                        >
+                          Xoá ảnh
+                        </button>
+                      </div>
+                    </div>
+                    <form class="my-4 text-left">
+                      <div>
+                        <label for="name" class="label-form"
+                          >Tên hiển thị</label
+                        >
+                        <input
+                          class="uk-input input-form"
+                          type="text"
+                          placeholder="Cập nhật tên hiển thị"
+                          aria-label="Input"
+                          name="name"
+                          id="name"
+                        />
+                      </div>
+                      <div
+                        class="uk-flex uk-flex-middle"
+                        style="margin-top: 18px"
+                      >
+                        <div class="uk-width-1-2 uk-margin-small-right">
+                          <label for="birthday" class="label-form"
+                            >Năm sinh</label
+                          >
+                          <input
+                            class="uk-input input-form"
+                            type="text"
+                            placeholder="Cập nhật năm sinh"
+                            aria-label="Input"
+                            name="birthday"
+                            id="birthday"
+                          />
+                        </div>
+                        <div class="uk-width-1-2">
+                          <label for="phone" class="label-form"
+                            >Số điện thoại</label
+                          >
+                          <input
+                            class="uk-input input-form"
+                            type="text"
+                            placeholder="Cập nhật số điện thoại"
+                            aria-label="Input"
+                            name="phone"
+                            id="phone"
+                          />
+                        </div>
+                      </div>
+                      <button
+                        disabled
+                        class="uk-button uk-button-primary rounded-10px px-4 mt-4"
+                        style="
+                          height: 44px;
+                          text-transform: inherit;
+                          cursor: not-allowed;
+                          background-color: #067ff3;
+                          opacity: 0.5;
+                        "
+                      >
+                        <img
+                          src="public/icon/save.svg"
+                          width="24"
+                          height="24"
+                          uk-svg
+                        />
+                        <span class="text-white" style="opacity: 0.75"
+                          >Lưu thông tin</span
+                        >
+                      </button>
+                    </form>
+                    <hr />
+
+                    <div class="rounded-b-4 text-left">
+                      <p class="text-xl text-black" style="font-weight: 600">
+                        Đăng nhập
+                      </p>
+
+                      <div style="padding-top: 0; margin-top: 0">
+                        <div class="uk-text-center" style="cursor: pointer">
+                          <form class="my-4 text-left">
+                            <div>
+                              <label for="oldPassword" class="label-form"
+                                >Mật khẩu cũ</label
+                              >
+                              <input
+                                class="uk-input input-form"
+                                type="password"
+                                placeholder="Cập nhật mật khẩu cũ"
+                                aria-label="Input"
+                                name="oldPassword"
+                                id="oldPassword"
+                              />
+                            </div>
+                            <div
+                              class="uk-flex uk-flex-middle"
+                              style="margin-top: 18px"
+                            >
+                              <div class="uk-width-1-2 uk-margin-small-right">
+                                <label for="newPassword" class="label-form"
+                                  >Mật khẩu mới</label
+                                >
+                                <input
+                                  class="uk-input input-form"
+                                  type="password"
+                                  placeholder="Cập nhật mật khẩu mới"
+                                  aria-label="Input"
+                                  name="newPassword"
+                                  id="newPassword"
+                                />
+                              </div>
+                              <div class="uk-width-1-2">
+                                <label for="confirmPassword" class="label-form"
+                                  >Xác nhận mật khẩu mới</label
+                                >
+                                <input
+                                  class="uk-input input-form"
+                                  type="text"
+                                  placeholder="Xác nhận mật khẩu mới"
+                                  aria-label="Input"
+                                  name="confirmPassword"
+                                  id="confirmPassword"
+                                />
+                              </div>
+                            </div>
+                            <button
+                              disabled
+                              class="uk-button uk-button-default rounded-10px px-4 mt-4"
+                              style="
+                                height: 44px;
+                                text-transform: inherit;
+                                cursor: not-allowed;
+                              "
+                            >
+                              <span>Cập nhật mật khẩu</span>
+                            </button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="uk-inline uk-flex uk-flex-middle">
