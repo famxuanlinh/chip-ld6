@@ -160,6 +160,8 @@ p {
   text-align: left;
 }
 
-#modal-profile {
+#modal-profile,
+#modal-course-content,
+#modal-watch-video {
   z-index: 9999999;
 }

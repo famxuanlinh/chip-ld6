@@ -132,7 +132,7 @@
               </ul>
             </div>
 
-            <!-- Modal profile -->
+            <!-- Modal Thông tin cá nhân -->
             <div id="modal-profile" uk-modal>
               <div
                 class="uk-modal-dialog uk-margin-auto-vertical rounded-4"
@@ -407,18 +407,20 @@
                       <p class="noti_item_desc_block_content">
                         What’s the weather like today?
                       </p>
-                      <button
-                        class="uk-button uk-button-primary rounded-10px px-4 uk-width-expand mt-2"
+                      <a
+                        class="uk-button uk-button-primary rounded-10px px-4 uk-width-expand mt-2 flex-center"
                         style="height: 44px; text-transform: inherit"
+                        href="/lop-hoc.html"
                       >
                         <img
                           src="public/icon/logout-outline_white.svg"
                           width="24"
                           height="24"
                           uk-svg
+                          class="mr-2"
                         />
                         Vào lớp
-                      </button>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -614,8 +616,8 @@
                       </button>
 
                       <a
-                        href="/class1.html"
-                        class="uk-button uk-button-primary rounded-10px px-4 ml-6"
+                        href="/lop-hoc.html"
+                        class="uk-button uk-button-primary rounded-10px px-4 ml-6 flex-items-center"
                         style="height: 44px; text-transform: inherit"
                       >
                         <img
@@ -623,6 +625,7 @@
                           width="24"
                           height="24"
                           uk-svg
+                          class="mr-2"
                         />
                         Vào lớp
                       </a>
@@ -715,7 +718,9 @@
                         >
                       </div>
                     </div>
-                    <div class="uk-flex uk-flex-middle">
+
+                    <!-- Variant ko có luyện tập ngay -->
+                    <!-- <div class="uk-flex uk-flex-middle">
                       <button
                         class="body2-semibold"
                         style="
@@ -739,10 +744,137 @@
                       >
                         Xem lại video
                       </button>
+                    </div> -->
+
+                    <!-- Variant có luyện tập ngay -->
+                    <div class="uk-flex uk-flex-middle">
+                      <div class="uk-inline">
+                        <button
+                          class="btn_profile"
+                          style="
+                            width: 32px;
+                            height: 32px;
+                            cursor: pointer;
+                            border-radius: 4px;
+                          "
+                          type="button"
+                        >
+                          <img
+                            src="public/icon/more.svg"
+                            width="24"
+                            height="24"
+                          />
+                        </button>
+                        <div
+                          class="uk-card uk-card-default"
+                          style="padding: 4px; border-radius: 8px"
+                          uk-drop="mode: click; pos: bottom-center"
+                        >
+                          <ul class="uk-list uk-margin-remove">
+                            <li
+                              class="uk-navbar-left uk-text-center nav_button"
+                              uk-toggle="target: #modal-watch-video"
+                            >
+                              Xem lại video lớp học
+                            </li>
+                            <li
+                              class="uk-navbar-left uk-text-center nav_button"
+                              uk-toggle="target: #modal-course-content"
+                            >
+                              Xem nội dung lớp học
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <a
+                        href="/luyen-tap.html"
+                        class="uk-button flex-items-center uk-button-primary rounded-10px px-4 ml-6"
+                        style="height: 44px; text-transform: inherit"
+                      >
+                        Luyện tập ngay
+                      </a>
+
+                      <!-- <button
+                        class="body2-semibold"
+                        style="
+                          color: #067ff3;
+                          cursor: pointer;
+                          background-color: transparent;
+                        "
+                        uk-toggle="target: #modal-course-content"
+                      >
+                        Xem nội dung
+                      </button>
+
+                      <button
+                        class="uk-button uk-button-default rounded-10px px-4 ml-3"
+                        uk-toggle="target: #modal-watch-video"
+                        style="
+                          height: 44px;
+                          text-transform: inherit;
+                          background-color: #f9f9f9;
+                        "
+                      >
+                        Xem lại video
+                      </button> -->
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+
+          <!-- Tin tức -->
+          <div id="news-in-home" class="mt-8">
+            <p class="title1-bold mb-2">Tin tức</p>
+            <ul class="uk-subnav uk-subnav-pill uk-margin-remove" uk-switcher>
+              <li class="uk-padding-remove">
+                <a class="news-switcher-tag" href="#">Tất cả tin tức</a>
+              </li>
+              <li class="uk-padding-remove">
+                <a class="news-switcher-tag" href="#">Thông báo</a>
+              </li>
+              <li class="uk-padding-remove">
+                <a class="news-switcher-tag" href="#">Sự kiện</a>
+              </li>
+              <li class="uk-padding-remove">
+                <a class="news-switcher-tag" href="#">Tin tức</a>
+              </li>
+            </ul>
+            <div class="uk-switcher uk-margin mt-4">
+              <div class="uk-grid-small uk-child-width-1-3" uk-grid>
+                <div>
+                  <div class="news-card">
+                    <img
+                      src="public/course.png"
+                      alt="news card"
+                      class="news-card-image"
+                    />
+                    <div class="p-4">
+                      <div class="uk-flex uk-flex-between mb-2">
+                        <span class="news-card-tag">Sự kiện</span>
+                        <span class="caption-medium" style="color: #7f868d"
+                          >12/05/2024</span
+                        >
+                      </div>
+                      <div
+                        class="body1-semibold line-clamp-3 cursor-pointer"
+                        style="max-height: 72px; height: 100%"
+                        uk-toggle="target: #modal-news-detail"
+                      >
+                        Chip Chip mở lớp bình thường xuyên suốt kỳ nghỉ lễ Giỗ
+                        tổ Hùng Vương 10/3
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="uk-grid-small uk-child-width-1-3" uk-grid>
+                Thông báo
+              </div>
+              <div>Sự kiện</div>
+              <div>Tin tức</div>
             </div>
           </div>
 
@@ -914,8 +1046,8 @@
                 </button>
 
                 <a
-                  href="/class1.html"
-                  class="uk-button uk-button-primary rounded-10px px-4 ml-6"
+                  href="/lop-hoc.html"
+                  class="uk-button flex-items-center uk-button-primary rounded-10px px-4 ml-6"
                   style="height: 44px; text-transform: inherit"
                 >
                   <img
@@ -923,6 +1055,7 @@
                     width="24"
                     height="24"
                     uk-svg
+                    class="mr-2"
                   />
                   Vào lớp
                 </a>
@@ -930,7 +1063,7 @@
             </div>
           </div>
 
-          <!-- Modal teacher info -->
+          <!-- Modal chi tiết giáo viên -->
           <div class="modal-content" id="modal-teacher-info" uk-modal>
             <div
               class="uk-modal-dialog uk-margin-auto-vertical rounded-4"
@@ -1047,6 +1180,62 @@
                     alt="play button"
                     class="modal-content-video-button"
                   />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal tin tức chi tiết  -->
+          <div class="modal-content" id="modal-news-detail" uk-modal>
+            <div
+              class="uk-modal-dialog uk-margin-auto-vertical rounded-4"
+              style="max-height: 644px"
+            >
+              <button
+                class="uk-modal-close-default"
+                type="button"
+                style="background-color: transparent; cursor: pointer"
+              >
+                <img src="public/icon/x-solid.svg" width="24" height="24" />
+              </button>
+
+              <div
+                class="uk-flex rounded-t-4 uk-flex-center uk-flex-middle uk-background-cover uk-light"
+                data-src="public/course.png"
+                uk-img
+                style="height: 240px; object-fit: contain"
+              ></div>
+
+              <div
+                class="uk-modal-body rounded-b-4 uk-padding-remove"
+                style="max-height: 404px; height: 100%"
+                uk-overflow-auto
+              >
+                <div class="p-6" style="max-height: 404px; height: 100%">
+                  <div class="uk-flex uk-flex-between mb-2">
+                    <span class="news-modal-tag">Sự kiện</span>
+                    <span class="caption-medium" style="color: #7f868d"
+                      >12/05/2024</span
+                    >
+                  </div>
+                  <div
+                    class="title2-semibold line-clamp-3 cursor-pointer"
+                    style="max-height: 72px; height: 100%"
+                  >
+                    Chip Chip mở lớp bình thường xuyên suốt kỳ nghỉ lễ Giỗ tổ
+                    Hùng Vương 10/3
+                  </div>
+                  <div class="body1-regular mb-6">
+                    Autem possimus sit voluptatem vel in. Necessitatibus sed
+                    veniam vel. Perferendis laborum magnam ad ipsum odio.
+                    Blanditiis enim eum ullam eos voluptas aut vel quidem omnis.
+                    Veritatis officiis maiores qui facilis ratione vitae
+                    laboriosam autem. Id placeat ea quaerat sequi blanditiis
+                    distinctio placeat. Dicta ab unde. Totam aliquam aut. Omnis
+                    aliquid quis dolore ut consequuntur repellat dolorem. Qui
+                    neque quas autem minus voluptatem eum ipsum ad. Eaque quasi
+                    aut delectus. Illum voluptatibus nihil quam ad rerum quidem.
+                  </div>
                 </div>
               </div>
             </div>

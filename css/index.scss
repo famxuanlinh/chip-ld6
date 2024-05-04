@@ -195,3 +195,62 @@
   @include tag-style;
   background-color: $neutral-04;
 }
+
+// News
+
+#news-in-home {
+  .uk-subnav-pill > .uk-active > a {
+    color: $neutral-00;
+    background-color: $neutral-05;
+    @extend .body2-semibold;
+    border: 1px solid $neutral-03;
+  }
+}
+.news {
+  &-switcher {
+    &-tag {
+      border-radius: 20px;
+      margin-right: 8px;
+      padding: 8px 16px !important;
+      text-transform: capitalize !important;
+      color: $neutral-05;
+      background-color: $neutral-01;
+      border: 1px solid $neutral-03;
+
+      @extend .body2-regular;
+    }
+  }
+
+  &-card {
+    border: 1px solid $neutral-03;
+    border-radius: 12px;
+
+    &-image {
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+      height: 160px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    &-tag {
+      padding: 4px 8px;
+      height: 24px;
+      border-radius: 20px;
+      background-color: $neutral-03;
+
+      @extend .caption-semibold;
+    }
+  }
+
+  &-modal {
+    &-tag {
+      padding: 4px 8px;
+      height: 28px;
+      border-radius: 20px;
+      background-color: $neutral-03;
+
+      @extend .body2-semibold;
+    }
+  }
+}

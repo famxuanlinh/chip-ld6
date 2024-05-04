@@ -477,9 +477,7 @@
 .text-white {
   color: white;
 }
-.text-white {
-  color: white;
-}
+
 .text-main {
   color: #1a1d1f;
 }
@@ -607,6 +605,13 @@
 .line-clamp-2 {
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -864,4 +869,24 @@
 
 .bg-neutral-08 {
   background-color: #111315;
+}
+
+.flex-justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-items-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
