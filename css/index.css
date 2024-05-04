@@ -1,4 +1,7 @@
 /* Padding Utilities */
+.p-2 {
+  padding: 8px;
+}
 .p-3 {
   padding: 12px;
 }
@@ -82,6 +85,9 @@
 
 .pr-7 {
   padding-right: 28px;
+}
+.pr-8 {
+  padding-right: 32px;
 }
 
 /* Padding bottom utilities */
@@ -889,4 +895,11 @@
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.space-y-2 > :not(:last-child) {
+  margin-bottom: 8px;
+}
+.space-y-4 > :not(:last-child) {
+  margin-bottom: 16px;
 }

@@ -3,9 +3,308 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Lớp học 1 - 1</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/css/uikit.min.css"
+    />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
-    Lớp học
+    <div>
+      <!-- Header -->
+      <div
+        class="uk-flex-between flex-items-center px-8 py-3"
+        style="height: 80px; border-bottom: 1px solid #e7e8ea"
+      >
+        <div>
+          <div class="body2-medium" style="color: #272b30">
+            Level 1 Unit 2 Lesson 1
+          </div>
+          <div class="title2-semibold pt-1">What’s the weather like today?</div>
+        </div>
+        <div class="uk-flex">
+          <button
+            class="rounded-full btn-icon mr-4"
+            style="width: 40px; height: 40px; cursor: pointer"
+            type="button"
+          >
+            <img src="public/icon/alert.svg" width="24" height="24" />
+          </button>
+          <button
+            id="btn-message"
+            onclick="toggleVisibility()"
+            class="rounded-full btn-icon mr-4"
+            style="width: 40px; height: 40px; cursor: pointer"
+            type="button"
+          >
+            <img
+              src="public/icon/message-outline_light.svg"
+              width="24"
+              height="24"
+            />
+          </button>
+          <button
+            class="rounded-full btn-icon mr-4"
+            style="width: 40px; height: 40px; cursor: pointer"
+            type="button"
+          >
+            <img src="public/icon/reload.svg" width="24" height="24" uk-svg />
+          </button>
+          <a
+            class="rounded-full btn-icon ml-4 flex-justify-center"
+            href="/index.html"
+            style="width: 40px; height: 40px; cursor: pointer"
+          >
+            <img src="public/icon/x.svg" width="24" height="24" />
+          </a>
+        </div>
+      </div>
+
+      <!-- body -->
+      <div class="class">
+        <!-- Video -->
+        <div class="flex-items-center" style="flex: 1 1 0%; height: 100%">
+          <div
+            class="rounded-4 uk-position-relative"
+            style="
+              aspect-ratio: 1150 / 686;
+              width: 100%;
+              /* background-image: linear-gradient(to right, red, yellow); */
+              margin-left: 32px;
+              font-size: 60px;
+              color: white;
+            "
+          >
+            <!-- What’s the weather like today? -->
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/c2pz2mlSfXA?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1"
+              allowfullscreen
+              uk-responsive
+              style="
+                aspect-ratio: 1150 / 686;
+                width: 100%;
+                max-height: calc(100vh - 128px);
+              "
+              class="rounded-4"
+              uk-video="automute: true"
+            ></iframe>
+          </div>
+        </div>
+
+        <!-- List users -->
+        <div
+          id="list-user"
+          class="pl-4 pr-8 py-6 flex-justify-center"
+          style="width: 398px; height: 100%; flex-direction: column"
+        >
+          <div class="uk-position-relative student-card">
+            <img
+              src="public/member.jpeg"
+              alt="member"
+              class="student-card-image"
+              style="aspect-ratio: 350 / 293"
+            />
+            <div class="student-card-desc">
+              <div class="flex-items-center">
+                <img
+                  style="flex: none; height: fit-content"
+                  src="public/avatar.png"
+                  width="32"
+                />
+                <div class="body1-medium ml-2" style="color: white">
+                  Hồ Dũng
+                </div>
+              </div>
+              <div class="uk-flex uk-flex-middle">
+                <img src="public/icon/medal.svg" width="20" height="20" />
+                <div class="body1-medium ml-1" style="color: white">x 5</div>
+              </div>
+            </div>
+          </div>
+          <div class="uk-position-relative student-card mt-4">
+            <img
+              src="public/member.jpeg"
+              alt="member"
+              class="student-card-image"
+              style="aspect-ratio: 350 / 293"
+            />
+            <div class="student-card-desc">
+              <div class="flex-items-center">
+                <img
+                  style="flex: none; height: fit-content"
+                  src="public/avatar.png"
+                  width="32"
+                />
+                <div class="body1-medium ml-2" style="color: white">
+                  Hồ Dũng
+                </div>
+              </div>
+              <!-- <div class="uk-flex uk-flex-middle">
+                <img src="public/icon/medal.svg" width="20" height="20" />
+                <div class="body1-medium ml-1" style="color: white">x 5</div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Right bar -->
+        <div
+          id="chat-box"
+          class="chat uk-box-shadow-medium uk-animation-slide-right"
+          style="width: 360px; height: 100%"
+        >
+          <div class="chat-header">
+            <span class="body1-semibold">Cuộc hội thoại</span>
+            <button
+              class="btn-icon rounded-full p-2"
+              onclick="toggleVisibility()"
+            >
+              <img
+                src="public/icon/x-simple.svg"
+                width="24px"
+                height="24px"
+                class="cursor-pointer"
+              />
+            </button>
+          </div>
+          <div class="chat-body p-4 space-y-4">
+            <div class="uk-flex" style="align-items: end">
+              <img
+                style="flex: none; height: fit-content"
+                src="public/avatar1.png"
+                width="32"
+              />
+              <div class="space-y-2">
+                <div class="chat-message-content">
+                  <div class="caption-semibold mb-1">Thầy Edward</div>
+                  Chào bạn, chào mừng bạn đến với buổi học hôm nay!
+                  <img
+                    src="public/icon/message-arrow_gray.svg"
+                    width="15"
+                    class="chat-message-content-arrow uk-hidden"
+                    height="18"
+                  />
+                  <div class="chat-message-content-time">20:37</div>
+                </div>
+                <div class="chat-message-content">
+                  Tôi là Edward Norton, tôi sẽ đồng hành cùng bạn trong buổi học
+                  này
+                  <img
+                    src="public/icon/message-arrow_gray.svg"
+                    width="15"
+                    class="chat-message-content-arrow"
+                    height="18"
+                  />
+                  <div class="chat-message-content-time">20:37</div>
+                </div>
+              </div>
+            </div>
+            <div class="uk-flex" style="align-items: end">
+              <img
+                style="flex: none; height: fit-content"
+                src="public/avatar.png"
+                width="32"
+              />
+              <div class="space-y-2">
+                <div class="chat-message-content">
+                  <div class="caption-semibold mb-1">Lê Mạnh Hùng</div>
+                  Em chào thầy ạ!
+                  <img
+                    src="public/icon/message-arrow_gray.svg"
+                    width="15"
+                    class="chat-message-content-arrow"
+                    height="18"
+                  />
+                  <div class="chat-message-content-time">20:37</div>
+                </div>
+              </div>
+            </div>
+            <div class="space-y-2">
+              <div class="space-y-2 uk-flex uk-flex-right uk-width-expand">
+                <div
+                  class="chat-message-content"
+                  style="background-color: #067ff3; color: white"
+                >
+                  Em chào thầy ạ!
+                  <img
+                    src="public/icon/message-arrow_blue.svg"
+                    width="15"
+                    class="chat-message-content-arrow-me uk-hidden"
+                    height="18"
+                  />
+                  <div class="chat-message-content-time" style="color: white">
+                    20:37
+                  </div>
+                </div>
+              </div>
+              <div class="space-y-2 uk-flex uk-flex-right uk-width-expand">
+                <div
+                  class="chat-message-content"
+                  style="background-color: #067ff3; color: white"
+                >
+                  Em chào thầy ạ!
+                  <img
+                    src="public/icon/message-arrow_blue.svg"
+                    width="15"
+                    class="chat-message-content-arrow-me"
+                    height="18"
+                  />
+                  <div class="chat-message-content-time" style="color: white">
+                    20:37
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="chat-footer">
+            <input
+              class="uk-input input-form"
+              type="text"
+              placeholder="Nhập tin nhắn"
+              aria-label="Input"
+              name="message"
+              style="flex: 1 1 0%"
+            />
+            <div class="flex-center ml-2" style="width: 44px; height: 44px">
+              <img
+                src="public/icon/send.svg"
+                width="24"
+                height="24"
+                class="cursor-pointer"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit-icons.min.js"></script>
+    <script>
+      function toggleVisibility() {
+        var chatBox = document.getElementById("chat-box");
+        var btnMessage = document.getElementById("btn-message");
+        var listUser = document.getElementById("list-user");
+
+        // Get the computed style to determine the initial display
+        var computedStyle = window.getComputedStyle(chatBox);
+        var display = computedStyle.getPropertyValue("display");
+
+        if (display === "none") {
+          chatBox.style.display = "block";
+          btnMessage.style.backgroundColor = "#efefef";
+          listUser.style.width = "242px";
+          listUser.style.paddingRight = "16px";
+        } else {
+          chatBox.style.display = "none";
+          btnMessage.style.backgroundColor = "transparent";
+          listUser.style.width = "398px";
+          listUser.style.paddingRight = "32px";
+        }
+      }
+    </script>
   </body>
 </html>
