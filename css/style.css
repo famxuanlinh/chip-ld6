@@ -1,3 +1,207 @@
+.title1-bold {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: -0.02em;
+  color: #1a1d1f;
+}
 
+.title2-semibold {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: left;
+  color: #1a1d1f;
+}
+
+.body1-semibold {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+  color: #1a1d1f;
+}
+
+.body1-medium {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  color: #1a1d1f;
+}
+
+.body1-regular {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  color: #1a1d1f;
+}
+
+.body2-semibold {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  text-align: left;
+  color: #1a1d1f;
+}
+
+.body2-medium {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: left;
+  color: #1a1d1f;
+}
+
+.body2-regular {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  color: #1a1d1f;
+}
+
+.caption-semibold {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  text-align: left;
+  color: #1a1d1f;
+}
+
+.caption-medium {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: left;
+  color: #1a1d1f;
+}
+
+.caption-regular {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+  color: #1a1d1f;
+}
+
+.button1 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #1a1d1f;
+}
+
+.button2 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #1a1d1f;
+}
+
+.button-link {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #1a1d1f;
+}
+
+.class-card {
+  border: 1px solid #efefef;
+  border-radius: 12px;
+  margin-top: 16px;
+}
+.class-card-header {
+  height: 48px;
+  border-radius: 8px 8px 0 0;
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+}
+.class-card-content {
+  padding: 24px;
+}
+
+.divider-vertical {
+  width: 2px;
+  height: 20px;
+  background-color: #7f868d;
+}
+
+.modal-content-title {
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  border: 1px solid #efefef;
+  text-align: left;
+}
+.modal-content-video {
+  max-height: 306px;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+.modal-content-video-button {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  cursor: pointer;
+}
+
+.btn-teacher {
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+}
+.btn-teacher:hover {
+  background-color: #f4f4f4;
+}
+
+.tag-progress-already {
+  height: 24px;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  color: #ffffff;
+  background-color: #07b682;
+}
+
+.tag-progress-cancel {
+  height: 24px;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  color: #ffffff;
+  background-color: #f74a4a;
+}
+
+.tag-progress-not {
+  height: 24px;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  color: #ffffff;
+  background-color: #efefef;
+  color: #272b30;
+}
+
+.tag-progress-missing {
+  height: 24px;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  color: #ffffff;
+  background-color: #7f868d;
+}
 
 /*# sourceMappingURL=style.css.map */

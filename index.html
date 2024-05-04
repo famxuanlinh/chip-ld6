@@ -9,8 +9,8 @@
       href="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/css/uikit.min.css"
     />
     <link rel="stylesheet" href="css/app.css" />
-    <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
     <div class="uk-flex uk-flex-wrap">
@@ -65,8 +65,11 @@
       </div>
 
       <!-- Content right -->
-      <div class="uk-width-expand uk-card-body" style="padding-top: 8px">
-        <div class="uk-flex uk-flex-between uk-text-center">
+      <div class="uk-width-expand">
+        <!-- header -->
+        <div
+          class="uk-flex uk-flex-between uk-text-center px-6 py-2 uk-box-shadow-small"
+        >
           <div class="uk-inline">
             <button
               class="uk-text-center btn_profile"
@@ -447,6 +450,7 @@
                           font-size: 14px;
                           font-weight: 600;
                           cursor: pointer;
+                          background-color: transparent;
                         "
                       >
                         Xem nội dung
@@ -506,6 +510,543 @@
                       trong khoảng thời gian này
                     </p>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div
+          style="max-height: calc(100vh - 80px); overflow: auto"
+          class="px-8 py-4"
+        >
+          <!-- Lớp học sắp diễn ra -->
+          <div>
+            <p class="title1-bold">Lớp học sắp diễn ra</p>
+            <div class="class-card">
+              <div>
+                <div class="class-card-header bg-primary-emerald">
+                  <div class="uk-link-reset uk-flex uk-flex-middle">
+                    <img
+                      src="public/icon/book-outline_white.svg"
+                      width="20"
+                      height="20"
+                      uk-svg
+                    />
+                    <span class="ml-2 text-neutral-00 body1-semibold"
+                      >Khoá học Phát âm cơ bản</span
+                    >
+                  </div>
+                  <div class="uk-link-reset uk-flex uk-flex-middle">
+                    <img src="public/icon/circle.svg" width="22" height="22" />
+
+                    <span class="ml-2 text-neutral-00 body2-semibold"
+                      >hoàn thành</span
+                    >
+                  </div>
+                </div>
+                <div class="class-card-content">
+                  <div class="uk-flex uk-flex-between uk-flex-center">
+                    <div>
+                      <div class="body1-medium">Level 1 Unit 2 Lesson 1</div>
+                      <div class="title2-semibold">
+                        What’s the weather like today?
+                      </div>
+                    </div>
+                    <button
+                      class="uk-button uk-button-primary rounded-10px px-4"
+                      uk-toggle="target: #modal-cancel-class"
+                      style="
+                        height: 40px;
+                        text-transform: inherit;
+                        color: #f74a4a;
+                        background-color: #fdcece4d;
+                      "
+                    >
+                      <img
+                        src="public/icon/x_red.svg"
+                        width="24"
+                        height="24"
+                        uk-svg
+                      />
+                      Huỷ lớp
+                    </button>
+                  </div>
+                  <div class="uk-flex uk-flex-between">
+                    <div class="uk-flex uk-flex-middle mt-3">
+                      <div
+                        class="btn-teacher"
+                        uk-toggle="target: #modal-teacher-info"
+                      >
+                        <img
+                          src="public/avatar.png"
+                          alt="avatar"
+                          class="rounded-full"
+                          style="width: 28px; height: 28px"
+                        />
+                        <span class="ml-10px body1-regular">Thầy Edward</span>
+                      </div>
+
+                      <div class="divider-vertical ml-2 mr-4"></div>
+                      <div>
+                        <img
+                          src="public/icon/calendar-outline.svg"
+                          alt="avatar"
+                          style="width: 24px; height: 24px"
+                        />
+                        <span class="ml-2.5 body1-regular"
+                          >20:30 - Thứ 6, 05/04/2024</span
+                        >
+                      </div>
+                    </div>
+                    <div class="uk-flex uk-flex-middle">
+                      <button
+                        class="body2-semibold"
+                        style="
+                          color: #067ff3;
+                          cursor: pointer;
+                          background-color: transparent;
+                        "
+                        uk-toggle="target: #modal-course-content"
+                      >
+                        Xem nội dung
+                      </button>
+
+                      <a
+                        href="/class1.html"
+                        class="uk-button uk-button-primary rounded-10px px-4 ml-6"
+                        style="height: 44px; text-transform: inherit"
+                      >
+                        <img
+                          src="public/icon/logout-outline_white.svg"
+                          width="24"
+                          height="24"
+                          uk-svg
+                        />
+                        Vào lớp
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lớp học vừa qua -->
+          <div class="mt-8">
+            <p class="title1-bold">Lớp học vừa qua</p>
+            <div class="class-card">
+              <div>
+                <div
+                  class="class-card-header"
+                  style="background-color: #ef8869"
+                >
+                  <div class="uk-link-reset uk-flex uk-flex-middle">
+                    <img
+                      src="public/icon/book-outline_white.svg"
+                      width="20"
+                      height="20"
+                      uk-svg
+                    />
+
+                    <span class="ml-2 text-neutral-00 body1-semibold"
+                      >Khoá học Phát âm cơ bản</span
+                    >
+                  </div>
+                  <div class="uk-link-reset uk-flex uk-flex-middle">
+                    <img src="public/icon/circle.svg" width="22" height="22" />
+
+                    <span class="ml-2 text-neutral-00 body2-semibold"
+                      >hoàn thành</span
+                    >
+                  </div>
+                </div>
+                <div class="class-card-content">
+                  <div class="uk-flex uk-flex-between uk-flex-center">
+                    <div>
+                      <div class="body1-medium">Level 1 Unit 2 Lesson 1</div>
+                      <div class="title2-semibold">
+                        What’s the weather like today?
+                      </div>
+                    </div>
+                    <div
+                      class="uk-flex uk-flex-right uk-flex-center"
+                      style="height: fit-content"
+                    >
+                      <div class="uk-flex uk-flex-middle mr-4">
+                        <img
+                          src="public/icon/medal.svg"
+                          width="24"
+                          height="24"
+                        />
+                        <div class="body1-medium ml-1">x 5</div>
+                      </div>
+                      <div class="tag-progress-already">Đã học</div>
+                      <!-- <div class="tag-progress-not">Chưa học</div>
+                      <div class="tag-progress-missing">Đã bỏ lỡ</div>
+                      <div class="tag-progress-cancel">Đã huỷ</div> -->
+                    </div>
+                  </div>
+                  <div class="uk-flex uk-flex-between">
+                    <div class="uk-flex uk-flex-middle mt-3">
+                      <div
+                        class="btn-teacher"
+                        uk-toggle="target: #modal-teacher-info"
+                      >
+                        <img
+                          src="public/avatar.png"
+                          alt="avatar"
+                          class="rounded-full"
+                          style="width: 28px; height: 28px"
+                        />
+                        <span class="ml-10px body1-regular">Thầy Edward</span>
+                      </div>
+
+                      <div class="divider-vertical ml-2 mr-4"></div>
+                      <div>
+                        <img
+                          src="public/icon/calendar-outline.svg"
+                          alt="avatar"
+                          style="width: 24px; height: 24px"
+                        />
+                        <span class="ml-2.5 body1-regular"
+                          >20:30 - Thứ 6, 05/04/2024</span
+                        >
+                      </div>
+                    </div>
+                    <div class="uk-flex uk-flex-middle">
+                      <button
+                        class="body2-semibold"
+                        style="
+                          color: #067ff3;
+                          cursor: pointer;
+                          background-color: transparent;
+                        "
+                        uk-toggle="target: #modal-course-content"
+                      >
+                        Xem nội dung
+                      </button>
+
+                      <button
+                        class="uk-button uk-button-default rounded-10px px-4 ml-3"
+                        uk-toggle="target: #modal-watch-video"
+                        style="
+                          height: 44px;
+                          text-transform: inherit;
+                          background-color: #f9f9f9;
+                        "
+                      >
+                        Xem lại video
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal -->
+          <!-- Modal huỷ lớp -->
+          <div class="modal-content" id="modal-cancel-class" uk-modal>
+            <div
+              class="uk-modal-dialog uk-margin-auto-vertical rounded-4"
+              style="max-height: 580px"
+            >
+              <p
+                class="title2-semibold p-6 pb-4 mb-0 rounded-t-2"
+                style="text-align: center"
+              >
+                Bạn có chắc muốn huỷ lịch học này?
+              </p>
+              <ul class="uk-list uk-list-disc body2-medium mx-6 my-0">
+                <li class="uk-margin-remove">
+                  Huỷ lịch học trước giờ bắt đầu học tối thiểu 3 tiếng sẽ không
+                  bị tính phí.
+                </li>
+                <li class="uk-margin-remove">
+                  <span style="color: #07b682"
+                    >Khi huỷ lịch không bị tính phí</span
+                  >, bạn sẽ được sắp xếp lịch học mới để tiếp tục học buổi học
+                  này theo giáo trình.
+                </li>
+                <li class="uk-margin-remove">
+                  <span style="color: red">Khi huỷ lịch bị tính phí</span>, bạn
+                  sẽ không thể học lại buổi học này.
+                </li>
+              </ul>
+
+              <div
+                class="uk-modal-body p-6 rounded-b-4"
+                style="padding-top: 0; margin-top: 0; max-height: 510px"
+                uk-overflow-auto
+              >
+                <div class="modal-content-title mt-6 mb-4">
+                  <div class="body2-medium">Buổi 6</div>
+                  <div class="title2-semibold mt-1">
+                    What’s the weather like today?
+                  </div>
+
+                  <div class="my-2">
+                    <img
+                      src="public/avatar.png"
+                      alt="avatar"
+                      class="rounded-full"
+                      style="width: 28px; height: 28px"
+                    />
+                    <span class="ml-10px body1-regular">Thầy Edward</span>
+                  </div>
+                  <div>
+                    <img
+                      src="public/icon/calendar-outline.svg"
+                      alt="avatar"
+                      style="width: 24px; height: 24px"
+                    />
+                    <span class="ml-2.5 body2-medium"
+                      >20:30 - Thứ 6, 05/04/2024</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                class="uk-modal-footer uk-text-end uk-flex uk-padding-remove uk-margin-remove rounded-b-2 uk-flex-right"
+                style="height: 60px; align-items: center"
+              >
+                <button
+                  class="uk-button uk-button-default uk-modal-close rounded-10px px-4 mx-3"
+                  style="
+                    height: 44px;
+                    text-transform: inherit;
+                    background-color: #f9f9f9;
+                  "
+                >
+                  Đóng
+                </button>
+
+                <a
+                  href="#"
+                  class="uk-button uk-button-primary rounded-10px px-4 py-0 mr-6"
+                  style="
+                    height: 44px;
+                    text-transform: inherit;
+                    background-color: #f74a4a;
+                  "
+                >
+                  Huỷ lịch học
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal xem nội dung -->
+          <div class="modal-content" id="modal-course-content" uk-modal>
+            <div
+              class="uk-modal-dialog uk-margin-auto-vertical rounded-4"
+              style="max-height: 580px"
+            >
+              <button
+                class="uk-modal-close-default"
+                type="button"
+                style="background-color: transparent; cursor: pointer"
+              >
+                <img src="public/icon/x.svg" width="24" height="24" />
+              </button>
+
+              <p
+                class="body1-semibold p-6 pb-4 mb-0 rounded-t-2"
+                style="
+                  background-color: #f9f9f9;
+                  border-bottom: 1px solid #e7e8ea;
+                  height: 56px;
+                "
+              >
+                Nội dung lớp học
+              </p>
+
+              <div
+                class="uk-modal-body p-6 rounded-b-4"
+                style="padding-top: 0; margin-top: 0; max-height: 510px"
+                uk-overflow-auto
+              >
+                <div class="modal-content-title mt-6 mb-4">
+                  <div class="body1-medium">Level 1 Unit 2 Lesson 1</div>
+                  <div class="title2-semibold">
+                    What’s the weather like today?
+                  </div>
+                </div>
+
+                <div class="uk-position-relative">
+                  <img
+                    src="public/course.png"
+                    alt="course"
+                    class="modal-content-video"
+                  />
+                  <img
+                    src="public/icon/play.svg"
+                    alt="play button"
+                    class="modal-content-video-button"
+                  />
+                </div>
+                <div class="body1-semibold mt-4">
+                  Trong bài học, bạn sẽ được học các nội dung kiến thức sau:
+                </div>
+              </div>
+              <div
+                class="uk-modal-footer uk-text-center uk-flex uk-margin-remove uk-flex-between rounded-b-2"
+                style="height: 60px; align-items: center"
+              >
+                <button
+                  class="body2-semibold"
+                  style="
+                    color: #067ff3;
+                    cursor: pointer;
+                    background-color: transparent;
+                    align-items: center;
+                  "
+                >
+                  Xem khoá học
+                  <img
+                    src="public/icon/open.svg"
+                    width="16"
+                    height="16"
+                    uk-svg
+                  />
+                </button>
+
+                <a
+                  href="/class1.html"
+                  class="uk-button uk-button-primary rounded-10px px-4 ml-6"
+                  style="height: 44px; text-transform: inherit"
+                >
+                  <img
+                    src="public/icon/logout-outline_white.svg"
+                    width="24"
+                    height="24"
+                    uk-svg
+                  />
+                  Vào lớp
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal teacher info -->
+          <div class="modal-content" id="modal-teacher-info" uk-modal>
+            <div
+              class="uk-modal-dialog uk-margin-auto-vertical rounded-4"
+              style="max-height: 580px"
+            >
+              <button
+                class="uk-modal-close-default"
+                type="button"
+                style="background-color: transparent; cursor: pointer"
+              >
+                <img src="public/icon/x.svg" width="24" height="24" />
+              </button>
+
+              <p
+                class="body1-semibold p-6 pb-4 mb-0 rounded-t-2"
+                style="
+                  background-color: #f9f9f9;
+                  border-bottom: 1px solid #e7e8ea;
+                  height: 56px;
+                "
+              >
+                Chi tiết giáo viên
+              </p>
+
+              <div
+                class="uk-modal-body p-6 rounded-b-4"
+                style="padding-top: 0; margin-top: 0; max-height: 510px"
+                uk-overflow-auto
+              >
+                <div class="uk-flex uk-text-center my-6" style="color: #1a1d1f">
+                  <img
+                    style="flex: none; height: fit-content"
+                    src="public/avatar.png"
+                    width="72px"
+                    height="72px"
+                  />
+                  <div
+                    style="
+                      margin-left: 12px;
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: center;
+                    "
+                  >
+                    <div class="body1-medium mb-2">Thầy Edward</div>
+                    <div class="body2-regular">
+                      Thầy Edward Norton là người có kinh nghiệm nhiều năm trong
+                      việc giảng dạy tiếng Anh ứng dụng cho người đi làm.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="uk-position-relative">
+                  <img
+                    src="public/course.png"
+                    alt="course"
+                    class="modal-content-video"
+                  />
+                  <img
+                    src="public/icon/play.svg"
+                    alt="play button"
+                    class="modal-content-video-button"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal xem lại video -->
+          <div class="modal-content" id="modal-watch-video" uk-modal>
+            <div
+              class="uk-modal-dialog uk-margin-auto-vertical rounded-4"
+              style="max-height: 580px"
+            >
+              <button
+                class="uk-modal-close-default"
+                type="button"
+                style="background-color: transparent; cursor: pointer"
+              >
+                <img src="public/icon/x.svg" width="24" height="24" />
+              </button>
+
+              <p
+                class="body1-semibold p-6 pb-4 mb-0 rounded-t-2"
+                style="
+                  background-color: #f9f9f9;
+                  border-bottom: 1px solid #e7e8ea;
+                  height: 56px;
+                "
+              >
+                Video lớp học
+              </p>
+
+              <div
+                class="uk-modal-body p-6 rounded-b-4"
+                style="padding-top: 0; margin-top: 0; max-height: 510px"
+                uk-overflow-auto
+              >
+                <div class="modal-content-title mt-6 mb-4">
+                  <div class="body1-medium">Level 1 Unit 2 Lesson 1</div>
+                  <div class="title2-semibold">
+                    What’s the weather like today?
+                  </div>
+                </div>
+
+                <div class="uk-position-relative">
+                  <img
+                    src="public/course.png"
+                    alt="course"
+                    class="modal-content-video"
+                  />
+                  <img
+                    src="public/icon/play.svg"
+                    alt="play button"
+                    class="modal-content-video-button"
+                  />
                 </div>
               </div>
             </div>
