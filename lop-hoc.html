@@ -27,15 +27,17 @@
         </div>
         <div class="uk-flex">
           <button
+            id="btn-support-box"
             class="rounded-full btn-icon mr-4"
             style="width: 40px; height: 40px; cursor: pointer"
             type="button"
+            onclick="toggleVisibility('support-box')"
           >
             <img src="public/icon/alert.svg" width="24" height="24" />
           </button>
           <button
-            id="btn-message"
-            onclick="toggleVisibility()"
+            id="btn-chat-box"
+            onclick="toggleVisibility('chat-box')"
             class="rounded-full btn-icon mr-4"
             style="width: 40px; height: 40px; cursor: pointer"
             type="button"
@@ -50,6 +52,7 @@
             class="rounded-full btn-icon mr-4"
             style="width: 40px; height: 40px; cursor: pointer"
             type="button"
+            onclick="refreshPage()"
           >
             <img src="public/icon/reload.svg" width="24" height="24" uk-svg />
           </button>
@@ -65,92 +68,345 @@
 
       <!-- body -->
       <div class="class">
-        <!-- Video -->
-        <div class="flex-items-center" style="flex: 1 1 0%; height: 100%">
+        <div
+          id="video-users"
+          class="flex-items-center uk-width-expand px-8 py-6 space-x-4"
+        >
+          <!-- Video -->
           <div
-            class="rounded-4 uk-position-relative"
+            class="flex-items-center uk-flex"
             style="
-              aspect-ratio: 1150 / 686;
-              width: 100%;
-              /* background-image: linear-gradient(to right, red, yellow); */
-              margin-left: 32px;
-              font-size: 60px;
-              color: white;
+              flex: 1 1 0%;
+              max-height: calc(100vh - 128px);
+              height: 100%;
+              overflow: hidden;
+              align-items: baseline;
             "
           >
-            <!-- What’s the weather like today? -->
-            <iframe
-              src="https://www.youtube-nocookie.com/embed/c2pz2mlSfXA?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1"
-              allowfullscreen
-              uk-responsive
+            <div
+              class="rounded-4 uk-position-relative"
               style="
                 aspect-ratio: 1150 / 686;
                 width: 100%;
-                max-height: calc(100vh - 128px);
+                /* background-image: linear-gradient(to right, red, yellow); */
+                font-size: 60px;
+                color: white;
               "
-              class="rounded-4"
-              uk-video="automute: true"
-            ></iframe>
-          </div>
-        </div>
+            >
+              <!-- What’s the weather like today? -->
+              <!-- src="https://www.youtube-nocookie.com/embed/c2pz2mlSfXA?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1" -->
+              <!-- uk-video="automute: true" -->
 
-        <!-- List users -->
-        <div
-          id="list-user"
-          class="pl-4 pr-8 py-6 flex-justify-center"
-          style="width: 398px; height: 100%; flex-direction: column"
-        >
-          <div class="uk-position-relative student-card">
-            <img
-              src="public/member.jpeg"
-              alt="member"
-              class="student-card-image"
-              style="aspect-ratio: 350 / 293"
-            />
-            <div class="student-card-desc">
-              <div class="flex-items-center">
-                <img
-                  style="flex: none; height: fit-content"
-                  src="public/avatar.png"
-                  width="32"
-                />
-                <div class="body1-medium ml-2" style="color: white">
-                  Hồ Dũng
-                </div>
-              </div>
-              <div class="uk-flex uk-flex-middle">
-                <img src="public/icon/medal.svg" width="20" height="20" />
-                <div class="body1-medium ml-1" style="color: white">x 5</div>
-              </div>
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/c2pz2mlSfXA"
+                allowfullscreen
+                uk-responsive
+                style="
+                  aspect-ratio: 1150 / 686;
+                  width: 100%;
+                  max-height: calc(100vh - 128px);
+                "
+                class="rounded-4"
+              ></iframe>
             </div>
           </div>
-          <div class="uk-position-relative student-card mt-4">
-            <img
-              src="public/member.jpeg"
-              alt="member"
-              class="student-card-image"
-              style="aspect-ratio: 350 / 293"
-            />
-            <div class="student-card-desc">
-              <div class="flex-items-center">
-                <img
-                  style="flex: none; height: fit-content"
-                  src="public/avatar.png"
-                  width="32"
-                />
-                <div class="body1-medium ml-2" style="color: white">
-                  Hồ Dũng
+
+          <!-- List users 1 - 1 -->
+          <!-- <div
+            id="list-user"
+            class="flex-justify-center space-y-4"
+            style="
+              width: 350px;
+              max-height: calc(100vh - 128px);
+              height: 100%;
+              overflow: hidden;
+              flex-direction: column;
+            "
+          >
+            <div class="student-card">
+              <img
+                src="public/member.jpeg"
+                alt="member"
+                class="student-card-image"
+                style="aspect-ratio: 350 / 293"
+              />
+              <div class="student-card-desc">
+                <div class="flex-items-center">
+                  <img
+                    style="flex: none; height: fit-content"
+                    src="public/avatar.png"
+                    width="32"
+                  />
+                  <div class="body1-medium ml-2" style="color: white">
+                    Hồ Dũng
+                  </div>
+                </div>
+                <div class="uk-flex uk-flex-middle">
+                  <img src="public/icon/medal.svg" width="20" height="20" />
+                  <div class="body1-medium ml-1" style="color: white">x 5</div>
                 </div>
               </div>
-              <!-- <div class="uk-flex uk-flex-middle">
-                <img src="public/icon/medal.svg" width="20" height="20" />
-                <div class="body1-medium ml-1" style="color: white">x 5</div>
-              </div> -->
             </div>
+            <div class="student-card mt-4">
+              <img
+                src="public/member.jpeg"
+                alt="member"
+                class="student-card-image"
+                style="aspect-ratio: 350 / 293"
+              />
+              <div class="student-card-desc">
+                <div class="flex-items-center">
+                  <img
+                    style="flex: none; height: fit-content"
+                    src="public/avatar.png"
+                    width="32"
+                  />
+                  <div class="body1-medium ml-2" style="color: white">
+                    Hồ Dũng
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- List users 1 - many -->
+          <div
+            class="uk-position-relative uk-visible-toggle uk-light"
+            tabindex="-1"
+            uk-slider="finite: true"
+            style="
+              width: 210px;
+              max-height: calc(100vh - 128px);
+              height: 100%;
+              overflow: hidden;
+            "
+          >
+            <div class="uk-slider-items uk-grid">
+              <div class="uk-width-expand">
+                <div class="uk-panel">
+                  <div class="student-card-small">
+                    <img
+                      src="public/member.jpeg"
+                      alt="member"
+                      class="student-card-small-image"
+                    />
+                    <div class="student-card-small-desc">
+                      <div class="flex-items-center">
+                        <img
+                          style="flex: none; height: fit-content"
+                          src="public/avatar.png"
+                          width="20"
+                        />
+                        <div class="caption-semibold ml-2" style="color: white">
+                          Hồ Dũng
+                        </div>
+                      </div>
+                      <div class="uk-flex uk-flex-middle">
+                        <img
+                          src="public/icon/medal.svg"
+                          width="16"
+                          height="16"
+                        />
+                        <div class="body2-semibold ml-1" style="color: white">
+                          x 5
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="uk-panel">
+                  <div class="student-card-small">
+                    <img
+                      src="public/member.jpeg"
+                      alt="member"
+                      class="student-card-small-image"
+                    />
+                    <div class="student-card-small-desc">
+                      <div class="flex-items-center">
+                        <img
+                          style="flex: none; height: fit-content"
+                          src="public/avatar.png"
+                          width="20"
+                        />
+                        <div class="caption-semibold ml-2" style="color: white">
+                          Hồ Dũng
+                        </div>
+                      </div>
+                      <div class="uk-flex uk-flex-middle">
+                        <img
+                          src="public/icon/medal.svg"
+                          width="16"
+                          height="16"
+                        />
+                        <div class="body2-semibold ml-1" style="color: white">
+                          x 5
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="uk-panel">
+                  <div class="student-card-small">
+                    <img
+                      src="public/member.jpeg"
+                      alt="member"
+                      class="student-card-small-image"
+                    />
+                    <div class="student-card-small-desc">
+                      <div class="flex-items-center">
+                        <img
+                          style="flex: none; height: fit-content"
+                          src="public/avatar.png"
+                          width="20"
+                        />
+                        <div class="caption-semibold ml-2" style="color: white">
+                          Hồ Dũng
+                        </div>
+                      </div>
+                      <div class="uk-flex uk-flex-middle">
+                        <img
+                          src="public/icon/medal.svg"
+                          width="16"
+                          height="16"
+                        />
+                        <div class="body2-semibold ml-1" style="color: white">
+                          x 5
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="uk-panel">
+                  <div class="student-card-small">
+                    <img
+                      src="public/member.jpeg"
+                      alt="member"
+                      class="student-card-small-image"
+                    />
+                    <div class="student-card-small-desc">
+                      <div class="flex-items-center">
+                        <img
+                          style="flex: none; height: fit-content"
+                          src="public/avatar.png"
+                          width="20"
+                        />
+                        <div class="caption-semibold ml-2" style="color: white">
+                          Hồ Dũng
+                        </div>
+                      </div>
+                      <div class="uk-flex uk-flex-middle">
+                        <img
+                          src="public/icon/medal.svg"
+                          width="16"
+                          height="16"
+                        />
+                        <div class="body2-semibold ml-1" style="color: white">
+                          x 5
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="uk-panel">
+                  <div class="student-card-small">
+                    <img
+                      src="public/member.jpeg"
+                      alt="member"
+                      class="student-card-small-image"
+                    />
+                    <div class="student-card-small-desc">
+                      <div class="flex-items-center">
+                        <img
+                          style="flex: none; height: fit-content"
+                          src="public/avatar.png"
+                          width="20"
+                        />
+                        <div class="caption-semibold ml-2" style="color: white">
+                          Hồ Dũng
+                        </div>
+                      </div>
+                      <div class="uk-flex uk-flex-middle">
+                        <img
+                          src="public/icon/medal.svg"
+                          width="16"
+                          height="16"
+                        />
+                        <div class="body2-semibold ml-1" style="color: white">
+                          x 5
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="uk-width-expand">
+                <div class="uk-panel">
+                  <div class="student-card-small">
+                    <img
+                      src="public/member.jpeg"
+                      alt="member"
+                      class="student-card-small-image"
+                    />
+                    <div class="student-card-small-desc">
+                      <div class="flex-items-center">
+                        <img
+                          style="flex: none; height: fit-content"
+                          src="public/avatar.png"
+                          width="20"
+                        />
+                        <div class="caption-semibold ml-2" style="color: white">
+                          Hồ Dũng
+                        </div>
+                      </div>
+                      <div class="uk-flex uk-flex-middle">
+                        <img
+                          src="public/icon/medal.svg"
+                          width="16"
+                          height="16"
+                        />
+                        <div class="body2-semibold ml-1" style="color: white">
+                          x 5
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <a
+              class="uk-position-top-left uk-margin-remove rounded-full uk-hidden-hover"
+              href
+              uk-slidenav-previous
+              uk-slider-item="previous"
+              style="
+                color: #272b30;
+                background-color: #ffffff99;
+                margin-bottom: 48px;
+                top: 48px;
+                left: 8px;
+              "
+            ></a>
+            <a
+              class="uk-position-bottom-right uk-margin-remove rounded-full uk-hidden-hover"
+              href
+              uk-slidenav-next
+              uk-slider-item="next"
+              style="
+                color: #272b30;
+                background-color: #ffffff99;
+                margin-bottom: 48px;
+                bottom: 48px;
+                right: 8px;
+              "
+            >
+            </a>
           </div>
+
+          <!-- End list user -->
         </div>
 
-        <!-- Right bar -->
+        <!-- Chat box -->
         <div
           id="chat-box"
           class="chat uk-box-shadow-medium uk-animation-slide-right"
@@ -160,7 +416,7 @@
             <span class="body1-semibold">Cuộc hội thoại</span>
             <button
               class="btn-icon rounded-full p-2"
-              onclick="toggleVisibility()"
+              onclick="toggleVisibility('chat-box')"
             >
               <img
                 src="public/icon/x-simple.svg"
@@ -278,32 +534,160 @@
             </div>
           </div>
         </div>
+
+        <!-- Support box -->
+        <div
+          id="support-box"
+          class="chat uk-box-shadow-medium uk-animation-slide-right"
+          style="width: 360px; height: 100%"
+        >
+          <div class="chat-header">
+            <span class="body1-semibold">Trợ giúp</span>
+            <button
+              class="btn-icon rounded-full p-2"
+              onclick="toggleVisibility('support-box')"
+            >
+              <img
+                src="public/icon/x-simple.svg"
+                width="24px"
+                height="24px"
+                class="cursor-pointer"
+              />
+            </button>
+          </div>
+          <div
+            class="p-4 space-y-4"
+            style="
+              max-height: calc(100vh - 152px);
+              height: 100%;
+              overflow: auto;
+            "
+          >
+            <div class="noti_item_desc_block mt-0">
+              <p class="body1-medium">Cách 1: Tải lại lớp học</p>
+              <button
+                class="uk-button uk-button-primary rounded-10px px-4 mt-2 flex-center"
+                style="
+                  height: 44px;
+                  text-transform: inherit;
+                  width: fit-content;
+                  font-size: 16px;
+                "
+                onclick="refreshPage()"
+              >
+                <img
+                  src="public/icon/reload_white.svg"
+                  width="24"
+                  height="24"
+                  uk-svg
+                  class="mr-2"
+                />
+                Tải lại lớp
+              </button>
+            </div>
+            <div class="noti_item_desc_block mt-0">
+              <p class="body1-medium">
+                Cách 2: Đưa thiết bị lại gần nơi có sóng wifi mạnh
+              </p>
+            </div>
+            <div class="noti_item_desc_block mt-0">
+              <p class="body1-medium">
+                Cách 3: Đổi sang kết nối Internet mạnh hơn
+              </p>
+            </div>
+            <div class="body2-regular pt-3" style="color: #535557">
+              Nếu bạn đã thử các cách trên mà vẫn không khắc phục được, hãy gửi
+              yêu cầu cho Admin để được hỗ trợ.
+            </div>
+            <form>
+              <div
+                uk-form-custom="target: > * > span:first-child"
+                class="uk-width-expand"
+                style="height: 44px; border-radius: 8px"
+              >
+                <select
+                  class="uk-width-expand"
+                  aria-label="Custom controls"
+                  style="color: #535557; height: 44px; border-radius: 8px"
+                >
+                  <option value="">Bạn đang gặp vấn đề gì?</option>
+                  <option value="1">Option 01</option>
+                  <option value="2">Option 02</option>
+                  <option value="3">Option 03</option>
+                  <option value="4">Option 04</option>
+                </select>
+                <button
+                  class="uk-button uk-button-default uk-width-expand flex-items-center px-4"
+                  type="button"
+                  tabindex="-1"
+                  style="
+                    color: #535557;
+                    justify-content: space-between;
+                    height: 44px;
+                    border-radius: 8px;
+                    text-transform: none;
+                  "
+                >
+                  <span></span>
+                  <span uk-icon="icon: chevron-down"></span>
+                </button>
+              </div>
+              <button
+                class="uk-button uk-button-primary rounded-10px px-4 mt-4 flex-center uk-width-expand"
+                style="height: 44px; text-transform: inherit; font-size: 16px"
+              >
+                Gửi yêu cầu trợ giúp
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit-icons.min.js"></script>
     <script>
-      function toggleVisibility() {
-        var chatBox = document.getElementById("chat-box");
-        var btnMessage = document.getElementById("btn-message");
-        var listUser = document.getElementById("list-user");
+      //Toggle to show/hide chat and support box
+      function toggleVisibility(boxId) {
+        var box = document.getElementById(boxId);
+        var btnMessage = document.getElementById("btn-" + boxId);
+        var videoUsersWrapper = document.getElementById("video-users");
 
-        // Get the computed style to determine the initial display
-        var computedStyle = window.getComputedStyle(chatBox);
+        var computedStyle = window.getComputedStyle(box);
         var display = computedStyle.getPropertyValue("display");
 
         if (display === "none") {
-          chatBox.style.display = "block";
+          let anotherBoxId;
+          let btnAnotherId;
+          if (boxId === "chat-box") {
+            anotherBoxId = "support-box";
+            btnAnotherId = "btn-support-box";
+          } else {
+            anotherBoxId = "chat-box";
+            btnAnotherId = "btn-chat-box";
+          }
+
+          var anotherBox = document.getElementById(anotherBoxId);
+          var btnAnother = document.getElementById(btnAnotherId);
+          anotherBox.style.display = "none";
+          btnAnother.style.backgroundColor = "transparent";
+
+          box.style.display = "block";
           btnMessage.style.backgroundColor = "#efefef";
-          listUser.style.width = "242px";
-          listUser.style.paddingRight = "16px";
+          videoUsersWrapper.style.paddingRight = "16px";
+          // listUser.style.width = "242px";
+          // listUser.style.paddingRight = "16px";
         } else {
-          chatBox.style.display = "none";
+          box.style.display = "none";
           btnMessage.style.backgroundColor = "transparent";
-          listUser.style.width = "398px";
-          listUser.style.paddingRight = "32px";
+          videoUsersWrapper.style.paddingRight = "16px";
+          // listUser.style.width = "398px";
+          // listUser.style.paddingRight = "32px";
         }
+      }
+
+      function refreshPage() {
+        location.reload();
       }
     </script>
   </body>

@@ -106,7 +106,7 @@ p {
   color: #1a1d1f;
 }
 
-.button1 {
+.button1, .btn-primary-custom {
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
@@ -441,6 +441,28 @@ modal-watch-video {
   background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgba(0, 0, 0, 0.8));
   border-radius: 16px;
 }
+.student-card-small {
+  width: 100%;
+  border-radius: 16px;
+  position: relative;
+}
+.student-card-small-image {
+  border-radius: 16px;
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 210/126;
+}
+.student-card-small-desc {
+  position: absolute;
+  padding: 0 8px 8px 8px;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgba(0, 0, 0, 0.8));
+  border-radius: 16px;
+}
 
 .chat {
   display: none;
@@ -455,7 +477,8 @@ modal-watch-video {
   border-bottom: 1px solid #efefef;
 }
 .chat-body {
-  height: calc(100vh - 216px);
+  max-height: calc(100vh - 216px);
+  height: 100%;
   overflow: auto;
 }
 .chat-footer {
@@ -489,6 +512,28 @@ modal-watch-video {
   font-size: 10px;
   text-align: end;
   line-height: 10px;
+}
+
+.btn-primary-custom {
+  height: 44px;
+  width: 100%;
+  border-radius: 10px;
+  padding-left: 16px;
+  padding-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: red;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn-primary-custom:hover {
+  opacity: 0.9;
+}
+
+.uk-width-expand > :not(:last-child) {
+  margin-bottom: 8px;
 }
 
 /*# sourceMappingURL=style.css.map */

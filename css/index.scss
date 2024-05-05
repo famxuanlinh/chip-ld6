@@ -433,8 +433,35 @@ modal-watch-video {
   width: 100%;
 }
 
-.student {
-  &-card {
+.student-card {
+  width: 100%;
+  border-radius: 16px;
+  position: relative;
+
+  &-image {
+    border-radius: 16px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &-desc {
+    position: absolute;
+    padding: 0 16px 16px 16px;
+
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(255, 0, 0, 0),
+      rgb(0, 0, 0, 0.8)
+    );
+    border-radius: 16px;
+  }
+
+  &-small {
     width: 100%;
     border-radius: 16px;
     position: relative;
@@ -443,12 +470,12 @@ modal-watch-video {
       border-radius: 16px;
       width: 100%;
       object-fit: cover;
+      aspect-ratio: 210 / 126;
     }
 
     &-desc {
       position: absolute;
-      padding: 0 16px 16px 16px;
-
+      padding: 0 8px 8px 8px;
       bottom: 0;
       left: 0;
       display: flex;
@@ -478,7 +505,8 @@ modal-watch-video {
   }
 
   &-body {
-    height: calc(100vh - 216px);
+    max-height: calc(100vh - 216px);
+    height: 100%;
     overflow: auto;
   }
   &-footer {
@@ -524,4 +552,28 @@ modal-watch-video {
       }
     }
   }
+}
+
+.btn-primary-custom {
+  @extend .button1;
+  height: 44px;
+  width: 100%;
+  border-radius: 10px;
+  padding-left: 16px;
+  padding-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: red;
+  cursor: pointer;
+
+  transition: 0.3s;
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.uk-width-expand > :not(:last-child) {
+  margin-bottom: 8px;
 }
