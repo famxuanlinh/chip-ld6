@@ -598,3 +598,13 @@ modal-watch-video {
   background-color: $primary-azure;
   margin-right: 4px;
 }
+
+// Login
+.login-input {
+  @extend .input-form;
+  height: 56px;
+  &-error {
+    @extend .login-input;
+    border: 2px solid $primary-red-rum;
+  }
+}

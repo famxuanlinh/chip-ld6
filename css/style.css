@@ -181,7 +181,7 @@ p {
   font-size: 14px;
 }
 
-.input-form {
+.input-form, .login-input, .login-input-error {
   height: 48px;
   border-radius: 12px;
   color: black;
@@ -554,6 +554,13 @@ modal-watch-video {
   color: #ffffff;
   background-color: #067ff3;
   margin-right: 4px;
+}
+
+.login-input, .login-input-error {
+  height: 56px;
+}
+.login-input-error {
+  border: 2px solid #f74a4a;
 }
 
 /*# sourceMappingURL=style.css.map */
