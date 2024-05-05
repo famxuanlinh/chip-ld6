@@ -4,6 +4,7 @@
   border: 0;
   font-size: 100%;
   box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
 
 :root {
@@ -534,6 +535,25 @@ modal-watch-video {
 
 .uk-width-expand > :not(:last-child) {
   margin-bottom: 8px;
+}
+
+.practice-card {
+  padding: 8px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  justify-content: start;
+}
+
+.tag-practice {
+  height: 24px;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  color: #ffffff;
+  background-color: #067ff3;
+  margin-right: 4px;
 }
 
 /*# sourceMappingURL=style.css.map */

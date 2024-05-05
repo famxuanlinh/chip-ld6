@@ -6,6 +6,7 @@
   border: 0;
   font-size: 100%;
   box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
 
 :root {
@@ -365,7 +366,7 @@ modal-watch-video {
   background-color: $neutral-04;
 }
 
-// News
+// News start
 
 #news-in-home {
   .uk-subnav-pill > .uk-active > a {
@@ -423,6 +424,8 @@ modal-watch-video {
     }
   }
 }
+
+// class start
 
 .class {
   height: calc(100vh - 80px);
@@ -576,4 +579,22 @@ modal-watch-video {
 
 .uk-width-expand > :not(:last-child) {
   margin-bottom: 8px;
+}
+
+// class end
+
+//practice start
+
+.practice-card {
+  padding: 8px;
+  border-radius: 20px;
+  background-color: $neutral-00;
+  justify-content: start;
+}
+
+//practice end
+.tag-practice {
+  @include tag-style;
+  background-color: $primary-azure;
+  margin-right: 4px;
 }
