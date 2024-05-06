@@ -15,6 +15,10 @@
   --primary-color-blue: #067ff3;
 }
 
+svg > path {
+  fill: currentColor;
+}
+
 p {
   margin: 0;
 }
@@ -35,7 +39,7 @@ p {
   color: #1a1d1f;
 }
 
-.body1-semibold {
+.body1-semibold, .class-sub-title {
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
@@ -126,22 +130,6 @@ p {
   font-weight: 500;
   line-height: 24px;
   color: #1a1d1f;
-}
-
-.class-card {
-  border: 1px solid #efefef;
-  border-radius: 12px;
-  margin-top: 16px;
-}
-.class-card-header {
-  height: 48px;
-  border-radius: 8px 8px 0 0;
-  padding: 12px 24px;
-  display: flex;
-  justify-content: space-between;
-}
-.class-card-content {
-  padding: 24px;
 }
 
 /* Header */
@@ -385,7 +373,7 @@ modal-watch-video {
   border-radius: 20px;
   margin-right: 8px;
   padding: 8px 16px !important;
-  text-transform: capitalize !important;
+  text-transform: none !important;
   color: #535557;
   background-color: #f9f9f9;
   border: 1px solid #efefef;
@@ -561,6 +549,30 @@ modal-watch-video {
 }
 .login-input-error {
   border: 2px solid #f74a4a;
+}
+
+.class-sub-title {
+  color: #7f868d;
+}
+
+.class-card {
+  border: 1px solid #efefef;
+  border-radius: 12px;
+}
+.class-card-header, .class-card-header-in-schedule {
+  height: 48px;
+  border-radius: 8px 8px 0 0;
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+}
+.class-card-header-in-schedule {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom: 1px solid #efefef;
+}
+.class-card-content {
+  padding: 24px;
 }
 
 /*# sourceMappingURL=style.css.map */

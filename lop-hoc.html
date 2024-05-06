@@ -33,7 +33,32 @@
             type="button"
             onclick="toggleVisibility('support-box')"
           >
-            <img src="public/icon/alert.svg" width="24" height="24" />
+            <!-- <img src="public/icon/alert.svg" width="24" height="24" /> -->
+            <svg
+              width="24"
+              style="color: #7f868d"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12 14C12.5523 14 13 13.5523 13 13V8.00001C13 7.44772 12.5523 7.00001 12 7.00001C11.4477 7.00001 11 7.44772 11 8.00001V13C11 13.5523 11.4477 14 12 14Z"
+                fill="#7F868D"
+              />
+              <path
+                d="M13 16C13 16.5523 12.5523 17 12 17C11.4477 17 11 16.5523 11 16C11 15.4477 11.4477 15 12 15C12.5523 15 13 15.4477 13 16Z"
+                fill="#7F868D"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                fill="#7F868D"
+              />
+            </svg>
           </button>
           <button
             id="btn-chat-box"
@@ -42,11 +67,31 @@
             style="width: 40px; height: 40px; cursor: pointer"
             type="button"
           >
-            <img
-              src="public/icon/message-outline_light.svg"
+            <svg
               width="24"
               height="24"
-            />
+              style="color: #7f868d"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16 5.99997C16.3948 5.99997 16.7809 5.8831 17.1094 5.66407L20 3.73701V13C20 13.5523 19.5523 14 19 14H18V16H19C20.6569 16 22 14.6568 22 13V3.73701C22 2.13962 20.2197 1.18683 18.8906 2.0729L16 3.99997H9C7.34315 3.99997 6 5.34312 6 6.99997V7.99997H8V6.99997C8 6.44769 8.44772 5.99997 9 5.99997H16Z"
+                fill="#7F868D"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M5.75061 18.4383C6.10524 18.1546 6.54586 18 7 18H15C15.5523 18 16 17.5523 16 17V11C16 10.4477 15.5523 10 15 10H5C4.44772 10 4 10.4477 4 11V19.8388L5.75061 18.4383ZM7 20H15C16.6569 20 18 18.6569 18 17V11C18 9.34315 16.6569 8 15 8H5C3.34315 8 2 9.34315 2 11V19.8388C2 21.5158 3.93986 22.4481 5.24939 21.4005L7 20Z"
+                fill="#7F868D"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M6 14C6 13.4477 6.44772 13 7 13H13C13.5523 13 14 13.4477 14 14C14 14.5523 13.5523 15 13 15H7C6.44772 15 6 14.5523 6 14Z"
+                fill="#7F868D"
+              />
+            </svg>
           </button>
           <button
             class="rounded-full btn-icon mr-4"
@@ -54,7 +99,7 @@
             type="button"
             onclick="refreshPage()"
           >
-            <img src="public/icon/reload.svg" width="24" height="24" uk-svg />
+            <img src="public/icon/reload.svg" width="24" height="24" />
           </button>
           <a
             class="rounded-full btn-icon ml-4 flex-justify-center"
@@ -652,6 +697,7 @@
         var box = document.getElementById(boxId);
         var btnMessage = document.getElementById("btn-" + boxId);
         var videoUsersWrapper = document.getElementById("video-users");
+        var icon = document.getElementById("btn-" + boxId).querySelector("svg");
 
         var computedStyle = window.getComputedStyle(box);
         var display = computedStyle.getPropertyValue("display");
@@ -659,6 +705,7 @@
         if (display === "none") {
           let anotherBoxId;
           let btnAnotherId;
+
           if (boxId === "chat-box") {
             anotherBoxId = "support-box";
             btnAnotherId = "btn-support-box";
@@ -668,21 +715,23 @@
           }
 
           var anotherBox = document.getElementById(anotherBoxId);
+          var anotherIcon = document
+            .getElementById(btnAnotherId)
+            .querySelector("svg");
           var btnAnother = document.getElementById(btnAnotherId);
           anotherBox.style.display = "none";
           btnAnother.style.backgroundColor = "transparent";
 
           box.style.display = "block";
           btnMessage.style.backgroundColor = "#efefef";
+          icon.style.color = "#535557";
+          anotherIcon.style.color = "#7F868D";
           videoUsersWrapper.style.paddingRight = "16px";
-          // listUser.style.width = "242px";
-          // listUser.style.paddingRight = "16px";
         } else {
           box.style.display = "none";
           btnMessage.style.backgroundColor = "transparent";
           videoUsersWrapper.style.paddingRight = "16px";
-          // listUser.style.width = "398px";
-          // listUser.style.paddingRight = "32px";
+          icon.style.color = "#7F868D";
         }
       }
 

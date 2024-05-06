@@ -17,6 +17,10 @@
   --primary-color-blue: #067ff3;
 }
 
+svg > path {
+  fill: currentColor;
+}
+
 p {
   margin: 0;
 }
@@ -126,23 +130,6 @@ p {
   font-weight: 500;
   line-height: 24px;
   color: $neutral-07;
-}
-
-.class-card {
-  border: 1px solid $neutral-03;
-  border-radius: 12px;
-
-  margin-top: 16px;
-  &-header {
-    height: 48px;
-    border-radius: 8px 8px 0 0;
-    padding: 12px 24px;
-    display: flex;
-    justify-content: space-between;
-  }
-  &-content {
-    padding: 24px;
-  }
 }
 
 /* Header */
@@ -382,7 +369,7 @@ modal-watch-video {
       border-radius: 20px;
       margin-right: 8px;
       padding: 8px 16px !important;
-      text-transform: capitalize !important;
+      text-transform: none !important;
       color: $neutral-05;
       background-color: $neutral-01;
       border: 1px solid $neutral-03;
@@ -606,5 +593,38 @@ modal-watch-video {
   &-error {
     @extend .login-input;
     border: 2px solid $primary-red-rum;
+  }
+}
+
+// Course
+.class {
+  &-sub-title {
+    @extend .body1-semibold;
+
+    color: $neutral-04;
+  }
+}
+
+.class-card {
+  border: 1px solid $neutral-03;
+  border-radius: 12px;
+
+  &-header {
+    height: 48px;
+    border-radius: 8px 8px 0 0;
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+
+    &-in-schedule {
+      @extend .class-card-header;
+
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      border-bottom: 1px solid $neutral-03;
+    }
+  }
+  &-content {
+    padding: 24px;
   }
 }

@@ -910,6 +910,15 @@
 .space-y-2 > :not(:last-child) {
   margin-bottom: 8px;
 }
+.space-y-3 > :not(:last-child) {
+  margin-bottom: 12px;
+}
+.space-y-4 > :not(:last-child) {
+  margin-bottom: 16px;
+}
+.space-y-6 > :not(:last-child) {
+  margin-bottom: 24px;
+}
 
 .space-x-4 > :not(:last-child) {
   margin-right: 16px;
@@ -917,7 +926,4 @@
 
 .space-x-6 > :not(:last-child) {
   margin-right: 24px;
-}
-.space-y-4 > :not(:last-child) {
-  margin-bottom: 16px;
 }
