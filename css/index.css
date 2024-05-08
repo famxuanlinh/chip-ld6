@@ -155,6 +155,9 @@
 .pl-7 {
   padding-left: 28px;
 }
+.pl-8 {
+  padding-left: 28px;
+}
 
 /* Add more classes as needed */
 
@@ -920,8 +923,15 @@
   margin-bottom: 24px;
 }
 
+.space-y-8 > :not(:last-child) {
+  margin-bottom: 32px;
+}
+
 .space-x-4 > :not(:last-child) {
   margin-right: 16px;
+}
+.space-x-1 > :not(:last-child) {
+  margin-right: 4px;
 }
 
 .space-x-6 > :not(:last-child) {

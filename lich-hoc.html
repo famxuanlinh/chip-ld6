@@ -29,12 +29,27 @@
           alt="logo"
         />
         <ul class="uk-list" uk-margin>
-          <li class="uk-navbar-left uk-text-center nav_button_active">
-            <a class="uk-link-reset" style="color: #1a1d1f" href="index.html">
-              <img src="public/icon/home.svg" width="24" height="24" uk-svg />
+          <li class="uk-navbar-left uk-text-center nav_button">
+            <a class="uk-link-reset" style="color: #535557" href="index.html">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M5 22C3.34315 22 2 20.6569 2 19V11.3361C2 10.4857 2.36096 9.67518 2.99311 9.10625L9.9931 2.80625C11.134 1.77943 12.866 1.77943 14.0069 2.80625L21.0069 9.10625C21.639 9.67518 22 10.4857 22 11.3361V19C22 20.6569 20.6569 22 19 22H5ZM20 11.3361V19C20 19.5523 19.5523 20 19 20H16V15C16 13.3432 14.6569 12 13 12H11C9.34315 12 8 13.3432 8 15V20H5C4.44772 20 4 19.5523 4 19V11.3361C4 11.0526 4.12032 10.7825 4.33104 10.5928L11.331 4.29284C11.7113 3.95056 12.2887 3.95056 12.669 4.29284L19.669 10.5928C19.8797 10.7825 20 11.0526 20 11.3361ZM10 20V15C10 14.4478 10.4477 14 11 14H13C13.5523 14 14 14.4478 14 15V20H10Z"
+                  fill="#535557"
+                />
+              </svg>
+
               <span style="margin-left: 8px">Trang chủ</span>
             </a>
           </li>
+
           <li class="uk-navbar-left uk-text-center nav_button">
             <a
               class="uk-link-reset"
@@ -50,18 +65,32 @@
               <span style="margin-left: 8px">Khoá học</span>
             </a>
           </li>
-          <li class="uk-navbar-left uk-text-center nav_button">
+
+          <li class="uk-navbar-left uk-text-center nav_button_active">
             <a
               class="uk-link-reset"
-              style="color: #535557"
+              style="color: #1a1d1f"
               href="lich-hoc.html"
             >
-              <img
-                src="public/icon/calendar-outline.svg"
+              <svg
                 width="24"
                 height="24"
-                uk-svg
-              />
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8 3C8 2.44772 7.55228 2 7 2C6.44772 2 6 2.44772 6 3V4H5C3.34315 4 2 5.34315 2 7V19C2 20.6569 3.34315 22 5 22H10.8764C11.3243 22 11.5659 21.4354 11.3051 21.0713C10.4836 19.9242 10 18.5186 10 17C10 13.134 13.134 10 17 10C18.5186 10 19.9242 10.4836 21.0713 11.3051C21.4354 11.5659 22 11.3243 22 10.8764V7C22 5.34315 20.6569 4 19 4H18V3C18 2.44772 17.5523 2 17 2C16.4477 2 16 2.44772 16 3V4H8V3Z"
+                  fill="#1A1D1F"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M22 17C22 14.2386 19.7614 12 17 12C14.2386 12 12 14.2386 12 17C12 19.7614 14.2386 22 17 22C19.7614 22 22 19.7614 22 17ZM18 15C18 14.4477 17.5523 14 17 14C16.4477 14 16 14.4477 16 15V17C16 17.2652 16.1054 17.5196 16.2929 17.7071L17.7929 19.2071C18.1834 19.5976 18.8166 19.5976 19.2071 19.2071C19.5976 18.8166 19.5976 18.1834 19.2071 17.7929L18 16.5858V15Z"
+                  fill="#1A1D1F"
+                />
+              </svg>
+
               <span style="margin-left: 8px">Lịch học</span>
             </a>
           </li>
@@ -72,7 +101,7 @@
       <div class="uk-width-expand">
         <!-- header -->
         <div
-          class="uk-flex uk-flex-between uk-text-center px-6 py-2 uk-box-shadow-small"
+          class="uk-flex uk-flex-between uk-text-center px-6 py-2 uk-box-shadow-small uk-margin-remove"
         >
           <div class="uk-inline">
             <button
@@ -528,7 +557,7 @@
           class="px-8 py-4"
         >
           <!-- Lịch học -->
-          <div id="news-in-home" class="mt-8">
+          <div id="news-in-home">
             <div
               class="flex-items-center"
               style="justify-content: space-between"

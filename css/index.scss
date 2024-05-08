@@ -17,7 +17,7 @@
   --primary-color-blue: #067ff3;
 }
 
-svg > path {
+svg:not(#other-icon) > path {
   fill: currentColor;
 }
 
@@ -140,6 +140,7 @@ p {
   height: 48px;
   cursor: pointer;
   color: #1a1d1f;
+  font-weight: 600;
 }
 
 .nav_button {
@@ -147,8 +148,9 @@ p {
   border-radius: 12px;
   height: 48px;
   cursor: pointer;
-  color: #1a1d1f;
+  color: $neutral-05;
   transition: 0.3ms;
+  font-weight: 600;
 }
 
 .nav_button:hover {
@@ -627,4 +629,182 @@ modal-watch-video {
   &-content {
     padding: 24px;
   }
+}
+
+.course {
+  &-card {
+    border: 1px solid $neutral-03;
+    border-radius: 12px;
+    &-big {
+      border: 1px solid $neutral-03;
+      border-radius: 12px;
+      &-image {
+        border-top-left-radius: 12px;
+        border-bottom-left-radius: 12px;
+        max-height: 178px;
+        object-fit: cover;
+      }
+
+      &-content {
+        padding: 16px;
+      }
+    }
+
+    &-image {
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+      height: 160px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.tag-course-progress {
+  height: 28px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 16px;
+  @extend .body2-semibold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-active {
+    @extend .tag-course-progress;
+    color: $primary-azure;
+    background-color: $secondary-azure;
+  }
+
+  &-done {
+    @extend .tag-course-progress;
+    color: $primary-mint;
+    background-color: $secondary-mint;
+  }
+}
+
+.uk-nav-sub {
+  display: none; /* Hide submenu by default */
+}
+
+.uk-parent:hover .uk-nav-sub,
+.uk-parent.uk-open .uk-nav-sub {
+  display: block; /* Show submenu when parent item is hovered or opened */
+}
+
+/*
+ For cross browser compatible styling hide Firefox's marker by setting summary { display: block }
+ and Chrome and Safari's marker by setting ::-webkit-details-marker {display: none;}
+*/
+summary {
+  display: block;
+  cursor: pointer;
+  outline: 0;
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+}
+
+.tree-nav__item {
+  display: block;
+  white-space: nowrap;
+  position: relative;
+
+  &.is-expandable::before {
+    border-left: 2px solid $neutral-03;
+    content: "";
+    height: 100%;
+    left: 12px;
+    position: absolute;
+    top: 22px;
+    height: calc(100% - 22px);
+  }
+
+  .tree-nav__item {
+    margin-left: 24px;
+  }
+
+  &.is-expandable[open] > .tree-nav__item-title::before {
+    font-family: "ionicons";
+    transform: rotate(90deg);
+  }
+
+  &.is-expandable[open] > summary.tree-nav__item-title::after {
+    display: inline-block;
+  }
+
+  &.is-expandable > .tree-nav__item-title {
+    padding-left: 2.4rem;
+
+    &::before {
+      position: absolute;
+      will-change: transform;
+      transition: transform 300ms ease;
+      content: "";
+      left: 0;
+      display: inline-block;
+      width: 1.6rem;
+      height: 1.6rem;
+      background-image: url("/public/icon/chevron-right.svg");
+    }
+    &:not(:last-child)::after {
+      position: absolute;
+      content: "";
+      width: 12px;
+      height: 24px;
+      left: 12px;
+      top: 26px;
+      border: 2px solid $neutral-03;
+      border-bottom-left-radius: 4px;
+      border-right: none;
+      border-top: none;
+      display: none;
+      will-change: transform;
+      transition: transform 300ms ease;
+    }
+  }
+}
+
+.tree-nav__item-title {
+  cursor: pointer;
+  display: block;
+  outline: 0;
+  @extend .body1-semibold;
+
+  .icon {
+    display: inline;
+    padding-left: 1.6rem;
+    margin-right: 0.8rem;
+    color: red;
+    font-size: 1.4rem;
+    position: relative;
+
+    &::before {
+      top: 0;
+      position: absolute;
+      left: 0;
+      display: inline-block;
+      width: 1.6rem;
+      text-align: center;
+    }
+  }
+}
+
+.tree-nav__item-title::-webkit-details-marker {
+  display: none;
+}
+
+.uk-list > * > ul,
+.uk-list > :nth-child(n + 2) {
+  margin-top: 0;
+}
+
+.uk-child-width-1-3_1 > *:not(:last-child) {
+  width: calc(100% / 3.1);
+}
+
+.uk-child-width-1-3_1 > :last-child {
+  width: calc(100% / 3.1 + 32px);
+  padding-right: 32px;
 }
