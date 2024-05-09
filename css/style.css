@@ -227,13 +227,13 @@ p {
   }
 }
 
-.reasons {
+.reasons, .celebrity, .communication {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
   position: relative;
 }
-.reasons-wrapper {
+.reasons-wrapper, .celebrity-wrapper, .communication-wrapper {
   position: relative;
 }
 .reasons-title, .commit-title {
@@ -252,7 +252,7 @@ p {
     padding: 32px 0 16px;
   }
 }
-.reasons-image {
+.reasons-image, .celebrity-image > img, .communication-image > img {
   margin: 0 28px;
 }
 .reasons-desc {
@@ -324,6 +324,9 @@ p {
   }
 }
 
+.icon-max-md {
+  z-index: 10;
+}
 @media (max-width: 767px) {
   .icon-max-md {
     display: none;
@@ -441,6 +444,135 @@ p {
   .commit-content-number {
     font-size: 36px;
     line-height: 52.2px;
+  }
+}
+
+.celebrity, .communication {
+  margin-top: 24px;
+}
+@media (min-width: 768px) {
+  .celebrity, .communication {
+    margin-top: 88px;
+    margin-bottom: 27px;
+  }
+}
+.celebrity-image > img, .communication-image > img {
+  max-width: 634px;
+  width: 100%;
+}
+.celebrity-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 556px;
+  width: 100%;
+}
+.celebrity-card-title {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 46.4px;
+  color: rgb(0, 0, 0);
+  padding: 20px 0 12px 0;
+}
+@media (max-width: 767px) {
+  .celebrity-card-title {
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 31.9px;
+    padding: 12px 0 8px 0;
+  }
+}
+.celebrity-card-rating {
+  width: 28px;
+  margin-bottom: 20px;
+}
+.celebrity-card-rating > :not(:last-child) {
+  margin-right: 10px;
+}
+@media (max-width: 767px) {
+  .celebrity-card-rating {
+    width: 20px;
+    margin-bottom: 12px;
+  }
+  .celebrity-card-rating > :not(:last-child) {
+    margin-right: 6px;
+  }
+}
+.celebrity-card-desc {
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 26.1px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.7);
+  padding-top: 4px;
+}
+@media (min-width: 768px) {
+  .celebrity-card-desc {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 40.6px;
+    padding-top: 9px;
+  }
+}
+
+.communication {
+  margin: 24px 0;
+}
+@media (min-width: 768px) {
+  .communication {
+    margin-top: 100px;
+    margin-bottom: 48px;
+  }
+}
+.communication-wrapper {
+  text-align: -webkit-center;
+}
+.communication-brands {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 24px;
+}
+.communication-brands > :not(:last-child) {
+  margin-right: 26px;
+}
+@media (min-width: 768px) {
+  .communication-brands {
+    margin-bottom: 62px;
+  }
+  .communication-brands > :not(:last-child) {
+    margin-right: 48px;
+  }
+}
+.communication-content {
+  max-width: 930px;
+  width: 100%;
+}
+.communication-btn {
+  height: 74px;
+  padding: 0 32px;
+  position: absolute;
+  bottom: 0;
+  color: white;
+  left: 0;
+  background-color: rgb(63, 165, 3);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26.1px;
+}
+@media (max-width: 767px) {
+  .communication-btn {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 17.4px;
+    padding: 0 16px;
+    height: 41px;
   }
 }
 

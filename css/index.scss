@@ -377,6 +377,7 @@ p {
 }
 
 .icon-max-md {
+  z-index: 10;
   @include max-md {
     display: none;
   }
@@ -498,6 +499,148 @@ p {
         font-size: 36px;
         line-height: 52.2px;
       }
+    }
+  }
+}
+
+// component 5 Người nổi tiếng chọn chipchip
+
+.celebrity {
+  @extend .reasons;
+  margin-top: 24px;
+  @include min-md {
+    margin-top: 88px;
+    margin-bottom: 27px;
+  }
+
+  &-wrapper {
+    @extend .reasons-wrapper;
+  }
+
+  &-image > img {
+    @extend .reasons-image;
+    max-width: 634px;
+    width: 100%;
+  }
+
+  &-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 556px;
+    width: 100%;
+
+    &-title {
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 46.4px;
+      color: rgba(0, 0, 0, 1);
+      padding: 20px 0 12px 0;
+      @include max-md {
+        color: rgba(0, 0, 0, 1);
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 31.9px;
+        padding: 12px 0 8px 0;
+      }
+    }
+
+    &-rating {
+      & > :not(:last-child) {
+        margin-right: 10px;
+      }
+      width: 28px;
+      margin-bottom: 20px;
+
+      @include max-md {
+        & > :not(:last-child) {
+          margin-right: 6px;
+        }
+
+        width: 20px;
+        margin-bottom: 12px;
+      }
+    }
+
+    &-desc {
+      font-size: 18px;
+      font-style: italic;
+      font-weight: 400;
+      line-height: 26.1px;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.7);
+      padding-top: 4px;
+
+      @include min-md {
+        color: rgba(0, 0, 0, 0.7);
+        font-size: 28px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 40.6px;
+        padding-top: 9px;
+      }
+    }
+  }
+}
+
+// Component 6 Truyền thông đưa tin về manson
+.communication {
+  @extend .celebrity;
+  margin: 24px 0;
+
+  @include min-md {
+    margin-top: 100px;
+    margin-bottom: 48px;
+  }
+
+  &-wrapper {
+    @extend .celebrity-wrapper;
+    text-align: -webkit-center;
+  }
+
+  &-image {
+    @extend .celebrity-image;
+  }
+  &-brands {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 24px;
+    & > :not(:last-child) {
+      margin-right: 26px;
+    }
+    @include min-md {
+      & > :not(:last-child) {
+        margin-right: 48px;
+      }
+      margin-bottom: 62px;
+    }
+  }
+  &-content {
+    max-width: 930px;
+    width: 100%;
+  }
+  &-btn {
+    height: 74px;
+    padding: 0 32px;
+    position: absolute;
+    bottom: 0;
+    color: white;
+    left: 0;
+    background-color: rgba(63, 165, 3, 1);
+
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26.1px;
+
+    @include max-md {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 17.4px;
+      padding: 0 16px;
+      height: 41px;
     }
   }
 }
