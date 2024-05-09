@@ -1,4 +1,11 @@
 /* Padding Utilities */
+.w-full {
+  width: 100%;
+  flex: 1 1 0%;
+}
+.h-full {
+  height: 100%;
+}
 .p-2 {
   padding: 8px;
 }
@@ -397,6 +404,9 @@
 
 .mr-7 {
   margin-right: 28px;
+}
+.mr-10px {
+  margin-right: 10px;
 }
 
 /* Margin top utilities */

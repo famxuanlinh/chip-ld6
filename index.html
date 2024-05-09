@@ -3,1251 +3,426 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>You class</title>
+    <title>Chip chip</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/css/uikit.min.css"
     />
-    <link rel="stylesheet" href="css/app.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
-    <div class="uk-flex uk-flex-wrap">
-      <!-- Left menu -->
-      <div
-        style="
-          width: 340px;
-          height: 100vh;
-          border-right: 1px solid #e7e8ea;
-          padding: 0 24px;
-        "
-      >
-        <img
-          style="height: 48px; margin-top: 16px"
-          src="public/logo.png"
-          alt="logo"
-        />
-        <ul class="uk-list" uk-margin>
-          <li class="uk-navbar-left uk-text-center nav_button_active">
-            <a class="uk-link-reset" style="color: #1a1d1f" href="index.html">
-              <img src="public/icon/home.svg" width="24" height="24" uk-svg />
-              <span style="margin-left: 8px">Trang chủ</span>
-            </a>
-          </li>
-          <li class="uk-navbar-left uk-text-center nav_button">
-            <a
-              class="uk-link-reset"
-              style="color: #535557"
-              href="khoa-hoc.html"
-            >
-              <img
-                src="public/icon/book-outline.svg"
-                width="24"
-                height="24"
-                uk-svg
-              />
-              <span style="margin-left: 8px">Khoá học</span>
-            </a>
-          </li>
-          <li class="uk-navbar-left uk-text-center nav_button">
-            <a
-              class="uk-link-reset"
-              style="color: #535557"
-              href="lich-hoc.html"
-            >
-              <img
-                src="public/icon/calendar-outline.svg"
-                width="24"
-                height="24"
-                uk-svg
-              />
-              <span style="margin-left: 8px">Lịch học</span>
-            </a>
-          </li>
-        </ul>
+    <!-- Header -->
+    <div>
+      <div class="container header">
+        <img src="public/logo.svg" alt="log" />
+        <button class="button-primary">Học thử miễn phí</button>
       </div>
-
-      <!-- Content right -->
-      <div class="uk-width-expand">
-        <!-- header -->
-        <div
-          class="uk-flex uk-flex-between uk-text-center px-6 py-2 uk-box-shadow-small uk-margin-remove"
-        >
-          <div class="uk-inline">
-            <button
-              class="uk-text-center btn-icon"
-              style="padding: 8px; border-radius: 12px; cursor: pointer"
-            >
-              <div class="uk-flex uk-text-center" style="color: #1a1d1f">
+    </div>
+    <div class="bg-pattern">
+      <!-- Kết quả bất ngờ sau 3 tháng hè -->
+      <div>
+        <div class="container uk-position-relative">
+          <div class="unexpected-results">
+            <div class="unexpected-results-image">
+              <img
+                src="public/2.1.png"
+                alt="log"
+                class="w-full"
+                style="object-fit: contain"
+              />
+            </div>
+            <div class="unexpected-results-content">
+              <div class="unexpected-results-item">
                 <img
-                  style="flex: none; height: fit-content"
-                  src="public/avatar.png"
-                  width="48"
+                  src="public/icon/ice-cream.svg"
+                  alt="log"
+                  class="unexpected-results-icon"
                 />
-                <div
-                  style="
-                    margin-left: 12px;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                  "
-                >
-                  <div style="color: #535557; text-align: justify">
-                    Xin chào 👋
-                  </div>
-                  <div>Hồ Trung Dũng</div>
+                <div class="unexpected-results-desc">
+                  Con hào hứng nói Tiếng Anh, hết sợ giao tiếp
                 </div>
               </div>
-            </button>
-            <div
-              class="uk-card uk-card-default"
-              style="padding: 4px; border-radius: 12px"
-              uk-drop="mode: click"
-            >
-              <ul class="uk-list uk-margin-remove">
-                <li
-                  class="uk-navbar-left uk-text-center nav_button"
-                  uk-toggle="target: #modal-profile"
-                >
-                  <a class="uk-link-reset">
-                    <img
-                      src="public/icon/person.svg"
-                      width="24"
-                      height="24"
-                      uk-svg
-                    />
-                    <span style="margin-left: 8px"
-                      >Chỉnh sửa hồ sơ cá nhân</span
-                    >
-                  </a>
-                </li>
-                <li class="uk-navbar-left uk-text-center nav_button">
-                  <a class="uk-link-reset" style="color: #535557" href="#">
-                    <img
-                      src="public/icon/logout.svg"
-                      width="24"
-                      height="24"
-                      uk-svg
-                    />
-                    <span style="margin-left: 8px">Đăng xuất</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Modal Thông tin cá nhân -->
-            <div id="modal-profile" uk-modal>
-              <div
-                class="uk-modal-dialog uk-margin-auto-vertical rounded-4"
-                style="max-height: 580px"
-              >
-                <button
-                  class="uk-modal-close-default"
-                  type="button"
-                  style="background-color: transparent; cursor: pointer"
-                >
-                  <img src="public/icon/x.svg" width="24" height="24" />
-                </button>
-
-                <p
-                  class="text-xl p-6 pb-4 mb-0 text-black"
-                  style="font-weight: 600"
-                >
-                  Thông tin cá nhân
-                </p>
-
-                <div
-                  class="uk-modal-body p-6 rounded-b-4"
-                  style="padding-top: 0; margin-top: 0; max-height: 510px"
-                  uk-overflow-auto
-                >
-                  <div class="uk-text-center" style="cursor: pointer">
-                    <div
-                      class="uk-flex uk-text-center uk-flex-middle"
-                      style="color: #1a1d1f"
-                    >
-                      <img
-                        style="flex: none; height: fit-content"
-                        src="public/avatar.png"
-                        width="96"
-                      />
-                      <div
-                        style="margin-left: 32px; display: flex"
-                        class="uk-text-center"
-                      >
-                        <button
-                          class="uk-button uk-button-primary rounded-10px px-4"
-                          style="height: 44px; text-transform: inherit"
-                        >
-                          <img
-                            src="public/icon/plus.svg"
-                            width="24"
-                            height="24"
-                            uk-svg
-                          />
-                          Tải lên ảnh mới
-                        </button>
-
-                        <button
-                          class="uk-button uk-button-default rounded-10px px-4 mx-3"
-                          style="
-                            height: 44px;
-                            text-transform: inherit;
-                            background-color: #f9f9f9;
-                          "
-                        >
-                          Xoá ảnh
-                        </button>
-                      </div>
-                    </div>
-                    <form class="my-4 text-left">
-                      <div>
-                        <label for="name" class="label-form"
-                          >Tên hiển thị</label
-                        >
-                        <input
-                          class="uk-input input-form"
-                          type="text"
-                          placeholder="Cập nhật tên hiển thị"
-                          aria-label="Input"
-                          name="name"
-                          id="name"
-                        />
-                      </div>
-                      <div
-                        class="uk-flex uk-flex-middle"
-                        style="margin-top: 18px"
-                      >
-                        <div class="uk-width-1-2 uk-margin-small-right">
-                          <label for="birthday" class="label-form"
-                            >Năm sinh</label
-                          >
-                          <input
-                            class="uk-input input-form"
-                            type="text"
-                            placeholder="Cập nhật năm sinh"
-                            aria-label="Input"
-                            name="birthday"
-                            id="birthday"
-                          />
-                        </div>
-                        <div class="uk-width-1-2">
-                          <label for="phone" class="label-form"
-                            >Số điện thoại</label
-                          >
-                          <input
-                            class="uk-input input-form"
-                            type="text"
-                            placeholder="Cập nhật số điện thoại"
-                            aria-label="Input"
-                            name="phone"
-                            id="phone"
-                          />
-                        </div>
-                      </div>
-                      <button
-                        disabled
-                        class="uk-button uk-button-primary rounded-10px px-4 mt-4"
-                        style="
-                          height: 44px;
-                          text-transform: inherit;
-                          cursor: not-allowed;
-                          background-color: #067ff3;
-                          opacity: 0.5;
-                        "
-                      >
-                        <img
-                          src="public/icon/save.svg"
-                          width="24"
-                          height="24"
-                          uk-svg
-                        />
-                        <span class="text-white" style="opacity: 0.75"
-                          >Lưu thông tin</span
-                        >
-                      </button>
-                    </form>
-                    <hr />
-
-                    <div class="rounded-b-4 text-left">
-                      <p class="text-xl text-black" style="font-weight: 600">
-                        Đăng nhập
-                      </p>
-
-                      <div style="padding-top: 0; margin-top: 0">
-                        <div class="uk-text-center" style="cursor: pointer">
-                          <form class="my-4 text-left">
-                            <div>
-                              <label for="oldPassword" class="label-form"
-                                >Mật khẩu cũ</label
-                              >
-                              <input
-                                class="uk-input input-form"
-                                type="password"
-                                placeholder="Cập nhật mật khẩu cũ"
-                                aria-label="Input"
-                                name="oldPassword"
-                                id="oldPassword"
-                              />
-                            </div>
-                            <div
-                              class="uk-flex uk-flex-middle"
-                              style="margin-top: 18px"
-                            >
-                              <div class="uk-width-1-2 uk-margin-small-right">
-                                <label for="newPassword" class="label-form"
-                                  >Mật khẩu mới</label
-                                >
-                                <input
-                                  class="uk-input input-form"
-                                  type="password"
-                                  placeholder="Cập nhật mật khẩu mới"
-                                  aria-label="Input"
-                                  name="newPassword"
-                                  id="newPassword"
-                                />
-                              </div>
-                              <div class="uk-width-1-2">
-                                <label for="confirmPassword" class="label-form"
-                                  >Xác nhận mật khẩu mới</label
-                                >
-                                <input
-                                  class="uk-input input-form"
-                                  type="text"
-                                  placeholder="Xác nhận mật khẩu mới"
-                                  aria-label="Input"
-                                  name="confirmPassword"
-                                  id="confirmPassword"
-                                />
-                              </div>
-                            </div>
-                            <button
-                              disabled
-                              class="uk-button uk-button-default rounded-10px px-4 mt-4"
-                              style="
-                                height: 44px;
-                                text-transform: inherit;
-                                cursor: not-allowed;
-                              "
-                            >
-                              <span>Cập nhật mật khẩu</span>
-                            </button>
-                          </form>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+              <div class="unexpected-results-item">
+                <img
+                  src="public/icon/ice-cream.svg"
+                  width="32"
+                  height="53"
+                  alt="log"
+                  class="unexpected-results-icon"
+                />
+                <div class="unexpected-results-desc">
+                  Phản xạ nhanh khi giao tiếp Tiếng Anh
                 </div>
+              </div>
+              <div class="unexpected-results-item">
+                <img
+                  src="public/icon/ice-cream.svg"
+                  width="32"
+                  height="53"
+                  alt="log"
+                  class="unexpected-results-icon"
+                />
+                <div class="unexpected-results-desc">
+                  Phát âm tiếng Anh chuẩn, ngữ điệu trôi chảy
+                </div>
+              </div>
+              <div class="unexpected-results-item">
+                <img
+                  src="public/icon/ice-cream.svg"
+                  width="32"
+                  height="53"
+                  alt="log"
+                  class="unexpected-results-icon"
+                />
+                <div class="unexpected-results-desc">
+                  Cải thiện từ vựng và ngữ pháp
+                </div>
+              </div>
+            </div>
+            <img
+              src="public/2.3.png"
+              alt="log"
+              class="unexpected-results-image-title-mobile"
+            />
+          </div>
+          <img
+            src="public/2.2.png"
+            alt="log"
+            class="unexpected-results-image-title-destop"
+          />
+        </div>
+      </div>
+
+      <!-- Thống kê -->
+      <div class="static uk-position-relative">
+        <img class="static-background" src="public/3.jpeg" alt="title 3" />
+        <div class="container static-content">
+          <div>
+            <div class="static-title">500.000+</div>
+            <div class="static-desc">lớp học đã hoàn thành</div>
+          </div>
+          <div>
+            <div class="static-title">530+</div>
+            <div class="static-desc">giáo viên</div>
+          </div>
+          <div>
+            <div class="static-title">6.000+</div>
+            <div class="static-desc">học sinh chính thức</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 lý do ba mẹ -->
+      <div class="reasons-wrapper">
+        <div class="container reasons">
+          <img
+            id="other-icon"
+            class="uk-position-absolute icon-max-md"
+            src="public/A.svg"
+            alt="title 3"
+            width="270"
+            style="position: absolute; top: -32px; left: -90px"
+          />
+          <img
+            id="other-icon"
+            class="uk-position-absolute icon-max-md"
+            src="public/Z.svg"
+            alt="title 3"
+            width="270"
+            style="position: absolute; bottom: -156px; left: -134px"
+          />
+          <img
+            id="other-icon"
+            class="uk-position-absolute icon-max-md"
+            src="public/S.svg"
+            alt="title 3"
+            width="270"
+            style="position: absolute; top: 72px; right: -90px"
+          />
+          <div class="reasons-title">
+            <div class="reasons-title-wrapper">
+              <div class="reasons-image flex-center">
+                <img src="public/3.1.png" alt="title 3" width="270" />
+              </div>
+              <div class="reasons-desc">
+                Học online 1 kèm 1, linh hoạt thời gian học, tần suất tiếp xúc
+                gấp 3 lần học trung tâm
               </div>
             </div>
           </div>
-          <div class="uk-inline uk-flex uk-flex-middle">
-            <div class="uk-flex uk-flex-middle px-3" style="margin-right: 24px">
-              <img src="public/icon/medal.svg" width="24" height="24" />
-              <p class="text-xl text-black" style="margin-left: 4px">54</p>
+          <div class="uk-child-width-1-3@m uk-grid-medium" uk-grid>
+            <div>
+              <div class="reasons-card uk-box-shadow-medium">
+                <img
+                  class="reasons-card-img"
+                  src="public/3.2.png"
+                  alt="title 3"
+                />
+                <div style="padding: 28px">
+                  <div class="reasons-card-title">
+                    Du học tại nhà cùng +500 giáo viên nước ngoài hạng A
+                  </div>
+                  <div class="reasons-card-desc">
+                    <div class="uk-flex uk-flex-top">
+                      <img
+                        src="public/icon/star.svg"
+                        alt="title 3"
+                        style="margin: 0 12px 0 0"
+                        width="28"
+                        height="28"
+                      />
+                      <div>100% có chứng chỉ đào tạo tiếng Anh quốc tế</div>
+                    </div>
+                    <div class="uk-flex uk-flex-top">
+                      <img
+                        src="public/icon/star.svg"
+                        alt="title 3"
+                        style="margin: 0 12px 0 0"
+                        width="28"
+                        height="28"
+                      />
+                      <div>Tuyển chọn kỹ lưỡng với 6 bước</div>
+                    </div>
+                    <div class="uk-flex uk-flex-top">
+                      <img
+                        src="public/icon/star.svg"
+                        alt="title 3"
+                        style="margin: 0 12px 0 0"
+                        width="28"
+                        height="28"
+                      />
+                      <div>
+                        Duy nhất ở Chip Chip, tất cả thông tin của giáo viên
+                        được công khai minh bạch trên app để phụ huynh yên tâm
+                        lựa chọn
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <button
-              class="rounded-full btn-icon"
-              style="width: 48px; height: 48px; cursor: pointer"
-              type="button"
-            >
-              <img src="public/icon/bell.svg" width="24" height="24" />
-            </button>
-            <div
-              uk-dropdown="mode: click; pos: bottom-right"
-              style="width: 392px; border-radius: 16px"
-              class="py-4 px-0"
-            >
-              <p
-                class="text-main text-left text-xl px-4"
-                style="padding-bottom: 28px"
-              >
-                Thông báo
-              </p>
-              <div style="max-height: 568px; overflow: auto">
-                <div class="noti_item px-4">
-                  <div class="noti_item_icon" style="background-color: #ef8869">
-                    <img src="public/icon/message.svg" width="24" height="24" />
+            <div>
+              <div class="reasons-card uk-box-shadow-medium">
+                <img
+                  class="reasons-card-img"
+                  src="public/3.3.png"
+                  alt="title 3"
+                />
+                <div style="padding: 28px">
+                  <div class="reasons-card-title">
+                    Nền tảng học tập độc quyền
                   </div>
-                  <div class="noti_item_content">
-                    <div class="noti_item_title">
-                      <p>
-                        Tin nhắn mới từ
-                        <span style="color: #067ff3">Thầy Edward</span>
-                      </p>
-                      <div class="noti_item_time">
-                        1h
-                        <p class="noti_item_active"></p>
+                  <div class="reasons-card-desc">
+                    <div class="uk-flex uk-flex-top">
+                      <img
+                        src="public/icon/star.svg"
+                        alt="title 3"
+                        style="margin: 0 12px 0 0"
+                        width="28"
+                        height="28"
+                      />
+                      <div>
+                        Sở hữu nền tảng học tập tương tác riêng, không học qua
+                        các phần mềm họp như Zoom, Skype
                       </div>
                     </div>
-                    <p class="noti_item_desc line-clamp-1">
-                      Xin chào học viên đến với khoá học phát âm cơ bản đến với
-                      khoá học phát âm cơ bản
-                    </p>
-                  </div>
-                </div>
-                <hr />
-                <div class="noti_item px-4">
-                  <div class="noti_item_icon" style="background-color: #63cc79">
-                    <img
-                      src="public/icon/calendar-outline_white.svg"
-                      width="24"
-                      height="24"
-                    />
-                  </div>
-                  <div class="noti_item_content">
-                    <div class="noti_item_title">
-                      <p>Lớp học sẽ sớm bắt đầu</p>
-                      <div class="noti_item_time">
-                        1h
-                        <p class="noti_item_active"></p>
-                      </div>
-                    </div>
-                    <div class="noti_item_desc_block">
-                      <p class="noti_item_desc_block_title">
-                        Buổi 3 | Khoá học Ngữ pháp cơ bản
-                      </p>
-                      <p class="noti_item_desc_block_content">
-                        What’s the weather like today?
-                      </p>
-                      <a
-                        class="uk-button uk-button-primary rounded-10px px-4 uk-width-expand mt-2 flex-center"
-                        style="height: 44px; text-transform: inherit"
-                        href="/lop-hoc.html"
-                      >
-                        <img
-                          src="public/icon/logout-outline_white.svg"
-                          width="24"
-                          height="24"
-                          uk-svg
-                          class="mr-2"
-                        />
-                        Vào lớp
-                      </a>
+                    <div class="uk-flex uk-flex-top">
+                      <img
+                        src="public/icon/star.svg"
+                        alt="title 3"
+                        style="margin: 0 12px 0 0"
+                        width="28"
+                        height="28"
+                      />
+                      <div>Thiết kế thân thiện, dành riêng cho trẻ em</div>
                     </div>
                   </div>
                 </div>
-                <hr />
-                <div class="noti_item px-4">
-                  <div class="noti_item_icon" style="background-color: #f74a4a">
-                    <img
-                      src="public/icon/calendar-outline_white.svg"
-                      width="24"
-                      height="24"
-                    />
+              </div>
+            </div>
+            <div>
+              <div class="reasons-card uk-box-shadow-medium">
+                <img
+                  class="reasons-card-img"
+                  src="public/3.4.png"
+                  alt="title 3"
+                />
+                <div style="padding: 28px">
+                  <div class="reasons-card-title">
+                    Phương pháp học giao tiếp S.P.E.A.K độc đáo
                   </div>
-                  <div class="noti_item_content">
-                    <div class="noti_item_title">
-                      <p>Lớp học sẽ sớm bắt đầu</p>
-                      <div class="noti_item_time">1h</div>
-                    </div>
-                    <div class="noti_item_desc_block">
-                      <p class="noti_item_desc_block_title">
-                        Buổi 3 | Khoá học Ngữ pháp cơ bản
-                      </p>
-                      <p class="noti_item_desc_block_content">
-                        What’s the weather like today?
-                      </p>
-                      <button
-                        class="mt-2"
-                        style="
-                          color: #067ff3;
-                          font-size: 14px;
-                          font-weight: 600;
-                          cursor: pointer;
-                          background-color: transparent;
-                        "
-                      >
-                        Xem nội dung
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <hr />
-                <div class="noti_item px-4">
-                  <div class="noti_item_icon" style="background-color: #ef8869">
-                    <img src="public/icon/message.svg" width="24" height="24" />
-                  </div>
-                  <div class="noti_item_content">
-                    <div class="noti_item_title">
-                      <p>Báo cáo học tập tuần 2 tháng 4</p>
-                      <div class="noti_item_time">
-                        1h
-                        <p class="noti_item_active"></p>
+                  <div class="reasons-card-desc">
+                    <div class="uk-flex uk-flex-top">
+                      <img
+                        src="public/icon/star.svg"
+                        alt="title 3"
+                        style="margin: 0 12px 0 0"
+                        width="28"
+                        height="28"
+                      />
+                      <div>
+                        Kết hợp tương tác giáo viên trong lớp và tự luyện tập có
+                        định hướng
                       </div>
                     </div>
-                    <p class="noti_item_desc">
-                      Đã có báo cáo học tập tuần 2 tháng 4 (từ 07/04 -> 15/04)
-                    </p>
-                    <button
-                      class="uk-button uk-button-default rounded-10px px-4 uk-width-expand mt-2"
-                      style="
-                        height: 44px;
-                        text-transform: inherit;
-                        background-color: #f9f9f9;
-                      "
-                    >
-                      Xem báo cáo
-                    </button>
-                  </div>
-                </div>
-                <hr class="mx-3" />
-                <div class="noti_item px-4">
-                  <div class="noti_item_icon" style="background-color: #7d5dff">
-                    <img
-                      src="public/icon/volume-outline.svg"
-                      width="24"
-                      height="24"
-                    />
-                  </div>
-                  <div class="noti_item_content">
-                    <div class="noti_item_title">
-                      <p>Thông báo: Thay đổi hệ thống</p>
-                      <div class="noti_item_time">
-                        1h
-                        <p class="noti_item_active"></p>
+                    <div class="uk-flex uk-flex-top">
+                      <img
+                        src="public/icon/star.svg"
+                        alt="title 3"
+                        style="margin: 0 12px 0 0"
+                        width="28"
+                        height="28"
+                      />
+                      <div>
+                        Giáo viên khơi gợi học sinh tư duy và nói nhiều hơn bằng
+                        các câu hỏi mở
                       </div>
                     </div>
-                    <p class="noti_item_desc">
-                      Chúng tôi xin thông báo, hệ thống sẽ được cập nhật trong
-                      khoảng thời gian từ 00:00 tới 03:00 ngày 12/03/2024. Hệ
-                      thống sẽ tạm thời bị gián đoạn và không thể đăng nhập
-                      trong khoảng thời gian này
-                    </p>
+                    <div class="uk-flex uk-flex-top">
+                      <img
+                        src="public/icon/star.svg"
+                        alt="title 3"
+                        style="margin: 0 12px 0 0"
+                        width="28"
+                        height="28"
+                      />
+                      <div>Bài tập về nhà tương tác dưới dạng game thú vị</div>
+                    </div>
+                    <div class="uk-flex uk-flex-top">
+                      <img
+                        src="public/icon/star.svg"
+                        alt="title 3"
+                        style="margin: 0 12px 0 0"
+                        width="28"
+                        height="28"
+                      />
+                      <div>
+                        Con được tham gia các dự án cá nhân, luyện tập thuyết
+                        trình tự tin bằng tiếng Anh sau mỗi 2 đơn vị bài họ
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- Content -->
-        <div
-          style="max-height: calc(100vh - 80px); overflow: auto"
-          class="px-8 py-4"
-        >
-          <!-- Lớp học sắp diễn ra -->
-          <div>
-            <p class="title1-bold">Lớp học sắp diễn ra</p>
-            <div class="class-card mt-4">
-              <div>
-                <div class="class-card-header bg-primary-emerald">
-                  <div class="uk-link-reset uk-flex uk-flex-middle">
-                    <img
-                      src="public/icon/book-outline_white.svg"
-                      width="20"
-                      height="20"
-                      style="color: white"
-                    />
-                    <span class="ml-2 text-neutral-00 body1-semibold"
-                      >Khoá học Phát âm cơ bản</span
-                    >
-                  </div>
-                  <div class="uk-link-reset uk-flex uk-flex-middle">
-                    <img src="public/icon/circle.svg" width="22" height="22" />
-
-                    <span class="ml-2 text-neutral-00 body2-semibold"
-                      >hoàn thành</span
-                    >
-                  </div>
+      <!-- Cam kết từ chip chip -->
+      <div class="commit-wrapper">
+        <div class="container commit">
+          <img src="public/4.1.png" alt="commit" class="commit-image" />
+          <div style="flex: 1 1 0%">
+            <div class="commit-title">
+              <div class="commit-title-wrapper">
+                <div class="commit-image-title flex-center">
+                  <img
+                    src="public/4.2.png"
+                    alt="title 3"
+                    style="max-width: 655px; width: 100%"
+                  />
                 </div>
-                <div class="class-card-content">
-                  <div class="uk-flex uk-flex-between uk-flex-center">
-                    <div>
-                      <div class="body1-medium">Level 1 Unit 2 Lesson 1</div>
-                      <div class="title2-semibold">
-                        What’s the weather like today?
-                      </div>
-                    </div>
-                    <button
-                      class="uk-button uk-button-primary rounded-10px px-4"
-                      uk-toggle="target: #modal-cancel-class"
-                      style="
-                        height: 40px;
-                        text-transform: inherit;
-                        color: #f74a4a;
-                        background-color: #fdcece4d;
-                      "
-                    >
-                      <img
-                        src="public/icon/x_red.svg"
-                        width="24"
-                        height="24"
-                        uk-svg
-                      />
-                      Huỷ lớp
-                    </button>
-                  </div>
-                  <div class="uk-flex uk-flex-between">
-                    <div class="uk-flex uk-flex-middle mt-3">
-                      <div
-                        class="btn-teacher"
-                        uk-toggle="target: #modal-teacher-info"
-                      >
-                        <img
-                          src="public/avatar.png"
-                          alt="avatar"
-                          class="rounded-full"
-                          style="width: 28px; height: 28px"
-                        />
-                        <span class="ml-10px body1-regular">Thầy Edward</span>
-                      </div>
-
-                      <div class="divider-vertical ml-2 mr-4"></div>
-                      <div>
-                        <img
-                          src="public/icon/calendar-outline.svg"
-                          alt="avatar"
-                          style="width: 24px; height: 24px"
-                        />
-                        <span class="ml-2.5 body1-regular"
-                          >20:30 - Thứ 6, 05/04/2024</span
-                        >
-                      </div>
-                    </div>
-                    <div class="uk-flex uk-flex-middle">
-                      <button
-                        class="body2-semibold"
-                        style="
-                          color: #067ff3;
-                          cursor: pointer;
-                          background-color: transparent;
-                        "
-                        uk-toggle="target: #modal-course-content"
-                      >
-                        Xem nội dung
-                      </button>
-
-                      <a
-                        href="/lop-hoc.html"
-                        class="uk-button uk-button-primary rounded-10px px-4 ml-6 flex-items-center"
-                        style="height: 44px; text-transform: inherit"
-                      >
-                        <img
-                          src="public/icon/logout-outline_white.svg"
-                          width="24"
-                          height="24"
-                          uk-svg
-                          class="mr-2"
-                        />
-                        Vào lớp
-                      </a>
-                    </div>
-                  </div>
+                <div class="commit-desc">
+                  Chip Chip luôn đặt ra tiêu chuẩn phục vụ cao nhất đối với học
+                  sinh và phụ huynh
                 </div>
               </div>
             </div>
-          </div>
-
-          <!-- Lớp học vừa qua -->
-          <div class="mt-8">
-            <p class="title1-bold">Lớp học vừa qua</p>
-            <div class="class-card mt-4">
-              <div>
-                <div
-                  class="class-card-header"
-                  style="background-color: #ef8869"
-                >
-                  <div class="uk-link-reset uk-flex uk-flex-middle">
-                    <img
-                      src="public/icon/book-outline_white.svg"
-                      width="20"
-                      height="20"
-                      uk-svg
-                      style="color: white"
-                    />
-
-                    <span class="ml-2 text-neutral-00 body1-semibold"
-                      >Khoá học Phát âm cơ bản</span
-                    >
-                  </div>
-                  <div class="uk-link-reset uk-flex uk-flex-middle">
-                    <img src="public/icon/circle.svg" width="22" height="22" />
-
-                    <span class="ml-2 text-neutral-00 body2-semibold"
-                      >hoàn thành</span
-                    >
-                  </div>
-                </div>
-                <div class="class-card-content">
-                  <div class="uk-flex uk-flex-between uk-flex-center">
-                    <div>
-                      <div class="body1-medium">Level 1 Unit 2 Lesson 1</div>
-                      <div class="title2-semibold">
-                        What’s the weather like today?
-                      </div>
-                    </div>
-                    <div
-                      class="uk-flex uk-flex-right uk-flex-center"
-                      style="height: fit-content"
-                    >
-                      <div class="uk-flex uk-flex-middle mr-4">
-                        <img
-                          src="public/icon/medal.svg"
-                          width="24"
-                          height="24"
-                        />
-                        <div class="body1-medium ml-1">x 5</div>
-                      </div>
-                      <div class="tag-progress-already">Đã học</div>
-                      <!-- <div class="tag-progress-not">Chưa học</div>
-                      <div class="tag-progress-missing">Đã bỏ lỡ</div>
-                      <div class="tag-progress-cancel">Đã huỷ</div> -->
-                    </div>
-                  </div>
-                  <div class="uk-flex uk-flex-between">
-                    <div class="uk-flex uk-flex-middle mt-3">
-                      <div
-                        class="btn-teacher"
-                        uk-toggle="target: #modal-teacher-info"
-                      >
-                        <img
-                          src="public/avatar.png"
-                          alt="avatar"
-                          class="rounded-full"
-                          style="width: 28px; height: 28px"
-                        />
-                        <span class="ml-10px body1-regular">Thầy Edward</span>
-                      </div>
-
-                      <div class="divider-vertical ml-2 mr-4"></div>
-                      <div>
-                        <img
-                          src="public/icon/calendar-outline.svg"
-                          alt="avatar"
-                          style="width: 24px; height: 24px"
-                        />
-                        <span class="ml-2.5 body1-regular"
-                          >20:30 - Thứ 6, 05/04/2024</span
-                        >
-                      </div>
-                    </div>
-
-                    <!-- Variant ko có luyện tập ngay -->
-                    <!-- <div class="uk-flex uk-flex-middle">
-                      <button
-                        class="body2-semibold"
-                        style="
-                          color: #067ff3;
-                          cursor: pointer;
-                          background-color: transparent;
-                        "
-                        uk-toggle="target: #modal-course-content"
-                      >
-                        Xem nội dung
-                      </button>
-
-                      <button
-                        class="uk-button uk-button-default rounded-10px px-4 ml-3"
-                        uk-toggle="target: #modal-watch-video"
-                        style="
-                          height: 44px;
-                          text-transform: inherit;
-                          background-color: #f9f9f9;
-                        "
-                      >
-                        Xem lại video
-                      </button>
-                    </div> -->
-
-                    <!-- Variant có luyện tập ngay -->
-                    <div class="uk-flex uk-flex-middle">
-                      <div class="uk-inline">
-                        <button
-                          class="btn-icon"
-                          style="
-                            width: 32px;
-                            height: 32px;
-                            cursor: pointer;
-                            border-radius: 4px;
-                          "
-                          type="button"
-                        >
-                          <img
-                            src="public/icon/more.svg"
-                            width="24"
-                            height="24"
-                          />
-                        </button>
-                        <div
-                          class="uk-card uk-card-default"
-                          style="padding: 4px; border-radius: 8px"
-                          uk-drop="mode: click; pos: bottom-center"
-                        >
-                          <ul class="uk-list uk-margin-remove">
-                            <li
-                              class="uk-navbar-left uk-text-center nav_button"
-                              uk-toggle="target: #modal-watch-video"
-                            >
-                              Xem lại video lớp học
-                            </li>
-                            <li
-                              class="uk-navbar-left uk-text-center nav_button"
-                              uk-toggle="target: #modal-course-content"
-                            >
-                              Xem nội dung lớp học
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-
-                      <a
-                        href="/luyen-tap.html"
-                        class="uk-button flex-items-center uk-button-primary rounded-10px px-4 ml-6"
-                        style="height: 44px; text-transform: inherit"
-                      >
-                        Luyện tập ngay
-                      </a>
-
-                      <!-- <button
-                        class="body2-semibold"
-                        style="
-                          color: #067ff3;
-                          cursor: pointer;
-                          background-color: transparent;
-                        "
-                        uk-toggle="target: #modal-course-content"
-                      >
-                        Xem nội dung
-                      </button>
-
-                      <button
-                        class="uk-button uk-button-default rounded-10px px-4 ml-3"
-                        uk-toggle="target: #modal-watch-video"
-                        style="
-                          height: 44px;
-                          text-transform: inherit;
-                          background-color: #f9f9f9;
-                        "
-                      >
-                        Xem lại video
-                      </button> -->
-                    </div>
-                  </div>
+            <div class="commit-content">
+              <div class="commit-content-item">
+                <div class="commit-content-number">01</div>
+                <img
+                  src="public/icon/1.svg"
+                  alt="1"
+                  class="commit-content-icon"
+                />
+                <div class="commit-content-desc">
+                  Hoàn phí nếu học không hiệu quả
                 </div>
               </div>
-            </div>
-          </div>
-
-          <!-- Tin tức -->
-          <div id="news-in-home" class="mt-8">
-            <p class="title1-bold mb-2">Tin tức</p>
-            <ul class="uk-subnav uk-subnav-pill uk-margin-remove" uk-switcher>
-              <li class="uk-padding-remove">
-                <a class="news-switcher-tag" href="#">Tất cả tin tức</a>
-              </li>
-              <li class="uk-padding-remove">
-                <a class="news-switcher-tag" href="#">Thông báo</a>
-              </li>
-              <li class="uk-padding-remove">
-                <a class="news-switcher-tag" href="#">Sự kiện</a>
-              </li>
-              <li class="uk-padding-remove">
-                <a class="news-switcher-tag" href="#">Tin tức</a>
-              </li>
-            </ul>
-            <div class="uk-switcher uk-margin mt-4">
-              <div class="uk-grid-small uk-child-width-1-3" uk-grid>
-                <div>
-                  <div class="news-card">
-                    <img
-                      src="public/course.png"
-                      alt="news card"
-                      class="news-card-image"
-                    />
-                    <div class="p-4">
-                      <div class="uk-flex uk-flex-between mb-2">
-                        <span class="news-card-tag">Sự kiện</span>
-                        <span class="caption-medium" style="color: #7f868d"
-                          >12/05/2024</span
-                        >
-                      </div>
-                      <div
-                        class="body1-semibold line-clamp-3 cursor-pointer"
-                        style="max-height: 72px; height: 100%"
-                        uk-toggle="target: #modal-news-detail"
-                      >
-                        Chip Chip mở lớp bình thường xuyên suốt kỳ nghỉ lễ Giỗ
-                        tổ Hùng Vương 10/3
-                      </div>
-                    </div>
-                  </div>
+              <div class="commit-content-item">
+                <div class="commit-content-number">02</div>
+                <img
+                  src="public/icon/1.svg"
+                  alt="1"
+                  class="commit-content-icon"
+                />
+                <div class="commit-content-desc">
+                  Cam kết đầu ra, được học lại miễn phí cho đến khi đạt cấp độ
                 </div>
               </div>
-              <div class="uk-grid-small uk-child-width-1-3" uk-grid>
-                Thông báo
-              </div>
-              <div>Sự kiện</div>
-              <div>Tin tức</div>
-            </div>
-          </div>
-
-          <!-- Modal -->
-          <!-- Modal huỷ lớp -->
-          <div class="modal-content" id="modal-cancel-class" uk-modal>
-            <div
-              class="uk-modal-dialog uk-margin-auto-vertical rounded-4"
-              style="max-height: 580px"
-            >
-              <p
-                class="title2-semibold p-6 pb-4 mb-0 rounded-t-2"
-                style="text-align: center"
-              >
-                Bạn có chắc muốn huỷ lịch học này?
-              </p>
-              <ul class="uk-list uk-list-disc body2-medium mx-6 my-0">
-                <li class="uk-margin-remove">
-                  Huỷ lịch học trước giờ bắt đầu học tối thiểu 3 tiếng sẽ không
-                  bị tính phí.
-                </li>
-                <li class="uk-margin-remove">
-                  <span style="color: #07b682"
-                    >Khi huỷ lịch không bị tính phí</span
-                  >, bạn sẽ được sắp xếp lịch học mới để tiếp tục học buổi học
-                  này theo giáo trình.
-                </li>
-                <li class="uk-margin-remove">
-                  <span style="color: red">Khi huỷ lịch bị tính phí</span>, bạn
-                  sẽ không thể học lại buổi học này.
-                </li>
-              </ul>
-
-              <div
-                class="uk-modal-body p-6 rounded-b-4"
-                style="padding-top: 0; margin-top: 0; max-height: 510px"
-                uk-overflow-auto
-              >
-                <div class="modal-content-title mt-6 mb-4">
-                  <div class="body2-medium">Buổi 6</div>
-                  <div class="title2-semibold mt-1">
-                    What’s the weather like today?
-                  </div>
-
-                  <div class="my-2">
-                    <img
-                      src="public/avatar.png"
-                      alt="avatar"
-                      class="rounded-full"
-                      style="width: 28px; height: 28px"
-                    />
-                    <span class="ml-10px body1-regular">Thầy Edward</span>
-                  </div>
-                  <div>
-                    <img
-                      src="public/icon/calendar-outline.svg"
-                      alt="avatar"
-                      style="width: 24px; height: 24px"
-                    />
-                    <span class="ml-2.5 body2-medium"
-                      >20:30 - Thứ 6, 05/04/2024</span
-                    >
-                  </div>
+              <div class="commit-content-item">
+                <div class="commit-content-number">03</div>
+                <img
+                  src="public/icon/1.svg"
+                  alt="1"
+                  class="commit-content-icon"
+                />
+                <div class="commit-content-desc">
+                  Có cô giáo người Việt đồng hành theo sát trong toàn bộ chương
+                  trình
                 </div>
               </div>
-              <div
-                class="uk-modal-footer uk-text-end uk-flex uk-padding-remove uk-margin-remove rounded-b-2 uk-flex-right"
-                style="height: 60px; align-items: center"
-              >
-                <button
-                  class="uk-button uk-button-default uk-modal-close rounded-10px px-4 mx-3"
-                  style="
-                    height: 44px;
-                    text-transform: inherit;
-                    background-color: #f9f9f9;
-                  "
-                >
-                  Đóng
-                </button>
-
-                <a
-                  href="#"
-                  class="uk-button uk-button-primary rounded-10px px-4 py-0 mr-6"
-                  style="
-                    height: 44px;
-                    text-transform: inherit;
-                    background-color: #f74a4a;
-                  "
-                >
-                  Huỷ lịch học
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Modal xem nội dung -->
-          <div class="modal-content" id="modal-course-content" uk-modal>
-            <div
-              class="uk-modal-dialog uk-margin-auto-vertical rounded-4"
-              style="max-height: 580px"
-            >
-              <button
-                class="uk-modal-close-default"
-                type="button"
-                style="background-color: transparent; cursor: pointer"
-              >
-                <img src="public/icon/x.svg" width="24" height="24" />
-              </button>
-
-              <p
-                class="body1-semibold p-6 pb-4 mb-0 rounded-t-2"
-                style="
-                  background-color: #f9f9f9;
-                  border-bottom: 1px solid #e7e8ea;
-                  height: 56px;
-                "
-              >
-                Nội dung lớp học
-              </p>
-
-              <div
-                class="uk-modal-body p-6 rounded-b-4"
-                style="padding-top: 0; margin-top: 0; max-height: 510px"
-                uk-overflow-auto
-              >
-                <div class="modal-content-title mt-6 mb-4">
-                  <div class="body1-medium">Level 1 Unit 2 Lesson 1</div>
-                  <div class="title2-semibold">
-                    What’s the weather like today?
-                  </div>
-                </div>
-
-                <div class="uk-position-relative">
-                  <img
-                    src="public/course.png"
-                    alt="course"
-                    class="modal-content-video"
-                  />
-                  <img
-                    src="public/icon/play.svg"
-                    alt="play button"
-                    class="modal-content-video-button"
-                  />
-                </div>
-                <div class="body1-semibold mt-4">
-                  Trong bài học, bạn sẽ được học các nội dung kiến thức sau:
-                </div>
-              </div>
-              <div
-                class="uk-modal-footer uk-text-center uk-flex uk-margin-remove uk-flex-between rounded-b-2"
-                style="height: 60px; align-items: center"
-              >
-                <button
-                  class="body2-semibold"
-                  style="
-                    color: #067ff3;
-                    cursor: pointer;
-                    background-color: transparent;
-                    align-items: center;
-                  "
-                >
-                  Xem khoá học
-                  <img
-                    src="public/icon/open.svg"
-                    width="16"
-                    height="16"
-                    uk-svg
-                  />
-                </button>
-
-                <a
-                  href="/lop-hoc.html"
-                  class="uk-button flex-items-center uk-button-primary rounded-10px px-4 ml-6"
-                  style="height: 44px; text-transform: inherit"
-                >
-                  <img
-                    src="public/icon/logout-outline_white.svg"
-                    width="24"
-                    height="24"
-                    uk-svg
-                    class="mr-2"
-                  />
-                  Vào lớp
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Modal chi tiết giáo viên -->
-          <div class="modal-content" id="modal-teacher-info" uk-modal>
-            <div
-              class="uk-modal-dialog uk-margin-auto-vertical rounded-4"
-              style="max-height: 580px"
-            >
-              <button
-                class="uk-modal-close-default"
-                type="button"
-                style="background-color: transparent; cursor: pointer"
-              >
-                <img src="public/icon/x.svg" width="24" height="24" />
-              </button>
-
-              <p
-                class="body1-semibold p-6 pb-4 mb-0 rounded-t-2"
-                style="
-                  background-color: #f9f9f9;
-                  border-bottom: 1px solid #e7e8ea;
-                  height: 56px;
-                "
-              >
-                Chi tiết giáo viên
-              </p>
-
-              <div
-                class="uk-modal-body p-6 rounded-b-4"
-                style="padding-top: 0; margin-top: 0; max-height: 510px"
-                uk-overflow-auto
-              >
-                <div class="uk-flex uk-text-center my-6" style="color: #1a1d1f">
-                  <img
-                    style="flex: none; height: fit-content"
-                    src="public/avatar.png"
-                    width="72px"
-                    height="72px"
-                  />
-                  <div
-                    style="
-                      margin-left: 12px;
-                      display: flex;
-                      flex-direction: column;
-                      justify-content: center;
-                    "
+              <div class="uk-flex uk-flex-center" style="margin-top: 12px">
+                <button class="button-primary">
+                  Học thử miễn phí
+                  <svg
+                    style="margin-left: 8px"
+                    width="23"
+                    height="23"
+                    viewBox="0 0 23 23"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <div class="body1-medium mb-2">Thầy Edward</div>
-                    <div class="body2-regular">
-                      Thầy Edward Norton là người có kinh nghiệm nhiều năm trong
-                      việc giảng dạy tiếng Anh ứng dụng cho người đi làm.
-                    </div>
-                  </div>
-                </div>
-
-                <div class="uk-position-relative">
-                  <img
-                    src="public/course.png"
-                    alt="course"
-                    class="modal-content-video"
-                  />
-                  <img
-                    src="public/icon/play.svg"
-                    alt="play button"
-                    class="modal-content-video-button"
-                  />
-                </div>
+                    <path
+                      d="M13.7442 3.94694C13.2242 3.93094 12.7882 4.33094 12.7602 4.85094C12.7082 5.27094 12.6642 7.02694 12.6442 8.26293C11.3282 8.26293 5.13216 7.84294 5.13216 7.84294C4.15616 7.84294 1.86816 7.84294 1.86816 10.9109V11.9389C1.86816 15.0109 4.23216 15.0109 5.27216 15.0109L12.7522 14.5789C12.8962 16.8989 13.1162 17.8989 13.3162 18.1789C13.4762 18.3829 13.7202 18.4989 13.9802 18.4869C15.1442 18.4869 17.4882 15.9789 18.1762 15.3309C19.0682 14.4949 21.1402 12.4309 21.1402 11.3109C21.1362 10.2389 15.7002 3.94694 13.7442 3.94694Z"
+                      fill="white"
+                    />
+                  </svg>
+                </button>
               </div>
             </div>
           </div>
+        </div>
+      </div>
 
-          <!-- Modal xem lại video -->
-          <div class="modal-content" id="modal-watch-video" uk-modal>
-            <div
-              class="uk-modal-dialog uk-margin-auto-vertical rounded-4"
-              style="max-height: 580px"
-            >
-              <button
-                class="uk-modal-close-default"
-                type="button"
-                style="background-color: transparent; cursor: pointer"
-              >
-                <img src="public/icon/x.svg" width="24" height="24" />
-              </button>
+      <!-- Người nổi tiếng chọn chipchip -->
+      <div class="reasons-wrapper">
+        <div class="container reasons">
+          <img
+            id="other-icon"
+            class="uk-position-absolute icon-max-md"
+            src="public/A.svg"
+            alt="title 3"
+            width="270"
+            style="position: absolute; top: -32px; left: -90px"
+          />
 
-              <p
-                class="body1-semibold p-6 pb-4 mb-0 rounded-t-2"
-                style="
-                  background-color: #f9f9f9;
-                  border-bottom: 1px solid #e7e8ea;
-                  height: 56px;
-                "
-              >
-                Video lớp học
-              </p>
-
-              <div
-                class="uk-modal-body p-6 rounded-b-4"
-                style="padding-top: 0; margin-top: 0; max-height: 510px"
-                uk-overflow-auto
-              >
-                <div class="modal-content-title mt-6 mb-4">
-                  <div class="body1-medium">Level 1 Unit 2 Lesson 1</div>
-                  <div class="title2-semibold">
-                    What’s the weather like today?
-                  </div>
-                </div>
-
-                <div class="uk-position-relative">
-                  <img
-                    src="public/course.png"
-                    alt="course"
-                    class="modal-content-video"
-                  />
-                  <img
-                    src="public/icon/play.svg"
-                    alt="play button"
-                    class="modal-content-video-button"
-                  />
-                </div>
+          <img
+            id="other-icon"
+            class="uk-position-absolute icon-max-md"
+            src="public/S.svg"
+            alt="title 3"
+            width="270"
+            style="position: absolute; top: 72px; right: -90px"
+          />
+          <div class="reasons-title">
+            <div class="reasons-title-wrapper">
+              <div class="reasons-image flex-center">
+                <img src="public/3.1.png" alt="title 3" width="270" />
               </div>
             </div>
           </div>
-
-          <!-- Modal tin tức chi tiết  -->
-          <div class="modal-content" id="modal-news-detail" uk-modal>
-            <div
-              class="uk-modal-dialog uk-margin-auto-vertical rounded-4"
-              style="max-height: 644px"
-            >
-              <button
-                class="uk-modal-close-default"
-                type="button"
-                style="background-color: transparent; cursor: pointer"
-              >
-                <img src="public/icon/x-solid.svg" width="24" height="24" />
-              </button>
-
-              <div
-                class="uk-flex rounded-t-4 uk-flex-center uk-flex-middle uk-background-cover uk-light"
-                data-src="public/course.png"
-                uk-img
-                style="height: 240px; object-fit: contain"
-              ></div>
-
-              <div
-                class="uk-modal-body rounded-b-4 uk-padding-remove"
-                style="max-height: 404px; height: 100%"
-                uk-overflow-auto
-              >
-                <div class="p-6" style="max-height: 404px; height: 100%">
-                  <div class="uk-flex uk-flex-between mb-2">
-                    <span class="news-modal-tag">Sự kiện</span>
-                    <span class="caption-medium" style="color: #7f868d"
-                      >12/05/2024</span
-                    >
-                  </div>
-                  <div
-                    class="title2-semibold line-clamp-3 cursor-pointer"
-                    style="max-height: 72px; height: 100%"
-                  >
-                    Chip Chip mở lớp bình thường xuyên suốt kỳ nghỉ lễ Giỗ tổ
-                    Hùng Vương 10/3
-                  </div>
-                  <div class="body1-regular mb-6">
-                    Autem possimus sit voluptatem vel in. Necessitatibus sed
-                    veniam vel. Perferendis laborum magnam ad ipsum odio.
-                    Blanditiis enim eum ullam eos voluptas aut vel quidem omnis.
-                    Veritatis officiis maiores qui facilis ratione vitae
-                    laboriosam autem. Id placeat ea quaerat sequi blanditiis
-                    distinctio placeat. Dicta ab unde. Totam aliquam aut. Omnis
-                    aliquid quis dolore ut consequuntur repellat dolorem. Qui
-                    neque quas autem minus voluptatem eum ipsum ad. Eaque quasi
-                    aut delectus. Illum voluptatibus nihil quam ad rerum quidem.
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="uk-child-width-1-2@m" uk-grid>
+            <div></div>
+            <div></div>
           </div>
         </div>
       </div>
     </div>
+    <div style="height: 500px"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit-icons.min.js"></script>
