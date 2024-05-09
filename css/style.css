@@ -550,6 +550,11 @@ p {
     margin-right: 48px;
   }
 }
+@media (max-width: 767px) {
+  .communication-brands-item {
+    height: 26px;
+  }
+}
 .communication-content {
   max-width: 930px;
   width: 100%;
@@ -573,6 +578,217 @@ p {
     line-height: 17.4px;
     padding: 0 16px;
     height: 41px;
+  }
+}
+
+.register {
+  background-color: white;
+  border-radius: 8px;
+  max-width: 1170px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.register-wrapper {
+  position: relative;
+  padding-top: 100px;
+}
+@media (max-width: 767px) {
+  .register-wrapper {
+    padding-top: 24px;
+  }
+}
+@media (max-width: 1023px) {
+  .register {
+    display: block;
+  }
+}
+.register-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 48px;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .register-content {
+    padding: 48px;
+  }
+}
+@media (max-width: 767px) {
+  .register-content {
+    padding: 24px;
+  }
+}
+.register-title {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 145%;
+  text-align: center;
+  background: radial-gradient(100% 100% at 0% 0%, #ffc007 0%, #ff5723 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+@media (max-width: 767px) {
+  .register-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 34.8px;
+  }
+}
+.register-img {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+@media (max-width: 1023px) {
+  .register-img {
+    width: 100%;
+    border-bottom-left-radius: none;
+    border-top-right-radius: 8px;
+    max-height: 400px;
+    object-fit: cover;
+  }
+}
+.register-form {
+  background-color: white;
+}
+.register-form > :not(:last-child) {
+  margin-bottom: 14px;
+}
+.register-form > :last-child {
+  margin-top: 25px !important;
+}
+.register-form-select {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 0 24px;
+  height: 60px;
+  justify-content: space-between;
+  background-color: transparent;
+  border: 1px solid rgb(235, 236, 240);
+  color: rgba(0, 0, 0, 0.6);
+}
+.register-form-label {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  margin-bottom: 6px;
+  color: #13161a;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.register-form-input {
+  padding: 0 24px;
+  height: 60px;
+  border-radius: 9999px;
+  border: 1px solid rgb(235, 236, 240);
+}
+.register-form-input ::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.bg-bottom {
+  background: linear-gradient(0deg, #c8f2ff 0%, #ffffff 100%), linear-gradient(0deg, #ffffff 0%, rgba(255, 255, 255, 0) 59.15%), linear-gradient(0deg, rgba(126, 207, 251, 0) 86.76%, rgba(24, 175, 255, 0.1) 93.38%, rgba(120, 214, 255, 0.1) 100%);
+}
+
+.footer {
+  max-width: 1170px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 80px 0 172px 0;
+  z-index: 10;
+}
+@media (max-width: 767px) {
+  .footer {
+    padding: 40px 0 72px 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer > :not(:last-child) {
+    margin-bottom: 12px;
+  }
+}
+.footer-info {
+  z-index: 9;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .footer-info {
+    text-align: start;
+  }
+}
+.footer-logo {
+  width: 199px;
+}
+@media (max-width: 767px) {
+  .footer-logo {
+    width: 166px;
+  }
+}
+.footer-title {
+  color: black;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 33px;
+}
+@media (max-width: 767px) {
+  .footer-title {
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 23.2px;
+  }
+}
+.footer-block {
+  z-index: 9;
+  text-align: justify;
+}
+.footer-block > :not(:last-child) {
+  margin-bottom: 12px;
+}
+@media (max-width: 767px) {
+  .footer-block {
+    text-align: justify;
+  }
+  .footer-block > :not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+.footer-sub-title {
+  color: black;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 26.1px;
+  padding-bottom: 4px;
+}
+@media (max-width: 767px) {
+  .footer-sub-title {
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 23.2px;
+    padding-bottom: 4px;
+  }
+}
+.footer-desc {
+  color: black;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+@media (max-width: 767px) {
+  .footer-desc {
+    color: black;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
   }
 }
 

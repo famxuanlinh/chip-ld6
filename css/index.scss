@@ -617,6 +617,12 @@ p {
       }
       margin-bottom: 62px;
     }
+
+    &-item {
+      @include max-md {
+        height: 26px;
+      }
+    }
   }
   &-content {
     max-width: 930px;
@@ -641,6 +647,220 @@ p {
       line-height: 17.4px;
       padding: 0 16px;
       height: 41px;
+    }
+  }
+}
+
+// component 8 register
+.register {
+  &-wrapper {
+    position: relative;
+
+    padding-top: 100px;
+    @include max-md {
+      padding-top: 24px;
+    }
+  }
+  background-color: white;
+  border-radius: 8px;
+  max-width: 1170px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  @include max-lg {
+    display: block;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 48px;
+    @include md {
+      padding: 48px;
+    }
+    @include max-md {
+      padding: 24px;
+    }
+  }
+
+  &-title {
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 145%;
+    text-align: center;
+    background: radial-gradient(100% 100% at 0% 0%, #ffc007 0%, #ff5723 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+
+    @include max-md {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 34.8px;
+    }
+  }
+  &-img {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+
+    @include max-lg {
+      width: 100%;
+      border-bottom-left-radius: none;
+      border-top-right-radius: 8px;
+      max-height: 400px;
+      object-fit: cover;
+    }
+  }
+  &-form {
+    background-color: white;
+    & > :not(:last-child) {
+      margin-bottom: 14px;
+    }
+    & > :last-child {
+      margin-top: 25px !important;
+    }
+    &-select {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      padding: 0 24px;
+      height: 60px;
+      justify-content: space-between;
+      background-color: transparent;
+      border: 1px solid rgba(235, 236, 240, 1);
+      color: rgba(0, 0, 0, 0.6);
+    }
+
+    &-label {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 22px;
+      margin-bottom: 6px;
+      color: #13161a;
+
+      /* Inside auto layout */
+      flex: none;
+      order: 0;
+      flex-grow: 0;
+    }
+    &-input {
+      padding: 0 24px;
+      height: 60px;
+      border-radius: 9999px;
+      border: 1px solid rgba(235, 236, 240, 1);
+      ::placeholder {
+        color: rgba(0, 0, 0, 0.6);
+      }
+    }
+  }
+}
+
+.bg-bottom {
+  background: linear-gradient(0deg, #c8f2ff 0%, #ffffff 100%),
+    linear-gradient(0deg, #ffffff 0%, rgba(255, 255, 255, 0) 59.15%),
+    linear-gradient(
+      0deg,
+      rgba(126, 207, 251, 0) 86.76%,
+      rgba(24, 175, 255, 0.1) 93.38%,
+      rgba(120, 214, 255, 0.1) 100%
+    );
+}
+
+// footer
+.footer {
+  max-width: 1170px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 80px 0 172px 0;
+  z-index: 10;
+
+  @include max-md {
+    padding: 40px 0 72px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    & > :not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &-info {
+    z-index: 9;
+
+    text-align: center;
+
+    @include max-md {
+      text-align: start;
+    }
+  }
+  &-logo {
+    width: 199px;
+    @include max-md {
+      width: 166px;
+    }
+  }
+
+  &-title {
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 33px;
+
+    @include max-md {
+      color: black;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 23.2px;
+    }
+  }
+
+  &-block {
+    z-index: 9;
+    & > :not(:last-child) {
+      margin-bottom: 12px;
+    }
+    text-align: justify;
+
+    @include max-md {
+      text-align: justify;
+
+      & > :not(:last-child) {
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  &-sub-title {
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 26.1px;
+    padding-bottom: 4px;
+
+    @include max-md {
+      color: black;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 23.2px;
+      padding-bottom: 4px;
+    }
+  }
+  &-desc {
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+
+    @include max-md {
+      color: black;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px;
     }
   }
 }
