@@ -71,6 +71,12 @@ $xxl-width: 1410px;
   }
 }
 
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 svg:not(#other-icon) > path {
   fill: currentColor;
 }
@@ -271,12 +277,15 @@ p {
 // Component 2
 .unexpected-results {
   display: flex;
-  // & > *:not(:last-child) {
-  //   width: calc(100% / 2);
-  // }
+
   @include max-md {
     flex-direction: column-reverse;
     align-items: center;
+  }
+  &-wrapper {
+    @include max-md {
+      overflow: hidden;
+    }
   }
 
   &-content {
@@ -287,6 +296,7 @@ p {
 
       @include max-md {
         margin-bottom: 12px;
+        margin-top: 24px;
       }
     }
 
@@ -300,7 +310,7 @@ p {
     }
     @include max-md {
       margin-top: 0;
-      margin-bottom: 12px;
+      margin-bottom: 40px;
     }
   }
 
@@ -317,6 +327,7 @@ p {
 
     @include max-md {
       width: 100%;
+      scale: 1.3;
     }
 
     &-title {
@@ -405,10 +416,12 @@ p {
     font-weight: 500;
     line-height: 92.8px;
     text-align: center;
+    font-family: Lilita One;
 
     @include max-md {
       font-size: 40px;
       line-height: 58px;
+      font-family: Lilita One;
     }
   }
   &-desc {
@@ -497,6 +510,7 @@ p {
         font-weight: 700;
         line-height: 29px;
         letter-spacing: -0.02em;
+        min-height: 26px;
       }
     }
     &-desc {
@@ -521,7 +535,7 @@ p {
 
 .icon-max-md {
   z-index: 10;
-  @include max-md {
+  @include max-lg() {
     display: none;
   }
 }
@@ -602,6 +616,8 @@ p {
 
       @include max-md {
         margin-left: 8px;
+        width: 32px;
+        height: 32px;
       }
     }
     &-desc {
@@ -673,6 +689,16 @@ p {
     align-items: center;
     max-width: 556px;
     width: 100%;
+
+    &-img {
+      width: 320px;
+      height: 320px;
+
+      @include max-md {
+        width: 200px;
+        height: 200px;
+      }
+    }
 
     &-title {
       font-size: 32px;
@@ -763,7 +789,7 @@ p {
 
     &-item {
       @include max-md {
-        height: 26px;
+        height: 21px;
       }
     }
   }
@@ -970,7 +996,9 @@ p {
     text-align: justify;
 
     @include max-md {
-      text-align: justify;
+      width: 100%;
+
+      text-align: left;
 
       & > :not(:last-child) {
         margin-bottom: 8px;
@@ -1012,4 +1040,153 @@ p {
   @include min-md {
     display: none;
   }
+}
+
+// carousel
+/* page styles */
+.ax-hidden {
+  visibility: hidden;
+  position: absolute;
+}
+
+/* carousel styles */
+.carousel {
+  --carousel-height: 450px;
+  --carousel-width: 1170px;
+  --carousel-item-height: 253px;
+  --carousel-item-width: 253px;
+
+  @include max-md {
+    --carousel-item-height: 160px;
+    --carousel-item-width: 160px;
+    --carousel-height: 285px;
+  }
+
+  width: 100%;
+}
+
+.carousel-container {
+  align-items: center;
+  display: flex;
+  min-height: var(--carousel-height);
+  margin: 0 auto;
+  max-width: var(--carousel-width);
+  position: relative;
+}
+
+.carousel-item {
+  height: var(--carousel-item-height);
+  opacity: 0;
+  position: absolute;
+  transform: translateX(-50%);
+  transition: all 0.3s ease-in-out;
+  width: var(--carousel-item-width);
+  z-index: 0;
+  object-fit: cover;
+}
+
+.carousel-item-1 {
+  left: 15%;
+  opacity: 0.4;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.6),
+    0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25),
+    0 0 100px rgba(255, 255, 255, 0.1);
+}
+
+.carousel-item-2,
+.carousel-item-4 {
+  height: calc(var(--carousel-item-height) * 1.3);
+  width: calc(var(--carousel-item-width) * 1.3);
+  opacity: 1;
+  z-index: 1;
+  opacity: 0.7;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.6),
+    0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25),
+    0 0 100px rgba(255, 255, 255, 0.1);
+}
+
+.carousel-item-2 {
+  left: 30%;
+}
+
+.carousel-item-3 {
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.6),
+    0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25),
+    0 0 100px rgba(255, 255, 255, 0.1);
+  opacity: 1;
+  height: calc(var(--carousel-item-height) * 1.78);
+  left: 50%;
+  width: calc(var(--carousel-item-width) * 1.78);
+  z-index: 2;
+}
+
+.carousel-item-4 {
+  left: 70%;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.6),
+    0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25),
+    0 0 100px rgba(255, 255, 255, 0.1);
+}
+
+.carousel-item-5 {
+  left: 85%;
+  opacity: 0.4;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.6),
+    0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25),
+    0 0 100px rgba(255, 255, 255, 0.1);
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+
+  z-index: 9;
+  margin-top: -225px;
+
+  @include max-md {
+    width: 328px;
+    margin-top: -156px;
+  }
+}
+
+/* carousel button styles */
+.carousel-control {
+  background-color: rgba(255, 255, 255, 1);
+
+  border-radius: 9999px;
+  color: #ff5723;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.5s ease-out;
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0px 6.21px 6.21px 0px rgba(0, 0, 0, 0.03);
+}
+
+.carousel-control:hover {
+  transform: scale(1.1);
+}
+
+/* previous button */
+.carousel-control-previous::after {
+  box-sizing: border-box;
+  // content: "";
+  content: url("/public/icon/previous.svg");
+  position: absolute;
+}
+
+/* next button */
+.carousel-control-next::after {
+  box-sizing: border-box;
+  content: url("/public/icon/next.svg");
+  display: block;
+  position: absolute;
 }

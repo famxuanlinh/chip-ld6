@@ -10,6 +10,14 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap"
+    />
   </head>
   <body>
     <!-- Header -->
@@ -24,7 +32,9 @@
       "
     >
       <div class="container header">
-        <img src="public/logo.svg" alt="log" class="header-logo" />
+        <a href="/index.html">
+          <img src="public/logo.svg" alt="log" class="header-logo" />
+        </a>
         <a href="#form-register" class="button-primary">Học thử miễn phí</a>
       </div>
     </div>
@@ -103,7 +113,7 @@
 
     <div class="bg-pattern" style="padding-top: 12px">
       <!-- Kết quả bất ngờ sau 3 tháng hè -->
-      <div>
+      <div class="unexpected-results-wrapper">
         <div class="container uk-position-relative">
           <div class="unexpected-results">
             <div class="unexpected-results-image">
@@ -225,7 +235,7 @@
           <div class="reasons-title">
             <div class="reasons-title-wrapper">
               <div class="reasons-image flex-center">
-                <img src="public/3.1.png" alt="title 3" width="270" />
+                <img src="public/3.1.png" alt="title 3" />
               </div>
               <div class="reasons-desc">
                 Học online 1 kèm 1, linh hoạt thời gian học, tần suất tiếp xúc
@@ -498,8 +508,7 @@
                 <img
                   src="public/5.3.png"
                   alt="celebrity"
-                  width="200"
-                  height="200"
+                  class="celebrity-card-img"
                 />
                 <div class="celebrity-card-title">DV Vân Trang - bé Nì</div>
 
@@ -526,8 +535,7 @@
                 <img
                   src="public/5.2.png"
                   alt="celebrity"
-                  width="200"
-                  height="200"
+                  class="celebrity-card-img"
                 />
                 <div class="celebrity-card-title">
                   DV Lã Thanh Huyền - bé Chum
@@ -572,21 +580,21 @@
             src="public/flight.svg"
             alt="title 3"
             width="358"
-            style="top: -200px; right: 0"
+            style="top: -130px; right: 0"
           />
-          <!-- <img
+          <img
             id="other-icon"
             class="uk-position-absolute icon-max-md"
             src="public/sun.svg"
             alt="title 3"
             width="240"
             style="bottom: 200px; left: 0"
-          /> -->
+          />
           <div
             class="communication-image flex-center"
             style="margin-bottom: 27px"
           >
-            <img src="public/5.1.png" alt="title 3" width="270" />
+            <img src="public/6.1.png" alt="title 3" width="270" />
           </div>
 
           <div style="text-align: -webkit-center">
@@ -685,6 +693,38 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      <!-- Feedback -->
+      <div>
+        <div class="communication-wrapper">
+          <div class="container" style="margin-bottom: 0">
+            <!-- <img
+              id="other-icon"
+              class="uk-position-absolute icon-max-md"
+              src="public/glass.png"
+              alt="title 3"
+              width="213"
+              style="top: 150px; left: 0"
+            /> -->
+            <img
+              id="other-icon"
+              class="uk-position-absolute icon-max-md"
+              src="public/icloud.svg"
+              alt="title 3"
+              width="358"
+              style="top: -130px; right: 0"
+            />
+
+            <div
+              class="communication-image flex-center"
+              style="margin-bottom: 27px"
+            >
+              <img src="public/9.1.png" alt="title 3" width="270" />
+            </div>
+          </div>
+          <div class="carousel" style="overflow: hidden"></div>
         </div>
       </div>
     </div>
@@ -829,6 +869,7 @@
                   font-weight: 600;
                   line-height: 26.64px;
                   color: black;
+                  margin-top: 12px;
                 "
               >
                 Công ty CP Công nghệ và Giáo dục
@@ -923,5 +964,159 @@
 
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit-icons.min.js"></script>
+    <script>
+      class Carousel {
+        constructor(el) {
+          this.el = el;
+          this.carouselOptions = ["previous", "next"];
+          this.carouselData = [
+            {
+              id: "1",
+              src: "public/7.3.jpg",
+            },
+            {
+              id: "2",
+              src: "public/7.2.jpg",
+            },
+            {
+              id: "3",
+              src: "public/7.1.jpg",
+            },
+            {
+              id: "4",
+              src: "public/7.4.jpg",
+            },
+            {
+              id: "5",
+              src: "public/7.5.jpg",
+            },
+          ];
+          this.carouselInView = [1, 2, 3, 4, 5];
+          this.carouselContainer;
+          this.carouselPlayState;
+        }
+
+        mounted() {
+          this.setupCarousel();
+        }
+
+        // Build carousel html
+        setupCarousel() {
+          const container = document.createElement("div");
+          const controls = document.createElement("div");
+
+          // Add container for carousel items and controls
+          this.el.append(container, controls);
+          container.className = "carousel-container";
+          controls.className = "carousel-controls";
+
+          // Take dataset array and append items to container
+          this.carouselData.forEach((item, index) => {
+            const carouselItem = item.src
+              ? document.createElement("img")
+              : document.createElement("div");
+
+            container.append(carouselItem);
+
+            // Add item attributes
+            carouselItem.className = `carousel-item carousel-item-${index + 1}`;
+            carouselItem.src = item.src;
+            carouselItem.setAttribute("loading", "lazy");
+            // Used to keep track of carousel items, infinite items possible in carousel however min 5 items required
+            carouselItem.setAttribute("data-index", `${index + 1}`);
+          });
+
+          this.carouselOptions.forEach((option) => {
+            const btn = document.createElement("button");
+            const axSpan = document.createElement("span");
+
+            // Add accessibilty spans to button
+            axSpan.innerText = option;
+            axSpan.className = "ax-hidden";
+            btn.append(axSpan);
+
+            // Add button attributes
+            btn.className = `carousel-control carousel-control-${option}`;
+            btn.setAttribute("data-name", option);
+
+            // Add carousel control options
+            controls.append(btn);
+          });
+
+          // After rendering carousel to our DOM, setup carousel controls' event listeners
+          this.setControls([...controls.children]);
+
+          // Set container property
+          this.carouselContainer = container;
+        }
+
+        setControls(controls) {
+          controls.forEach((control) => {
+            control.onclick = (event) => {
+              event.preventDefault();
+
+              // Manage control actions, update our carousel data first then with a callback update our DOM
+              this.controlManager(control.dataset.name);
+            };
+          });
+        }
+
+        controlManager(control) {
+          if (control === "previous") return this.previous();
+          if (control === "next") return this.next();
+
+          return;
+        }
+
+        previous() {
+          // Update order of items in data array to be shown in carousel
+          this.carouselData.unshift(this.carouselData.pop());
+
+          // Push the first item to the end of the array so that the previous item is front and center
+          this.carouselInView.push(this.carouselInView.shift());
+
+          // Update the css class for each carousel item in view
+          this.carouselInView.forEach((item, index) => {
+            this.carouselContainer.children[
+              index
+            ].className = `carousel-item carousel-item-${item}`;
+          });
+
+          // Using the first 5 items in data array update content of carousel items in view
+          this.carouselData.slice(0, 5).forEach((data, index) => {
+            document.querySelector(`.carousel-item-${index + 1}`).src =
+              data.src;
+          });
+        }
+
+        next() {
+          // Update order of items in data array to be shown in carousel
+          this.carouselData.push(this.carouselData.shift());
+
+          // Take the last item and add it to the beginning of the array so that the next item is front and center
+          this.carouselInView.unshift(this.carouselInView.pop());
+
+          // Update the css class for each carousel item in view
+          this.carouselInView.forEach((item, index) => {
+            this.carouselContainer.children[
+              index
+            ].className = `carousel-item carousel-item-${item}`;
+          });
+
+          // Using the first 5 items in data array update content of carousel items in view
+          this.carouselData.slice(0, 5).forEach((data, index) => {
+            document.querySelector(`.carousel-item-${index + 1}`).src =
+              data.src;
+          });
+        }
+      }
+
+      // Refers to the carousel root element you want to target, use specific class selectors if using multiple carousels
+      const el = document.querySelector(".carousel");
+      // Create a new carousel object
+      const exampleCarousel = new Carousel(el);
+      // Setup carousel and methods
+      exampleCarousel.mounted();
+    </script>
   </body>
 </html>
