@@ -13,13 +13,95 @@
   </head>
   <body>
     <!-- Header -->
-    <div>
+    <div
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.3);
+        z-index: 999;
+      "
+    >
       <div class="container header">
-        <img src="public/logo.svg" alt="log" />
-        <button class="button-primary">Học thử miễn phí</button>
+        <img src="public/logo.svg" alt="log" class="header-logo" />
+        <a href="#form-register" class="button-primary">Học thử miễn phí</a>
       </div>
     </div>
-    <div class="bg-pattern">
+
+    <!-- Banner -->
+    <div class="banner-wrapper">
+      <div class="container banner">
+        <div class="banner-left" style="z-index: 1">
+          <div
+            class="uk-flex uk-flex-center"
+            style="padding-top: 24px; margin-bottom: -20px"
+          >
+            <img src="public/1.3.png" alt="log" />
+          </div>
+
+          <div
+            class="is-max-md"
+            style="scale: 1.25; margin-top: 20px; margin-bottom: 2px"
+          >
+            <img src="public/1.4.png" alt="log" />
+          </div>
+          <div class="uk-position-relative">
+            <img src="public/1.2.svg" alt="log" />
+            <div class="banner-content">
+              <div class="banner-title">
+                Chương trình Tiếng Anh online trẻ em với giáo viên nước ngoài
+                hạng A
+              </div>
+              <div class="banner-content-items">
+                <div class="banner-content-item">
+                  <div>
+                    <img
+                      src="public/icon/check.svg"
+                      alt="check"
+                      class="banner-content-item-icon"
+                    />
+                  </div>
+                  <div class="banner-content-item-text">
+                    Học online 1 kèm 1 linh hoạt, tần suất gấp 3 lần trung tâm
+                  </div>
+                </div>
+                <div class="banner-content-item">
+                  <div>
+                    <img
+                      src="public/icon/check.svg"
+                      alt="check"
+                      class="banner-content-item-icon"
+                    />
+                  </div>
+                  <div class="banner-content-item-text">
+                    100% giáo viên nước ngoài có chứng chỉ giảng dạy quốc tế,
+                    kinh nghiệm 1 năm trở lên
+                  </div>
+                </div>
+                <div class="banner-content-item">
+                  <div>
+                    <img
+                      src="public/icon/check.svg"
+                      alt="check"
+                      class="banner-content-item-icon"
+                    />
+                  </div>
+                  <div class="banner-content-item-text">
+                    Chương trình giao tiếp chuẩn Cambridge
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="banner-right">
+          <img src="public/1.4.png" alt="log" />
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-pattern" style="padding-top: 12px">
       <!-- Kết quả bất ngờ sau 3 tháng hè -->
       <div>
         <div class="container uk-position-relative">
@@ -366,7 +448,7 @@
                 </div>
               </div>
               <div class="uk-flex uk-flex-center" style="margin-top: 12px">
-                <button class="button-primary">
+                <a href="#form-register" class="button-primary">
                   Học thử miễn phí
                   <svg
                     style="margin-left: 8px"
@@ -381,7 +463,7 @@
                       fill="white"
                     />
                   </svg>
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -609,7 +691,7 @@
 
     <div class="bg-bottom">
       <!-- Đăng ký  -->
-      <div class="register-wrapper">
+      <div id="form-register" class="register-wrapper">
         <img
           id="other-icon"
           class="uk-position-absolute icon-max-md"

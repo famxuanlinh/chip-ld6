@@ -9,12 +9,8 @@
   font-family: "Inter", sans-serif;
 }
 
-:root {
-  --title-neutral-07-color: #1a1d1f;
-  --title-neutral-06-color: #272b30;
-  --title-neutral-04-color: #7f868d;
-  --title-neutral-02-color: #f4f4f4;
-  --primary-color-blue: #067ff3;
+html {
+  scroll-behavior: smooth;
 }
 
 $sm-width: 640px;
@@ -97,11 +93,21 @@ p {
 
 .header {
   height: 72px;
-  color: #ffffff4d;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+
+  @include max-md {
+    height: 60px;
+  }
+
+  &-logo {
+    height: 60px;
+    @include max-md {
+      height: 48px;
+    }
+  }
 }
 
 .button-primary {
@@ -120,8 +126,145 @@ p {
   order: 1;
   flex-grow: 0;
 
+  text-decoration: none;
+
+  &:hover {
+    color: #c8f2ff;
+    text-decoration: none;
+  }
+
   @include max-md {
     padding: 10px 20px;
+  }
+}
+
+// banner
+.banner {
+  &-wrapper {
+    background-image: url(/public/background-cover.webp);
+    width: 100%;
+    background-size: cover;
+    overflow: hidden;
+  }
+
+  display: flex;
+
+  padding-top: 72px;
+  @include max-md {
+    padding-top: 60px;
+  }
+
+  &-left {
+    max-width: 750px;
+    width: 100%;
+    flex: none;
+
+    @include md {
+      scale: 0.8;
+      margin-left: -100px;
+    }
+    @include lg {
+      scale: 0.8;
+    }
+  }
+
+  &-right {
+    scale: 1.4;
+    display: flex;
+    align-items: center;
+    margin-left: -30px;
+    @include max-md {
+      display: none;
+    }
+
+    & > img {
+      @include lg {
+        scale: 1.4;
+      }
+      @include md {
+        scale: 2;
+      }
+    }
+  }
+
+  &-title {
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 42.88px;
+    color: rgba(255, 107, 0, 1);
+    margin-bottom: 15px;
+
+    @include max-md {
+      margin-bottom: 7px;
+      font-size: 14.62px;
+      font-weight: 900;
+      line-height: 19.59px;
+    }
+  }
+
+  &-content {
+    position: absolute;
+    top: 74px;
+    left: 106px;
+    max-width: 76%;
+    width: 100%;
+
+    @include max-md {
+      position: absolute;
+      top: 34px;
+      left: 58px;
+      max-width: 76%;
+      width: 100%;
+    }
+
+    &-items {
+      & > :not(:last-child) {
+        margin-bottom: 6px;
+      }
+
+      @include max-md {
+        & > :not(:last-child) {
+          margin-bottom: 2.74px;
+        }
+      }
+    }
+
+    &-item {
+      display: flex;
+
+      @include max-md {
+        align-items: baseline;
+      }
+
+      &-icon {
+        width: 24px;
+        margin-right: 8px;
+        margin-top: 4px;
+        flex: none;
+        @include max-md {
+          width: 11px;
+          margin-right: 4px;
+        }
+      }
+
+      &-text {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 33px;
+        color: rgba(0, 0, 0, 0.9);
+        flex: 1 1;
+
+        font-style: normal;
+        letter-spacing: 0.02em;
+        @include max-md {
+          font-size: 9.14px;
+          font-weight: 500;
+          color: rgba(0, 0, 0, 0.9);
+          line-height: 15.07px;
+          flex: 1 1;
+        }
+      }
+    }
   }
 }
 
@@ -862,5 +1005,11 @@ p {
       font-weight: 400;
       line-height: 24px;
     }
+  }
+}
+
+.is-max-md {
+  @include min-md {
+    display: none;
   }
 }
