@@ -175,6 +175,13 @@ p {
     width: 100%;
   }
 }
+@media (max-width: 390px) {
+  .banner-content {
+    position: absolute;
+    top: 26px;
+    left: 48px;
+  }
+}
 .banner-content-items > :not(:last-child) {
   margin-bottom: 6px;
 }
@@ -193,7 +200,7 @@ p {
 }
 @media (max-width: 390px) {
   .banner-content-item {
-    height: 26px;
+    height: 32px;
   }
 }
 .banner-content-item-icon {
@@ -219,7 +226,7 @@ p {
 }
 @media (max-width: 767px) {
   .banner-content-item-text {
-    font-size: 9.14px;
+    font-size: 11px;
     font-weight: 500;
     color: rgb(0, 0, 0);
     line-height: 15.07px;
