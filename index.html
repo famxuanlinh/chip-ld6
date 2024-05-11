@@ -623,14 +623,30 @@
           <div style="text-align: -webkit-center">
             <div class="communication-content">
               <div
+                onclick="playPause()"
                 class="uk-position-relative"
                 style="
                   text-align: -webkit-center uk-width-1-1;
                   margin-bottom: 24px;
-                  width: fit-content;
+                  width: 100%;
                 "
               >
-                <img id="other-icon" src="public/6.7.png" alt="nhan dan tv" />
+                <img
+                  id="background-video"
+                  src="public/6.7.png"
+                  alt="nhan dan tv"
+                />
+                <video id="my-video" style="width: 100%; display: none">
+                  <source src="public/video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <img
+                  id="btn-play"
+                  src="public/icon/play.svg"
+                  alt="play"
+                  class="uk-position-center"
+                  style="cursor: pointer"
+                />
                 <button class="communication-btn">
                   Truyền hình Nhân dân
                   <img
@@ -1118,6 +1134,23 @@
       const exampleCarousel = new Carousel(el);
       // Setup carousel and methods
       exampleCarousel.mounted();
+    </script>
+    <script>
+      var myVideo = document.getElementById("my-video");
+      var btnPlay = document.getElementById("btn-play");
+      var backgroundVideo = document.getElementById("background-video");
+
+      function playPause() {
+        if (myVideo.paused) {
+          myVideo.style.display = "block";
+          myVideo.play();
+          btnPlay.style.display = "none";
+          backgroundVideo.style.display = "none";
+        } else {
+          myVideo.pause();
+          btnPlay.style.display = "flex";
+        }
+      }
     </script>
   </body>
 </html>
