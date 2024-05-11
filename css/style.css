@@ -447,12 +447,15 @@ p {
   }
 }
 .reasons-card-title {
-  color: #000000;
   font-size: 24px;
   font-weight: 700;
   line-height: 34.8px;
   letter-spacing: -0.02em;
   min-height: 70px;
+  background: radial-gradient(100% 100% at 0% 0%, #ffc007 0%, #ff5723 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 @media (max-width: 767px) {
   .reasons-card-title {
