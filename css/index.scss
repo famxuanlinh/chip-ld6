@@ -13,11 +13,18 @@ html {
   scroll-behavior: smooth;
 }
 
+$xs-width: 391px;
 $sm-width: 640px;
 $md-width: 768px;
 $lg-width: 1024px;
 $xl-width: 1280px;
 $xxl-width: 1410px;
+
+@mixin max-xs {
+  @media (max-width: #{$xs-width - 1px}) {
+    @content;
+  }
+}
 
 @mixin sm {
   @media (max-width: #{$sm-width - 1px}) {
@@ -206,6 +213,10 @@ p {
       font-weight: 900;
       line-height: 19.59px;
     }
+
+    @include max-xs {
+      margin-bottom: 0;
+    }
   }
 
   &-content {
@@ -241,6 +252,9 @@ p {
       @include max-md {
         align-items: baseline;
       }
+      @include max-xs {
+        height: 26px;
+      }
 
       &-icon {
         width: 24px;
@@ -265,9 +279,13 @@ p {
         @include max-md {
           font-size: 9.14px;
           font-weight: 500;
-          color: rgba(0, 0, 0, 0.9);
+          color: rgba(0, 0, 0);
           line-height: 15.07px;
           flex: 1 1;
+        }
+
+        @include max-xs {
+          line-height: 14px;
         }
       }
     }

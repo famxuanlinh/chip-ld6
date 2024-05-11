@@ -154,6 +154,11 @@ p {
     line-height: 19.59px;
   }
 }
+@media (max-width: 390px) {
+  .banner-title {
+    margin-bottom: 0;
+  }
+}
 .banner-content {
   position: absolute;
   top: 74px;
@@ -186,6 +191,11 @@ p {
     align-items: baseline;
   }
 }
+@media (max-width: 390px) {
+  .banner-content-item {
+    height: 26px;
+  }
+}
 .banner-content-item-icon {
   width: 24px;
   margin-right: 8px;
@@ -211,9 +221,14 @@ p {
   .banner-content-item-text {
     font-size: 9.14px;
     font-weight: 500;
-    color: rgba(0, 0, 0, 0.9);
+    color: rgb(0, 0, 0);
     line-height: 15.07px;
     flex: 1 1;
+  }
+}
+@media (max-width: 390px) {
+  .banner-content-item-text {
+    line-height: 14px;
   }
 }
 
