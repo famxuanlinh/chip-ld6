@@ -392,7 +392,6 @@ a {
   background: linear-gradient(103.71deg, rgba(253, 221, 174, 0.1) 4.11%, rgba(249, 160, 45, 0.1) 90.92%);
   overflow: hidden;
   position: relative;
-  margin: 100px 0 160px 0;
   background-repeat: repeat-y;
   width: 100%;
   background-size: contain;
@@ -476,6 +475,48 @@ a {
   }
 }
 
+.feedback {
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .feedback {
+    margin: 24px 0;
+  }
+}
+.feedback-content {
+  margin: 64px 0 60px 0;
+}
+@media screen and (max-width: 768px) {
+  .feedback-content {
+    margin: 24px 0;
+  }
+}
+.feedback-container {
+  padding: 100px 0;
+}
+@media screen and (max-width: 768px) {
+  .feedback-container {
+    padding: 24px 0 !important;
+  }
+}
+.feedback-title {
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 768px) {
+  .feedback-title {
+    margin-bottom: 24px;
+  }
+}
+.feedback-img {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .uk-child-width-mobile > * {
+    width: 80%;
+  }
+}
 html {
   scroll-behavior: smooth;
 }
@@ -649,13 +690,13 @@ p {
   }
 }
 
-.reasons, .communication {
+.reasons {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
   position: relative;
 }
-.reasons-wrapper, .communication-wrapper {
+.reasons-wrapper {
   position: relative;
 }
 .reasons-title {
@@ -822,7 +863,7 @@ p {
     margin-top: 4px;
   }
 }
-.commit-title, .choose-title, .platform-title, .review-title {
+.commit-title, .communication-title, .choose-title, .platform-title, .review-title, .feedback-title {
   font-size: 48px;
   font-weight: 700;
   line-height: 64.8px;
@@ -830,7 +871,7 @@ p {
   color: #000000;
 }
 @media screen and (max-width: 768px) {
-  .commit-title, .choose-title, .platform-title, .review-title {
+  .commit-title, .communication-title, .choose-title, .platform-title, .review-title, .feedback-title {
     margin-top: 12px;
     font-size: 22px;
     font-weight: 700;
@@ -898,26 +939,32 @@ p {
   }
 }
 
-.communication {
-  margin: 24px 0;
-}
-@media (min-width: 768px) {
-  .communication {
-    margin-top: 88px;
-    margin-bottom: 27px;
-  }
-}
-@media (min-width: 768px) {
-  .communication {
-    margin-top: 100px;
-    margin-bottom: 48px;
-  }
+.communication-circle {
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  z-index: -1;
 }
 .communication-wrapper {
-  text-align: -webkit-center;
+  padding: 100px 0;
+  background: linear-gradient(103.71deg, rgba(253, 221, 174, 0.1) 4.11%, rgba(249, 160, 45, 0.1) 90.92%);
+  overflow: hidden;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .communication-wrapper {
+    padding: 24px 0;
+  }
+}
+.communication-title {
+  padding-bottom: 48px;
+}
+@media screen and (max-width: 768px) {
+  .communication-title {
+    padding-bottom: 18px;
+  }
 }
 .communication-image {
-  max-width: 634px;
   width: 100%;
 }
 .communication-brands {
@@ -925,15 +972,11 @@ p {
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-bottom: 24px;
 }
 .communication-brands > :not(:last-child) {
   margin-right: 26px;
 }
 @media (min-width: 768px) {
-  .communication-brands {
-    margin-bottom: 62px;
-  }
   .communication-brands > :not(:last-child) {
     margin-right: 48px;
   }
@@ -944,8 +987,13 @@ p {
   }
 }
 .communication-content {
-  max-width: 930px;
   width: 100%;
+  padding-top: 48px;
+}
+@media screen and (max-width: 768px) {
+  .communication-content {
+    padding-top: 24px;
+  }
 }
 .communication-btn {
   height: 74px;
@@ -970,19 +1018,21 @@ p {
 }
 
 .register {
+  z-index: 1;
   background-color: white;
   border-radius: 8px;
-  max-width: 1170px;
   display: flex;
   align-items: center;
   width: 100%;
 }
 .register-wrapper {
   z-index: 9;
+  padding: 100px 0;
+  background: linear-gradient(96.41deg, #6fca14 5.05%, #32ca14 96.09%);
 }
-@media (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .register-wrapper {
-    padding-top: 24px;
+    padding: 24px 0;
   }
 }
 .register-background {
@@ -994,6 +1044,7 @@ p {
   width: 100%;
   overflow: hidden;
   object-fit: cover;
+  z-index: -1;
   background: linear-gradient(96.41deg, #6fca14 5.05%, #32ca14 96.09%);
 }
 @media (max-width: 1023px) {
@@ -1002,6 +1053,9 @@ p {
   }
 }
 .register-content {
+  flex: 1 1 0%;
+  flex: none;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1009,37 +1063,37 @@ p {
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .register-content {
+    width: 100%;
     padding: 48px;
   }
 }
 @media (max-width: 767px) {
   .register-content {
-    padding: 24px;
+    width: 100%;
+    padding: 20px;
   }
 }
 .register-title {
+  font-size: 46px;
   font-weight: 700;
-  font-size: 34px;
-  line-height: 145%;
+  line-height: 57.5px;
+  letter-spacing: -0.025em;
   text-align: center;
-  background: radial-gradient(100% 100% at 0% 0%, #ffc007 0%, #ff5723 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  flex: none;
-  order: 0;
-  align-self: stretch;
-  flex-grow: 0;
+  color: black;
 }
 @media (max-width: 767px) {
   .register-title {
-    font-size: 24px;
+    font-size: 23px;
     font-weight: 700;
-    line-height: 34.8px;
+    line-height: 33.35px;
   }
 }
 .register-img {
+  flex: 1 1 0%;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
+  flex: none;
+  width: 50%;
 }
 @media (max-width: 1023px) {
   .register-img {
@@ -1051,7 +1105,13 @@ p {
   }
 }
 .register-form {
+  margin-top: 30px;
   background-color: white;
+}
+@media screen and (max-width: 768px) {
+  .register-form {
+    margin-top: 24px;
+  }
 }
 .register-form > :not(:last-child) {
   margin-bottom: 14px;

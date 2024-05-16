@@ -7,6 +7,7 @@
 @import "choose";
 @import "platform";
 @import "review";
+@import "feedback";
 
 html {
   scroll-behavior: smooth;
@@ -490,28 +491,40 @@ p {
   }
 }
 
-// Component 6 Truyền thông đưa tin về manson
+// Component 6 Truyền thông đưa tin về
 .communication {
-  @extend .reasons;
-  @include min-md {
-    margin-top: 88px;
-    margin-bottom: 27px;
-  }
-  margin: 24px 0;
-
-  @include min-md {
-    margin-top: 100px;
-    margin-bottom: 48px;
+  &-circle {
+    position: absolute;
+    bottom: -40px;
+    right: -40px;
+    z-index: -1;
   }
 
   &-wrapper {
-    @extend .reasons-wrapper;
-    text-align: -webkit-center;
+    padding: 100px 0;
+    background: linear-gradient(
+      103.71deg,
+      rgba(253, 221, 174, 0.1) 4.11%,
+      rgba(249, 160, 45, 0.1) 90.92%
+    );
+    overflow: hidden;
+    position: relative;
+
+    @include maxw(768) {
+      padding: 24px 0;
+    }
+  }
+
+  &-title {
+    @extend .commit-title;
+    padding-bottom: 48px;
+    @include maxw(768) {
+      padding-bottom: 18px;
+    }
   }
 
   &-image {
     @extend .reasons-image;
-    max-width: 634px;
     width: 100%;
   }
   &-brands {
@@ -519,7 +532,6 @@ p {
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin-bottom: 24px;
     & > :not(:last-child) {
       margin-right: 26px;
     }
@@ -527,7 +539,6 @@ p {
       & > :not(:last-child) {
         margin-right: 48px;
       }
-      margin-bottom: 62px;
     }
 
     &-item {
@@ -537,8 +548,11 @@ p {
     }
   }
   &-content {
-    max-width: 930px;
     width: 100%;
+    padding-top: 48px;
+    @include maxw(768) {
+      padding-top: 24px;
+    }
   }
   &-btn {
     height: 74px;
@@ -567,10 +581,14 @@ p {
 .register {
   &-wrapper {
     z-index: 9;
-    @include max-md {
-      padding-top: 24px;
+    padding: 100px 0;
+    background: linear-gradient(96.41deg, #6fca14 5.05%, #32ca14 96.09%);
+
+    @include maxw(768) {
+      padding: 24px 0;
     }
   }
+  z-index: 1;
 
   &-background {
     position: absolute;
@@ -581,11 +599,11 @@ p {
     width: 100%;
     overflow: hidden;
     object-fit: cover;
+    z-index: -1;
     background: linear-gradient(96.41deg, #6fca14 5.05%, #32ca14 96.09%);
   }
   background-color: white;
   border-radius: 8px;
-  max-width: 1170px;
   display: flex;
   align-items: center;
   width: 100%;
@@ -595,40 +613,43 @@ p {
   }
 
   &-content {
+    flex: 1 1 0%;
+    flex: none;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 0 48px;
     @include md {
+      width: 100%;
       padding: 48px;
     }
     @include max-md {
-      padding: 24px;
+      width: 100%;
+      padding: 20px;
     }
   }
 
   &-title {
+    font-size: 46px;
     font-weight: 700;
-    font-size: 34px;
-    line-height: 145%;
+    line-height: 57.5px;
+    letter-spacing: -0.025em;
     text-align: center;
-    background: radial-gradient(100% 100% at 0% 0%, #ffc007 0%, #ff5723 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
+    color: black;
 
     @include max-md {
-      font-size: 24px;
+      font-size: 23px;
       font-weight: 700;
-      line-height: 34.8px;
+      line-height: 33.35px;
     }
   }
   &-img {
+    flex: 1 1 0%;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
+    flex: none;
+    width: 50%;
 
     @include max-lg {
       width: 100%;
@@ -639,6 +660,10 @@ p {
     }
   }
   &-form {
+    margin-top: 30px;
+    @include maxw(768) {
+      margin-top: 24px;
+    }
     background-color: white;
     & > :not(:last-child) {
       margin-bottom: 14px;

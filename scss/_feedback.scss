@@ -1,0 +1,38 @@
+.feedback {
+  position: relative;
+
+  @include maxw(768) {
+    margin: 24px 0;
+  }
+
+  &-content {
+    margin: 64px 0 60px 0;
+    @include maxw(768) {
+      margin: 24px 0;
+    }
+  }
+
+  &-container {
+    padding: 100px 0;
+    @include maxw(768) {
+      padding: 24px 0 !important;
+    }
+  }
+  &-title {
+    @extend .commit-title;
+    margin-bottom: 60px;
+    @include maxw(768) {
+      margin-bottom: 24px;
+    }
+  }
+  &-img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+}
+
+@include maxw(768) {
+  .uk-child-width-mobile > * {
+    width: 80%;
+  }
+}

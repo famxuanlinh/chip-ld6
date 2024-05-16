@@ -426,54 +426,130 @@
       </div>
     </div>
 
+    <!-- Những phản hồi quý giá từ phụ huynh -->
+    <div class="feedback">
+      <div class="">
+        <div class="feedback-container">
+          <div class="feedback-title container">
+            Những
+            <span style="color: #3db54a">phản hồi quý giá</span>
+            từ phụ huynh
+          </div>
+
+          <div
+            id="slider-feedback"
+            class="uk-position-relative uk-visible-toggle uk-light feedback-content"
+            tabindex="-1"
+            uk-slider
+          >
+            <div
+              class="uk-slider-items uk-child-width-mobile uk-child-width-1-3@s uk-grid-small uk-child-width-1-4@m"
+            >
+              <div>
+                <img
+                  class="feedback-img"
+                  src="public/7.1.jpg"
+                  width="400"
+                  height="600"
+                  alt=""
+                />
+              </div>
+              <div>
+                <img
+                  class="feedback-img"
+                  src="public/7.2.jpg"
+                  width="400"
+                  height="600"
+                  alt=""
+                />
+              </div>
+              <div>
+                <img
+                  class="feedback-img"
+                  src="public/7.3.jpg"
+                  width="400"
+                  height="600"
+                  alt=""
+                />
+              </div>
+              <div>
+                <img
+                  class="feedback-img"
+                  src="public/7.4.jpg"
+                  width="400"
+                  height="600"
+                  alt=""
+                />
+              </div>
+              <div>
+                <img
+                  class="feedback-img"
+                  src="public/7.5.jpg"
+                  width="400"
+                  height="600"
+                  alt=""
+                />
+              </div>
+              <div>
+                <img
+                  class="feedback-img"
+                  src="public/7.6.jpg"
+                  width="400"
+                  height="600"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="uk-flex uk-flex-center container">
+            <a href="#form-register" class="button-primary"
+              >Học thử miễn phí
+              <img
+                style="margin-left: 5px"
+                src="public/icon/arrow-right.svg"
+                alt="arrow right"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Truyền thồn đưa tin về chip chip -->
-    <!-- <div class="communication-wrapper">
+    <div class="communication-wrapper">
+      <img
+        src="public/circle.svg"
+        alt="circle"
+        style="cursor: pointer"
+        class="communication-circle"
+      />
       <div class="container communication">
-        <div
-          class="communication-image flex-center"
-          style="margin-bottom: 27px"
-        >
-          <img src="public/6.1.png" alt="title 3" width="270" />
+        <div class="communication-title">
+          <span style="color: #3db54a"> Truyền thông đưa tin</span>
+          về Chip Chip
+        </div>
+        <div style="text-align: -webkit-center">
+          <div class="communication-brands">
+            <img
+              id="other-icon"
+              class="communication-brands-item"
+              src="public/6.3-vnexpress.svg"
+              alt="nhan dan tv"
+            />
+            <img
+              id="other-icon"
+              class="communication-brands-item"
+              src="public/6.4-cafebiz.svg"
+              alt="nhan dan tv"
+            />
+          </div>
         </div>
 
         <div style="text-align: -webkit-center">
           <div class="communication-content">
             <div
-              onclick="playPause()"
-              class="uk-position-relative"
-              style="
-                text-align: -webkit-center uk-width-1-1;
-                margin-bottom: 24px;
-                width: 100%;
-              "
+              class="uk-child-width-1-2@m uk-grid-small uk-grid-medium@m"
+              uk-grid
             >
-              <img
-                id="background-video"
-                src="public/6.7.png"
-                alt="nhan dan tv"
-              />
-              <video id="my-video" style="width: 100%; display: none">
-                <source src="public/video.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-              <img
-                id="btn-play"
-                src="public/icon/play.svg"
-                alt="play"
-                class="uk-position-center"
-                style="cursor: pointer"
-              />
-              <button class="communication-btn">
-                Truyền hình Nhân dân
-                <img
-                  id="other-icon"
-                  src="public/icon/arrow-right.svg"
-                  alt="arrow"
-                  style="margin-left: 12px"
-                />
-              </button>
-            </div>
-            <div class="uk-child-width-1-2@m uk-grid-medium" uk-grid>
               <div>
                 <div
                   class="uk-position-relative"
@@ -482,16 +558,11 @@
                     width: fit-content;
                   "
                 >
-                  <img id="other-icon" src="public/6.6.png" alt="nhan dan tv" />
-                  <button class="communication-btn">
-                    Báo điện tử VnExpress.net
-                    <img
-                      id="other-icon"
-                      src="public/icon/arrow-right.svg"
-                      alt="arrow"
-                      style="margin-left: 12px"
-                    />
-                  </button>
+                  <img
+                    id="other-icon"
+                    src="public/communication-img-1.png"
+                    alt="nhan dan tv"
+                  />
                 </div>
               </div>
               <div>
@@ -502,16 +573,11 @@
                     width: fit-content;
                   "
                 >
-                  <img id="other-icon" src="public/6.5.png" alt="nhan dan tv" />
-                  <button class="communication-btn">
-                    Cafe Biz
-                    <img
-                      id="other-icon"
-                      src="public/icon/arrow-right.svg"
-                      alt="arrow"
-                      style="margin-left: 12px"
-                    />
-                  </button>
+                  <img
+                    id="other-icon"
+                    src="public/communication-img-2.png"
+                    alt="nhan dan tv"
+                  />
                 </div>
               </div>
               <div></div>
@@ -519,114 +585,109 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
 
     <!-- Đăng ký  -->
-    <div class="static uk-position-relative">
-      <img class="static-background" src="public/3.jpeg" alt="title 3" />
-      <div id="form-register" class="register-wrapper">
-        <div class="container uk-child-width-1-2 uk-flex uk-flex-center">
-          <div class="register">
-            <img src="public/8.png" alt="register" class="register-img" />
-            <div class="register-content">
-              <div class="register-title">
-                Đăng ký học thử miễn phí nhận <span>quà tặng hè Chip Chip</span>
-              </div>
-              <form style="margin-top: 18px" class="text-left register-form">
-                <div>
-                  <label for="name" class="register-form-label"
-                    >Tên của con <span style="color: red">*</span></label
-                  >
-                  <input
-                    class="uk-input register-form-input"
-                    type="text"
-                    placeholder="Nhập tên của con"
-                    aria-label="Input"
-                    name="name"
-                    id="name"
-                  />
-                </div>
-                <div>
-                  <label for="name" class="register-form-label"
-                    >Năm sinh <span style="color: red">*</span></label
-                  >
-                  <div
-                    uk-form-custom="target: > * > span:first-child"
-                    style="border-radius: 999px; width: 100%"
-                  >
-                    <select
-                      class="w-full"
-                      aria-label="Custom controls"
-                      style="
-                        color: #535557;
-                        height: 44px;
-                        border-radius: 9999px;
-                      "
-                    >
-                      <option value="">Chọn năm sinh</option>
-                      <option value="2010">2010</option>
-                      <option value="2011">2011</option>
-                      <option value="2012">2012</option>
-                      <option value="2013">2013</option>
-                      <option value="2014">2014</option>
-                      <option value="2015">2015</option>
-                      <option value="2016">2016</option>
-                      <option value="2017">2017</option>
-                      <option value="2018">2018</option>
-                      <option value="2019">2019</option>
-                      <option value="2019">2020</option>
-                      <option value="2019">2021</option>
-                    </select>
-                    <button
-                      class="register-form-select"
-                      type="button"
-                      tabindex="-1"
-                      style="border-radius: 999px; text-transform: none"
-                    >
-                      <span class="uk-margin-remove"></span>
-                      <span uk-icon="icon: chevron-down"></span>
-                    </button>
-                  </div>
-                </div>
-                <div>
-                  <label for="name" class="register-form-label"
-                    >Số điện thoại <span style="color: red">*</span></label
-                  >
-                  <input
-                    class="uk-input register-form-input"
-                    type="text"
-                    placeholder="Số điện thoại của phụ huynh"
-                    aria-label="Input"
-                    name="name"
-                    id="name"
-                  />
-                </div>
-                <div
-                  class="uk-flex uk-flex-center"
-                  style="margin-top: 12px; height: 60px"
+    <div id="form-register" class="register-wrapper uk-position-relative">
+      <img class="register-background" src="public/3.jpeg" alt="title 3" />
+      <div class="container uk-child-width-1-2 uk-flex uk-flex-center">
+        <div class="register">
+          <img src="public/8.png" alt="register" class="register-img" />
+          <div class="register-content">
+            <div class="register-title">
+              Đăng ký học thử miễn phí nhận
+              <span style="color: #ff5924"> quà tặng hè Chip Chip</span>
+            </div>
+            <form class="text-left register-form">
+              <div>
+                <label for="name" class="register-form-label"
+                  >Tên của con <span style="color: red">*</span></label
                 >
-                  <button
-                    class="button-primary"
-                    style="height: 100%; width: 100%"
+                <input
+                  class="uk-input register-form-input"
+                  type="text"
+                  placeholder="Nhập tên của con"
+                  aria-label="Input"
+                  name="name"
+                  id="name"
+                />
+              </div>
+              <div>
+                <label for="name" class="register-form-label"
+                  >Năm sinh <span style="color: red">*</span></label
+                >
+                <div
+                  uk-form-custom="target: > * > span:first-child"
+                  style="border-radius: 999px; width: 100%"
+                >
+                  <select
+                    class="w-full"
+                    aria-label="Custom controls"
+                    style="color: #535557; height: 44px; border-radius: 9999px"
                   >
-                    Đăng ký ngay
-                    <svg
-                      style="margin-left: 8px"
-                      width="23"
-                      height="23"
-                      viewBox="0 0 23 23"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M13.7442 3.94694C13.2242 3.93094 12.7882 4.33094 12.7602 4.85094C12.7082 5.27094 12.6642 7.02694 12.6442 8.26293C11.3282 8.26293 5.13216 7.84294 5.13216 7.84294C4.15616 7.84294 1.86816 7.84294 1.86816 10.9109V11.9389C1.86816 15.0109 4.23216 15.0109 5.27216 15.0109L12.7522 14.5789C12.8962 16.8989 13.1162 17.8989 13.3162 18.1789C13.4762 18.3829 13.7202 18.4989 13.9802 18.4869C15.1442 18.4869 17.4882 15.9789 18.1762 15.3309C19.0682 14.4949 21.1402 12.4309 21.1402 11.3109C21.1362 10.2389 15.7002 3.94694 13.7442 3.94694Z"
-                        fill="white"
-                      />
-                    </svg>
+                    <option value="">Chọn năm sinh</option>
+                    <option value="2010">2010</option>
+                    <option value="2011">2011</option>
+                    <option value="2012">2012</option>
+                    <option value="2013">2013</option>
+                    <option value="2014">2014</option>
+                    <option value="2015">2015</option>
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2019">2020</option>
+                    <option value="2019">2021</option>
+                  </select>
+                  <button
+                    class="register-form-select"
+                    type="button"
+                    tabindex="-1"
+                    style="border-radius: 999px; text-transform: none"
+                  >
+                    <span class="uk-margin-remove"></span>
+                    <span uk-icon="icon: chevron-down"></span>
                   </button>
                 </div>
-              </form>
-            </div>
+              </div>
+              <div>
+                <label for="name" class="register-form-label"
+                  >Số điện thoại <span style="color: red">*</span></label
+                >
+                <input
+                  class="uk-input register-form-input"
+                  type="text"
+                  placeholder="Số điện thoại của phụ huynh"
+                  aria-label="Input"
+                  name="name"
+                  id="name"
+                />
+              </div>
+              <div
+                class="uk-flex uk-flex-center"
+                style="margin-top: 12px; height: 60px"
+              >
+                <button
+                  class="button-primary"
+                  style="height: 100%; width: 100%"
+                >
+                  Đăng ký ngay
+                  <svg
+                    style="margin-left: 8px"
+                    width="23"
+                    height="23"
+                    viewBox="0 0 23 23"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M13.7442 3.94694C13.2242 3.93094 12.7882 4.33094 12.7602 4.85094C12.7082 5.27094 12.6642 7.02694 12.6442 8.26293C11.3282 8.26293 5.13216 7.84294 5.13216 7.84294C4.15616 7.84294 1.86816 7.84294 1.86816 10.9109V11.9389C1.86816 15.0109 4.23216 15.0109 5.27216 15.0109L12.7522 14.5789C12.8962 16.8989 13.1162 17.8989 13.3162 18.1789C13.4762 18.3829 13.7202 18.4989 13.9802 18.4869C15.1442 18.4869 17.4882 15.9789 18.1762 15.3309C19.0682 14.4949 21.1402 12.4309 21.1402 11.3109C21.1362 10.2389 15.7002 3.94694 13.7442 3.94694Z"
+                      fill="white"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -846,7 +907,35 @@
         }
       }
     </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var sliderFeedback = document.getElementById("slider-feedback");
 
+        function updateSliderCentering() {
+          console.log("window.innerWidth", window.innerWidth);
+          if (window.innerWidth < 768) {
+            sliderFeedback.setAttribute(
+              "uk-slider",
+              "clsActivated: uk-transition-active"
+            );
+            console.log("false");
+          } else {
+            sliderFeedback.setAttribute(
+              "uk-slider",
+              "clsActivated: uk-transition-active; center: true"
+            );
+            console.log("true");
+          }
+          console.log("asdasd", sliderFeedback);
+
+          UIkit.slider(sliderFeedback); // Reinitialize the slider to apply changes
+        }
+
+        updateSliderCentering();
+
+        window.addEventListener("resize", updateSliderCentering);
+      });
+    </script>
     <script>
       var myVideo = document.getElementById("my-video");
       var btnPlay = document.getElementById("btn-play");
