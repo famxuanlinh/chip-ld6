@@ -11,6 +11,7 @@
     <link rel="icon" type="image/x-icon" href="/public/icon/logo.svg" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/app.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
@@ -23,754 +24,513 @@
   <body>
     <!-- Header -->
     <div
+      class="uk-box-shadow-medium"
       style="
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
-        background: rgba(255, 255, 255, 0.3);
         z-index: 999;
+        background-color: white;
       "
     >
       <div class="container header">
         <a href="/index.html">
           <img src="public/logo.svg" alt="log" class="header-logo" />
         </a>
-        <a href="#form-register" class="button-primary">Học thử miễn phí</a>
       </div>
     </div>
 
-    <!-- Banner -->
-    <div class="banner-wrapper">
-      <div class="container banner">
-        <div class="banner-left" style="z-index: 1">
-          <div
-            class="uk-flex uk-flex-center"
-            style="padding-top: 24px; margin-bottom: -20px"
-          >
-            <img src="public/1.3.png" alt="log" />
-          </div>
-
-          <div
-            class="is-max-md"
-            style="scale: 1.25; margin-top: 20px; margin-bottom: 2px"
-          >
-            <img src="public/1.4.png" alt="log" />
-          </div>
-          <div class="uk-position-relative">
-            <img src="public/1.2.svg" alt="log" />
-            <div class="banner-content">
-              <div class="banner-title">
-                Chương trình Tiếng Anh online trẻ em với giáo viên nước ngoài
-                hạng A
-              </div>
-              <div class="banner-content-items">
-                <div class="banner-content-item">
-                  <div>
-                    <img
-                      src="public/icon/check.svg"
-                      alt="check"
-                      class="banner-content-item-icon"
-                    />
-                  </div>
-                  <div class="banner-content-item-text">
-                    Học online 1 kèm 1 linh hoạt, tần suất gấp 3 lần trung tâm
-                  </div>
-                </div>
-                <div class="banner-content-item">
-                  <div>
-                    <img
-                      src="public/icon/check.svg"
-                      alt="check"
-                      class="banner-content-item-icon"
-                    />
-                  </div>
-                  <div class="banner-content-item-text">
-                    100% giáo viên nước ngoài có chứng chỉ giảng dạy quốc tế,
-                    kinh nghiệm 1 năm trở lên
-                  </div>
-                </div>
-                <div class="banner-content-item">
-                  <div>
-                    <img
-                      src="public/icon/check.svg"
-                      alt="check"
-                      class="banner-content-item-icon"
-                    />
-                  </div>
-                  <div class="banner-content-item-text">
-                    Chương trình giao tiếp chuẩn Cambridge
-                  </div>
-                </div>
-              </div>
+    <!-- Main banner -->
+    <div class="hero">
+      <div class="container">
+        <div class="hero-container">
+          <div class="hero-content">
+            <div class="hero-content-sub-title">
+              Học tiếng Anh Online theo nhóm
             </div>
-          </div>
-        </div>
-        <div class="banner-right">
-          <img src="public/1.4.png" alt="log" />
-        </div>
-      </div>
-    </div>
-
-    <div class="bg-pattern" style="padding-top: 12px">
-      <!-- Kết quả bất ngờ sau 3 tháng hè -->
-      <div class="unexpected-results-wrapper">
-        <div class="container uk-position-relative">
-          <div class="unexpected-results">
-            <div class="unexpected-results-image">
+            <div class="hero-content-title">
+              Cùng con học vui <br />
+              Tự tin giao tiếp
               <img
-                src="public/2.1.png"
-                alt="log"
-                class="w-full"
-                style="object-fit: contain"
+                src="public/hero-lines.svg"
+                alt=""
+                class="hero-content-lines"
               />
             </div>
-            <div class="unexpected-results-content">
-              <div class="unexpected-results-item">
-                <img
-                  src="public/icon/ice-cream.svg"
-                  alt="log"
-                  class="unexpected-results-icon"
-                />
-                <div class="unexpected-results-desc">
-                  Con hào hứng nói Tiếng Anh, hết sợ giao tiếp
-                </div>
-              </div>
-              <div class="unexpected-results-item">
-                <img
-                  src="public/icon/ice-cream.svg"
-                  width="32"
-                  height="53"
-                  alt="log"
-                  class="unexpected-results-icon"
-                />
-                <div class="unexpected-results-desc">
-                  Phản xạ nhanh khi giao tiếp Tiếng Anh
-                </div>
-              </div>
-              <div class="unexpected-results-item">
-                <img
-                  src="public/icon/ice-cream.svg"
-                  width="32"
-                  height="53"
-                  alt="log"
-                  class="unexpected-results-icon"
-                />
-                <div class="unexpected-results-desc">
-                  Phát âm tiếng Anh chuẩn, ngữ điệu trôi chảy
-                </div>
-              </div>
-              <div class="unexpected-results-item">
-                <img
-                  src="public/icon/ice-cream.svg"
-                  width="32"
-                  height="53"
-                  alt="log"
-                  class="unexpected-results-icon"
-                />
-                <div class="unexpected-results-desc">
-                  Cải thiện từ vựng và ngữ pháp
-                </div>
-              </div>
-            </div>
-            <img
-              src="public/2.3.png"
-              alt="log"
-              class="unexpected-results-image-title-mobile"
-            />
-          </div>
-          <img
-            src="public/2.2.png"
-            alt="log"
-            class="unexpected-results-image-title-destop"
-          />
-        </div>
-      </div>
-
-      <!-- Thống kê -->
-      <div class="static uk-position-relative">
-        <img class="static-background" src="public/3.jpeg" alt="title 3" />
-        <div class="container static-content">
-          <div>
-            <div class="static-title">500.000+</div>
-            <div class="static-desc">lớp học đã hoàn thành</div>
-          </div>
-          <div>
-            <div class="static-title">530+</div>
-            <div class="static-desc">giáo viên</div>
-          </div>
-          <div>
-            <div class="static-title">6.000+</div>
-            <div class="static-desc">học sinh chính thức</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 3 lý do ba mẹ -->
-      <div class="reasons-wrapper">
-        <div class="container reasons">
-          <img
-            id="other-icon"
-            class="uk-position-absolute icon-max-md"
-            src="public/A.svg"
-            alt="title 3"
-            width="270"
-            style="top: -32px; left: -90px"
-          />
-          <img
-            id="other-icon"
-            class="uk-position-absolute icon-max-md"
-            src="public/Z.svg"
-            alt="title 3"
-            width="270"
-            style="bottom: -156px; left: -134px"
-          />
-          <img
-            id="other-icon"
-            class="uk-position-absolute icon-max-md"
-            src="public/S.svg"
-            alt="title 3"
-            width="270"
-            style="top: 72px; right: -90px"
-          />
-          <div class="reasons-title">
-            <div class="reasons-title-wrapper">
-              <div class="reasons-image flex-center">
-                <img src="public/3.1.png" alt="title 3" />
-              </div>
-              <div class="reasons-desc">
-                Học online 1 kèm 1, linh hoạt thời gian học, tần suất tiếp xúc
-                gấp 3 lần học trung tâm
-              </div>
-            </div>
-          </div>
-          <div class="uk-child-width-1-3@m uk-grid-medium" uk-grid>
-            <div>
-              <div class="reasons-card uk-box-shadow-medium">
-                <img
-                  class="reasons-card-img"
-                  src="public/3.2.png"
-                  alt="title 3"
-                />
-                <div style="padding: 28px">
-                  <div class="reasons-card-title">
-                    Du học tại nhà cùng +500 giáo viên nước ngoài hạng A
-                  </div>
-                  <div class="reasons-card-desc">
-                    <div class="uk-flex uk-flex-top">
-                      <img
-                        src="public/icon/star.svg"
-                        alt="title 3"
-                        style="margin: 0 12px 0 0"
-                        width="28"
-                        height="28"
-                      />
-                      <div>100% có chứng chỉ đào tạo tiếng Anh quốc tế</div>
-                    </div>
-                    <div class="uk-flex uk-flex-top">
-                      <img
-                        src="public/icon/star.svg"
-                        alt="title 3"
-                        style="margin: 0 12px 0 0"
-                        width="28"
-                        height="28"
-                      />
-                      <div>Tuyển chọn kỹ lưỡng với 6 bước</div>
-                    </div>
-                    <div class="uk-flex uk-flex-top">
-                      <img
-                        src="public/icon/star.svg"
-                        alt="title 3"
-                        style="margin: 0 12px 0 0"
-                        width="28"
-                        height="28"
-                      />
-                      <div>
-                        Duy nhất ở Chip Chip, tất cả thông tin của giáo viên
-                        được công khai minh bạch trên app để phụ huynh yên tâm
-                        lựa chọn
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="reasons-card uk-box-shadow-medium">
-                <img
-                  class="reasons-card-img"
-                  src="public/3.3.png"
-                  alt="title 3"
-                />
-                <div style="padding: 28px">
-                  <div class="reasons-card-title">
-                    Nền tảng học tập độc quyền
-                  </div>
-                  <div class="reasons-card-desc">
-                    <div class="uk-flex uk-flex-top">
-                      <img
-                        src="public/icon/star.svg"
-                        alt="title 3"
-                        style="margin: 0 12px 0 0"
-                        width="28"
-                        height="28"
-                      />
-                      <div>
-                        Sở hữu nền tảng học tập tương tác riêng, không học qua
-                        các phần mềm họp như Zoom, Skype
-                      </div>
-                    </div>
-                    <div class="uk-flex uk-flex-top">
-                      <img
-                        src="public/icon/star.svg"
-                        alt="title 3"
-                        style="margin: 0 12px 0 0"
-                        width="28"
-                        height="28"
-                      />
-                      <div>Thiết kế thân thiện, dành riêng cho trẻ em</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="reasons-card uk-box-shadow-medium">
-                <img
-                  class="reasons-card-img"
-                  src="public/3.4.png"
-                  alt="title 3"
-                />
-                <div style="padding: 28px">
-                  <div class="reasons-card-title">
-                    Phương pháp học giao tiếp S.P.E.A.K độc đáo
-                  </div>
-                  <div class="reasons-card-desc">
-                    <div class="uk-flex uk-flex-top">
-                      <img
-                        src="public/icon/star.svg"
-                        alt="title 3"
-                        style="margin: 0 12px 0 0"
-                        width="28"
-                        height="28"
-                      />
-                      <div>
-                        Kết hợp tương tác giáo viên trong lớp và tự luyện tập có
-                        định hướng
-                      </div>
-                    </div>
-                    <div class="uk-flex uk-flex-top">
-                      <img
-                        src="public/icon/star.svg"
-                        alt="title 3"
-                        style="margin: 0 12px 0 0"
-                        width="28"
-                        height="28"
-                      />
-                      <div>
-                        Giáo viên khơi gợi học sinh tư duy và nói nhiều hơn bằng
-                        các câu hỏi mở
-                      </div>
-                    </div>
-                    <div class="uk-flex uk-flex-top">
-                      <img
-                        src="public/icon/star.svg"
-                        alt="title 3"
-                        style="margin: 0 12px 0 0"
-                        width="28"
-                        height="28"
-                      />
-                      <div>Bài tập về nhà tương tác dưới dạng game thú vị</div>
-                    </div>
-                    <div class="uk-flex uk-flex-top">
-                      <img
-                        src="public/icon/star.svg"
-                        alt="title 3"
-                        style="margin: 0 12px 0 0"
-                        width="28"
-                        height="28"
-                      />
-                      <div>
-                        Con được tham gia các dự án cá nhân, luyện tập thuyết
-                        trình tự tin bằng tiếng Anh sau mỗi 2 đơn vị bài học
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Cam kết từ chip chip -->
-      <div class="commit-wrapper">
-        <div class="container commit">
-          <img src="public/4.1.png" alt="commit" class="commit-image" />
-          <div style="flex: 1 1 0%">
-            <div class="commit-title">
-              <div class="commit-title-wrapper">
-                <div class="commit-image-title flex-center">
-                  <img
-                    src="public/4.2.png"
-                    alt="title 3"
-                    style="max-width: 655px; width: 100%"
-                  />
-                </div>
-                <div class="commit-desc">
-                  Chip Chip luôn đặt ra tiêu chuẩn phục vụ cao nhất đối với học
-                  sinh và phụ huynh
-                </div>
-              </div>
-            </div>
-            <div class="commit-content">
-              <div class="commit-content-item">
-                <div class="commit-content-number">01</div>
-                <img
-                  src="public/icon/1.svg"
-                  alt="1"
-                  class="commit-content-icon"
-                />
-                <div class="commit-content-desc">
-                  Hoàn phí nếu học không hiệu quả
-                </div>
-              </div>
-              <div class="commit-content-item">
-                <div class="commit-content-number">02</div>
-                <img
-                  src="public/icon/1.svg"
-                  alt="1"
-                  class="commit-content-icon"
-                />
-                <div class="commit-content-desc">
-                  Cam kết đầu ra, được học lại miễn phí cho đến khi đạt cấp độ
-                </div>
-              </div>
-              <div class="commit-content-item">
-                <div class="commit-content-number">03</div>
-                <img
-                  src="public/icon/1.svg"
-                  alt="1"
-                  class="commit-content-icon"
-                />
-                <div class="commit-content-desc">
-                  Có cô giáo người Việt đồng hành theo sát trong toàn bộ chương
-                  trình
-                </div>
-              </div>
-              <div class="uk-flex uk-flex-center" style="margin-top: 12px">
-                <a href="#form-register" class="button-primary">
-                  Học thử miễn phí
-                  <svg
-                    style="margin-left: 8px"
-                    width="23"
-                    height="23"
-                    viewBox="0 0 23 23"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M13.7442 3.94694C13.2242 3.93094 12.7882 4.33094 12.7602 4.85094C12.7082 5.27094 12.6642 7.02694 12.6442 8.26293C11.3282 8.26293 5.13216 7.84294 5.13216 7.84294C4.15616 7.84294 1.86816 7.84294 1.86816 10.9109V11.9389C1.86816 15.0109 4.23216 15.0109 5.27216 15.0109L12.7522 14.5789C12.8962 16.8989 13.1162 17.8989 13.3162 18.1789C13.4762 18.3829 13.7202 18.4989 13.9802 18.4869C15.1442 18.4869 17.4882 15.9789 18.1762 15.3309C19.0682 14.4949 21.1402 12.4309 21.1402 11.3109C21.1362 10.2389 15.7002 3.94694 13.7442 3.94694Z"
-                      fill="white"
-                    />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Người nổi tiếng chọn chipchip -->
-      <div class="celebrity-wrapper">
-        <div class="container celebrity">
-          <img
-            id="other-icon"
-            class="uk-position-absolute icon-max-md"
-            src="public/ice-cream.svg"
-            alt="title 3"
-            width="96"
-            style="top: -70px; left: 150px"
-          />
-          <img
-            id="other-icon"
-            class="uk-position-absolute icon-max-md"
-            src="public/stars.svg"
-            alt="title 3"
-            width="202"
-            style="top: 72px; right: 90px"
-          />
-          <div class="celebrity-image flex-center" style="margin-bottom: 27px">
-            <img src="public/5.1.png" alt="title 3" width="270" />
-          </div>
-          <div class="uk-child-width-1-2@m" uk-grid>
-            <div style="text-align: -webkit-center">
-              <div class="celebrity-card">
-                <img
-                  src="public/5.3.png"
-                  alt="celebrity"
-                  class="celebrity-card-img"
-                />
-                <div class="celebrity-card-title">DV Vân Trang - bé Nì</div>
-
-                <div
-                  class="celebrity-card-rating uk-flex uk-flex-middle uk-flex-center"
-                >
-                  <img src="public/icon/star2.svg" alt="kep" width="47" />
-                  <img src="public/icon/star2.svg" alt="kep" width="47" />
-                  <img src="public/icon/star2.svg" alt="kep" width="47" />
-                  <img src="public/icon/star2.svg" alt="kep" width="47" />
-                  <img src="public/icon/star2.svg" alt="kep" width="47" />
-                </div>
-                <img src="public/5.4.svg" alt="kep" width="47" />
-                <div class="celebrity-card-desc">
-                  Tôi rất ấn tượng với chương trình học tiếng Anh tại Chip Chip.
-                  Con tôi đã tiến bộ rõ rệt và tự tin hơn nhiều nhờ cách Chip
-                  Chip tập trung vào việc phát âm và từ vựng, điều này rất quan
-                  trọng với trẻ.
-                </div>
-              </div>
-            </div>
-            <div style="text-align: -webkit-center">
-              <div class="celebrity-card">
-                <img
-                  src="public/5.2.png"
-                  alt="celebrity"
-                  class="celebrity-card-img"
-                />
-                <div class="celebrity-card-title">
-                  DV Lã Thanh Huyền - bé Chum
-                </div>
-
-                <div
-                  class="celebrity-card-rating uk-flex uk-flex-middle uk-flex-center"
-                >
-                  <img src="public/icon/star2.svg" alt="kep" width="47" />
-                  <img src="public/icon/star2.svg" alt="kep" width="47" />
-                  <img src="public/icon/star2.svg" alt="kep" width="47" />
-                  <img src="public/icon/star2.svg" alt="kep" width="47" />
-                  <img src="public/icon/star2.svg" alt="kep" width="47" />
-                </div>
-                <img src="public/5.4.svg" alt="kep" width="47" />
-                <div class="celebrity-card-desc">
-                  Nhờ Chip Chip, con tôi giờ đây có thể giao tiếp bằng tiếng Anh
-                  một cách tự nhiên và hiệu quả. Các giáo viên tại Chip Chip
-                  thực sự chuyên nghiệp và biết cách làm cho bài học trở nên vui
-                  vẻ, hấp dẫn.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Truyền thồn đưa tin về chip chip -->
-      <div class="communication-wrapper">
-        <div class="container communication">
-          <img
-            id="other-icon"
-            class="uk-position-absolute icon-max-md"
-            src="public/glass.png"
-            alt="title 3"
-            width="213"
-            style="top: 150px; left: 0"
-          />
-          <img
-            id="other-icon"
-            class="uk-position-absolute icon-max-md"
-            src="public/flight.svg"
-            alt="title 3"
-            width="358"
-            style="top: -130px; right: 0"
-          />
-          <img
-            id="other-icon"
-            class="uk-position-absolute icon-max-md"
-            src="public/sun.svg"
-            alt="title 3"
-            width="240"
-            style="bottom: 200px; left: 0"
-          />
-          <div
-            class="communication-image flex-center"
-            style="margin-bottom: 27px"
-          >
-            <img src="public/6.1.png" alt="title 3" width="270" />
-          </div>
-
-          <div style="text-align: -webkit-center">
-            <div class="communication-brands">
-              <img
-                id="other-icon"
-                class="communication-brands-item"
-                src="public/6.2-nhan-dan.svg"
-                alt="nhan dan tv"
-              />
-              <img
-                id="other-icon"
-                class="communication-brands-item"
-                src="public/6.3-vnexpress.svg"
-                alt="nhan dan tv"
-              />
-              <img
-                id="other-icon"
-                class="communication-brands-item"
-                src="public/6.4-cafebiz.svg"
-                alt="nhan dan tv"
-              />
-            </div>
-          </div>
-          <div style="text-align: -webkit-center">
-            <div class="communication-content">
-              <div
-                onclick="playPause()"
-                class="uk-position-relative"
-                style="
-                  text-align: -webkit-center uk-width-1-1;
-                  margin-bottom: 24px;
-                  width: 100%;
-                "
+            <div class="hero-content-desc">
+              Con cùng bạn học tập tiếng Anh hiệu quả với
+              <span style="font-weight: 700; color: #ff5924"
+                >100% giáo viên nước ngoài</span
               >
+
+              ngay tại nhà. Học phí chỉ từ
+              <span style="font-weight: 700; color: #ff5924"
+                >65.000/buổi học</span
+              >.
+            </div>
+            <div class="hero-content-btn">
+              <a
+                href="#form-register"
+                class="button-primary button-primary-big shrink"
+                >Học thử miễn phí
                 <img
-                  id="background-video"
-                  src="public/6.7.png"
-                  alt="nhan dan tv"
+                  style="margin-left: 5px"
+                  src="public/icon/arrow-right.svg"
+                  alt="arrow right"
+              /></a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img src="public/hero-img.png" alt="title 1" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Thống kê -->
+    <div class="static uk-position-relative">
+      <!-- <img class="static-background" src="public/3.jpeg" alt="title 3" /> -->
+      <div class="container static-content">
+        <div>
+          <div class="static-title">500.000+</div>
+          <div class="static-desc">lớp học đã hoàn thành</div>
+        </div>
+        <div>
+          <div class="static-title">530+</div>
+          <div class="static-desc">giáo viên</div>
+        </div>
+        <div>
+          <div class="static-title">6.000+</div>
+          <div class="static-desc">học sinh chính thức</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tại sao nên chọn -->
+    <div class="choose">
+      <div class="">
+        <div class="choose-container">
+          <div class="choose-title container">
+            Tại sao nên chọn <br />
+            <span style="color: #3db54a"
+              >khóa học tiếng Anh online theo nhóm</span
+            >
+            cho con?
+          </div>
+          <div class="choose-cards container">
+            <div class="choose-card">
+              <img
+                class="choose-card-icon"
+                src="public/icon/choose-icon1.svg"
+                alt="choose icon"
+              />
+              <div class="choose-card-desc">
+                Con học vui - tương tác hiệu quả với thời lượng
+                <span>40 - 45 phút/buổi</span>
+              </div>
+            </div>
+
+            <div class="choose-card">
+              <img
+                class="choose-card-icon"
+                src="public/icon/choose-icon2.svg"
+                alt="choose icon"
+              />
+              <div class="choose-card-desc">
+                Con tự tin giao tiếp, phát âm chuẩn, phản xạ nhanh nhờ
+                <span>tương tác liên tục với giáo viên nước ngoài top đầu</span>
+                , được tuyển chọn khắt khe qua 6 bước
+              </div>
+            </div>
+
+            <div class="choose-card">
+              <img
+                class="choose-card-icon"
+                src="public/icon/choose-icon3.svg"
+                alt="choose icon"
+              />
+              <div class="choose-card-desc">
+                Con thoải mái tương tác cùng bạn bè với
+                <span>sĩ số lớp chỉ từ 2 - 4 học sinh</span>
+              </div>
+            </div>
+
+            <div class="choose-card">
+              <img
+                class="choose-card-icon"
+                src="public/icon/choose-icon4.svg"
+                alt="choose icon"
+              />
+              <div class="choose-card-desc">
+                Lớp học chất lượng với
+                <span>chi phí chỉ từ 65.000/buổi học</span>
+              </div>
+            </div>
+          </div>
+          <div class="choose-videos">
+            <div
+              onclick="playEmbed('choose-video1')"
+              id="choose-video1"
+              class="choose-video"
+            >
+              <div>
+                <img
+                  src="public/choose-img-2.png"
+                  alt="thumbnail"
+                  style="width: 100%; height: 100%"
                 />
-                <video id="my-video" style="width: 100%; display: none">
-                  <source src="public/video.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
                 <img
-                  id="btn-play"
-                  src="public/icon/play.svg"
+                  src="public/icon/play-circle.svg"
                   alt="play"
                   class="uk-position-center"
                   style="cursor: pointer"
                 />
-                <button class="communication-btn">
-                  Truyền hình Nhân dân
-                  <img
-                    id="other-icon"
-                    src="public/icon/arrow-right.svg"
-                    alt="arrow"
-                    style="margin-left: 12px"
-                  />
-                </button>
               </div>
-              <div class="uk-child-width-1-2@m uk-grid-medium" uk-grid>
-                <div>
-                  <div
-                    class="uk-position-relative"
-                    style="
-                      text-align: -webkit-center uk-width-1-1;
-                      width: fit-content;
-                    "
-                  >
-                    <img
-                      id="other-icon"
-                      src="public/6.6.png"
-                      alt="nhan dan tv"
-                    />
-                    <button class="communication-btn">
-                      Báo điện tử VnExpress.net
-                      <img
-                        id="other-icon"
-                        src="public/icon/arrow-right.svg"
-                        alt="arrow"
-                        style="margin-left: 12px"
-                      />
-                    </button>
-                  </div>
-                </div>
-                <div>
-                  <div
-                    class="uk-position-relative"
-                    style="
-                      text-align: -webkit-center uk-width-1-1;
-                      width: fit-content;
-                    "
-                  >
-                    <img
-                      id="other-icon"
-                      src="public/6.5.png"
-                      alt="nhan dan tv"
-                    />
-                    <button class="communication-btn">
-                      Cafe Biz
-                      <img
-                        id="other-icon"
-                        src="public/icon/arrow-right.svg"
-                        alt="arrow"
-                        style="margin-left: 12px"
-                      />
-                    </button>
-                  </div>
-                </div>
-                <div></div>
-              </div>
+              <iframe
+                class="review-iframe"
+                data-src="https://www.youtube.com/embed/_Mh_65H26fM"
+                title="Diễn viên Lã Thanh Huyền đã chia sẻ gì khi cho bé Chum học tập tại Chip Chip?"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+                autoplay
+              ></iframe>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Feedback -->
-      <div>
-        <div class="communication-wrapper">
-          <div class="container" style="margin-bottom: 0">
-            <!-- <img
-              id="other-icon"
-              class="uk-position-absolute icon-max-md"
-              src="public/glass.png"
-              alt="title 3"
-              width="213"
-              style="top: 150px; left: 0"
-            /> -->
-            <img
-              id="other-icon"
-              class="uk-position-absolute icon-max-md"
-              src="public/icloud.svg"
-              alt="title 3"
-              width="358"
-              style="top: -130px; right: 0"
-            />
-
             <div
-              class="communication-image flex-center"
-              style="margin-bottom: 27px"
+              onclick="playEmbed('choose-video2')"
+              id="choose-video2"
+              class="choose-video"
             >
-              <img src="public/9.1.png" alt="title 3" width="270" />
+              <div>
+                <img src="public/choose-img-1.jpg" alt="thumbnail" />
+                <img
+                  src="public/icon/play-circle.svg"
+                  alt="play"
+                  class="uk-position-center"
+                  style="cursor: pointer"
+                />
+              </div>
+              <iframe
+                class="review-iframe"
+                data-src="https://www.youtube.com/embed/ovw-ze6SUvU"
+                title="Diễn viên Lã Thanh Huyền đã chia sẻ gì khi cho bé Chum học tập tại Chip Chip?"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+                autoplay
+              ></iframe>
             </div>
           </div>
-          <div class="carousel" style="overflow: hidden"></div>
+          <div class="uk-flex uk-flex-center container">
+            <a href="#form-register" class="button-primary"
+              >Học thử miễn phí
+              <img
+                style="margin-left: 5px"
+                src="public/icon/arrow-right.svg"
+                alt="arrow right"
+            /></a>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="bg-bottom">
-      <!-- Đăng ký  -->
+    <!-- Chip chip cam kết -->
+    <div class="commit-wrapper">
+      <div class="container commit">
+        <img src="public/4.1.png" alt="commit" class="commit-image" />
+        <div style="flex: 1 1 0%">
+          <div class="">
+            <div class="commit-title">
+              Chip Chip <span style="color: #3db54a">cam kết</span>
+            </div>
+            <div class="commit-desc">
+              Chip Chip luôn đặt ra tiêu chuẩn phục vụ cao nhất đối với học sinh
+              và phụ huynh
+            </div>
+          </div>
+          <div class="commit-content">
+            <div class="commit-content-item">
+              <div class="commit-content-number">01</div>
+              <img
+                src="public/icon/1.svg"
+                alt="1"
+                class="commit-content-icon"
+              />
+              <div class="commit-content-desc">
+                Hoàn phí nếu học không hiệu quả
+              </div>
+            </div>
+            <div class="commit-content-item">
+              <div class="commit-content-number">02</div>
+              <img
+                src="public/icon/1.svg"
+                alt="1"
+                class="commit-content-icon"
+              />
+              <div class="commit-content-desc">
+                Cam kết đầu ra, được học lại miễn phí cho đến khi đạt cấp độ
+              </div>
+            </div>
+            <div class="commit-content-item">
+              <div class="commit-content-number">03</div>
+              <img
+                src="public/icon/1.svg"
+                alt="1"
+                class="commit-content-icon"
+              />
+              <div class="commit-content-desc">
+                Có cô giáo người Việt đồng hành theo sát trong toàn bộ chương
+                trình
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Học tiếng Anh thú vị vớinền tảng công nghệ Chip Chip -->
+    <div class="platform">
+      <div class="platform-title">
+        Học tiếng Anh thú vị với <br />
+        <span style="color: #3db54a">nền tảng công nghệ Chip Chip</span>
+      </div>
+      <div class="platform-container">
+        <img class="platform-img" src="public/platform-img.jpg" alt="check" />
+        <div class="platform-content">
+          <img class="platform-dots" src="public/hero-dots.svg" alt="dots" />
+
+          <div class="platform-card">
+            <img
+              class="platform-card-icon"
+              src="public/icon/check-icon.svg"
+              alt="check"
+            />
+            <div class="platform-card-desc">
+              Nền tảng Smartclass 5.0 dành riêng cho trẻ em với giao diện dễ sử
+              dụng
+            </div>
+          </div>
+          <div class="platform-card">
+            <img
+              class="platform-card-icon"
+              src="public/icon/check-icon.svg"
+              alt="check"
+            />
+            <div class="platform-card-desc">
+              Nền tảng Smartclass 5.0 dành riêng cho trẻ em với giao diện dễ sử
+              dụng
+            </div>
+          </div>
+          <div class="platform-card">
+            <img
+              class="platform-card-icon"
+              src="public/icon/check-icon.svg"
+              alt="check"
+            />
+            <div class="platform-card-desc">
+              Nền tảng Smartclass 5.0 dành riêng cho trẻ em với giao diện dễ sử
+              dụng
+            </div>
+          </div>
+          <div class="uk-flex uk-flex-center">
+            <a href="#form-register" class="button-primary"
+              >Học thử miễn phí
+              <img
+                style="margin-left: 5px"
+                src="public/icon/arrow-right.svg"
+                alt="arrow right"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tự hào khi có đến 98% phụ huynh đánh giá cao khóa học Chip Chip -->
+    <div class="review">
+      <img
+        src="public/circle.svg"
+        alt="circle"
+        style="cursor: pointer"
+        class="review-circle"
+      />
+      <div class="">
+        <div class="review-container">
+          <div class="review-title container">
+            Tự hào khi có đến <br />
+            <span style="color: #3db54a">98% phụ huynh đánh giá cao</span>
+            khóa học Chip Chip
+          </div>
+
+          <div class="review-videos">
+            <div style="flex: 1 1 0%">
+              <div
+                onclick="playEmbed('review-video1')"
+                id="review-video1"
+                class="review-video"
+              >
+                <div>
+                  <img src="public/review-img-1.jpg" alt="thumbnail" />
+                  <img
+                    src="public/icon/play-circle.svg"
+                    alt="play"
+                    class="uk-position-center"
+                    style="cursor: pointer"
+                  />
+                </div>
+                <iframe
+                  class="review-iframe"
+                  data-src="https://www.youtube.com/embed/jBmgjm4acHQ"
+                  title="Diễn viên Lã Thanh Huyền đã chia sẻ gì khi cho bé Chum học tập tại Chip Chip?"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                  autoplay
+                ></iframe>
+              </div>
+              <div class="review-video-desc">DV Lã Thanh Huyền - bé Chum</div>
+            </div>
+            <div style="flex: 1 1 0%">
+              <div
+                onclick="playEmbed('review-video2')"
+                id="review-video2"
+                class="review-video"
+              >
+                <div>
+                  <img src="public/review-img-2.jpg" alt="thumbnail" />
+                  <img
+                    src="public/icon/play-circle.svg"
+                    alt="play"
+                    class="uk-position-center"
+                    style="cursor: pointer"
+                  />
+                </div>
+                <iframe
+                  class="review-iframe"
+                  data-src="https://www.youtube.com/embed/im0tVwVsoeg"
+                  title="Diễn viên Lã Thanh Huyền đã chia sẻ gì khi cho bé Chum học tập tại Chip Chip?"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                  autoplay
+                ></iframe>
+              </div>
+              <div class="review-video-desc">DV Vân Trang - bé Nì</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Truyền thồn đưa tin về chip chip -->
+    <!-- <div class="communication-wrapper">
+      <div class="container communication">
+        <div
+          class="communication-image flex-center"
+          style="margin-bottom: 27px"
+        >
+          <img src="public/6.1.png" alt="title 3" width="270" />
+        </div>
+
+        <div style="text-align: -webkit-center">
+          <div class="communication-content">
+            <div
+              onclick="playPause()"
+              class="uk-position-relative"
+              style="
+                text-align: -webkit-center uk-width-1-1;
+                margin-bottom: 24px;
+                width: 100%;
+              "
+            >
+              <img
+                id="background-video"
+                src="public/6.7.png"
+                alt="nhan dan tv"
+              />
+              <video id="my-video" style="width: 100%; display: none">
+                <source src="public/video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <img
+                id="btn-play"
+                src="public/icon/play.svg"
+                alt="play"
+                class="uk-position-center"
+                style="cursor: pointer"
+              />
+              <button class="communication-btn">
+                Truyền hình Nhân dân
+                <img
+                  id="other-icon"
+                  src="public/icon/arrow-right.svg"
+                  alt="arrow"
+                  style="margin-left: 12px"
+                />
+              </button>
+            </div>
+            <div class="uk-child-width-1-2@m uk-grid-medium" uk-grid>
+              <div>
+                <div
+                  class="uk-position-relative"
+                  style="
+                    text-align: -webkit-center uk-width-1-1;
+                    width: fit-content;
+                  "
+                >
+                  <img id="other-icon" src="public/6.6.png" alt="nhan dan tv" />
+                  <button class="communication-btn">
+                    Báo điện tử VnExpress.net
+                    <img
+                      id="other-icon"
+                      src="public/icon/arrow-right.svg"
+                      alt="arrow"
+                      style="margin-left: 12px"
+                    />
+                  </button>
+                </div>
+              </div>
+              <div>
+                <div
+                  class="uk-position-relative"
+                  style="
+                    text-align: -webkit-center uk-width-1-1;
+                    width: fit-content;
+                  "
+                >
+                  <img id="other-icon" src="public/6.5.png" alt="nhan dan tv" />
+                  <button class="communication-btn">
+                    Cafe Biz
+                    <img
+                      id="other-icon"
+                      src="public/icon/arrow-right.svg"
+                      alt="arrow"
+                      style="margin-left: 12px"
+                    />
+                  </button>
+                </div>
+              </div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- Đăng ký  -->
+    <div class="static uk-position-relative">
+      <img class="static-background" src="public/3.jpeg" alt="title 3" />
       <div id="form-register" class="register-wrapper">
-        <img
-          id="other-icon"
-          class="uk-position-absolute icon-max-md"
-          src="public/float.svg"
-          alt="title 3"
-          width="150"
-          style="top: 0; right: 100px"
-        />
-        <img
-          id="other-icon"
-          class="uk-position-absolute icon-max-md"
-          src="public/cocount.svg"
-          alt="title 3"
-          width="152"
-          style="top: -100px; left: 150px"
-        />
         <div class="container uk-child-width-1-2 uk-flex uk-flex-center">
           <div class="register">
             <img src="public/8.png" alt="register" class="register-img" />
             <div class="register-content">
               <div class="register-title">
-                Đăng ký học thử miễn phí & nhận ưu đãi quà tặng hè sớm
+                Đăng ký học thử miễn phí nhận <span>quà tặng hè Chip Chip</span>
               </div>
               <form style="margin-top: 18px" class="text-left register-form">
                 <div>
@@ -870,111 +630,199 @@
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- footer -->
-      <div class="footer-wrapper uk-position-relative">
-        <img
-          src="public/bg-footer.png"
-          alt="bg footer"
-          class="uk-position-bottom-left uk-width-expand"
-        />
-        <div class="container" style="text-align: -webkit-center">
-          <div class="footer" style="z-index: 1">
-            <div class="footer-info">
-              <img src="public/logo.svg" alt="log" class="footer-logo" />
-              <div
-                style="
-                  font-size: 18px;
-                  font-weight: 600;
-                  line-height: 26.64px;
-                  color: black;
-                  margin-top: 12px;
-                "
-              >
-                Công ty CP Công nghệ và Giáo dục
-                <br class="uk-visible@s" />
-                <span style="color: rgba(255, 108, 0, 1)">Chip Chip</span>
+    <!-- footer -->
+    <div id="footer" class="footer">
+      <div class="section-30 uk-background-default uk-hidden@m">
+        <div class="uk-container">
+          <div class="uk-child-width-1-1" uk-grid>
+            <div>
+              <figure class="box-logo-f uk-margin">
+                <a href=""> <img src="images/logo_f.png" alt="" /></a>
+                <figcaption class="box-logo-f__txt mt-5">
+                  Công ty CP Công nghệ và Giáo dục Chip Chip
+                </figcaption>
+              </figure>
+            </div>
+            <div>
+              <div class="footer__title uk-margin-small">Điện thoại</div>
+              <div class="box-logo-f__txt" style="font-weight: 600">
+                1900 066 818
               </div>
             </div>
-            <div class="footer-block">
-              <div class="footer-title">Danh mục</div>
-              <div class="footer-desc">Cam kết từ Chip Chip</div>
-              <div class="footer-desc">Cảm nhận của phụ huynh</div>
-              <div class="footer-desc">Đăng ký học thử</div>
+            <div>
+              <div class="footer__title uk-margin-small">Địa chỉ</div>
+              <div class="box-logo-f__txt">
+                Tầng 5 nhà D, số 15 Lê Văn Thiêm, Thanh Xuân, Hà Nội
+              </div>
             </div>
-            <div class="footer-block">
-              <div class="footer-title">Thông tin liên hệ</div>
+            <div>
+              <div class="footer__title uk-margin-small">Liên kết</div>
               <div>
-                <div class="footer-sub-title">Hotline</div>
+                <a
+                  href=""
+                  class="uk-icon-button box-social__icon uk-margin-small-right"
+                  uk-icon="twitter"
+                ></a>
+                <a
+                  href=""
+                  class="uk-icon-button box-social__icon uk-margin-small-right"
+                  uk-icon="facebook"
+                ></a>
+                <a
+                  href=""
+                  class="uk-icon-button box-social__icon"
+                  uk-icon="youtube"
+                ></a>
+              </div>
+            </div>
+            <div>
+              <div class="box-social pt-15">
+                <div class="footer__title">Miễn phí tải về</div>
+                <div class="box-logo-f__txt mb-10">Phần mềm học cho bé</div>
+                <div class="uk-child-width-auto uk-grid-small" uk-grid>
+                  <div>
+                    <a
+                      href="https://apps.apple.com/app/id1482612826"
+                      target="_blank"
+                    >
+                      <img src="images/appstore.png" alt=""
+                    /></a>
+                  </div>
+                  <div>
+                    <a
+                      href="https://play.google.com/store/apps/details?id=vn.edu.chipchip.parentapp&hl=en"
+                      target="_blank"
+                    >
+                      <img src="images/googleplay.png" alt=""
+                    /></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="uk-section-small uk-background-default uk-visible@m">
+        <div class="uk-container">
+          <div class="uk-child-width-1-3@m" uk-grid>
+            <div>
+              <figure class="box-logo-f uk-margin">
+                <a href=""> <img src="images/logo_f.png" alt="" /></a>
+                <figcaption class="box-logo-f__txt mt-5">
+                  <b>Công ty CP Công nghệ và Giáo dục ChipChip</b>
+                </figcaption>
+                <div class="box-logo-f__txt" style="line-height: 25px">
+                  MST: 0109088958 do Sở Kế hoạch và Đầu tư TP. Hà Nội cấp ngày
+                  14 tháng 02 năm 2020
+                </div>
+              </figure>
+              <div>
+                <a
+                  href=""
+                  class="uk-icon-button box-social__icon uk-margin-small-right"
+                  uk-icon="twitter"
+                ></a>
+                <a
+                  href=""
+                  class="uk-icon-button box-social__icon uk-margin-small-right"
+                  uk-icon="facebook"
+                ></a>
+                <a
+                  href=""
+                  class="uk-icon-button box-social__icon"
+                  uk-icon="youtube"
+                ></a>
+              </div>
+            </div>
+            <div>
+              <div class="footer__title uk-margin">Truy cập</div>
+              <ul class="uk-list footer__list-link">
+                <li><a href="giao-vien.html">Giáo viên</a></li>
+                <li>
+                  <a href="chuong-trinh-hoc.html">Chương trình học</a>
+                </li>
+                <li><a href="nen-tang-hoc.html">Nền tảng học</a></li>
+                <li><a href="gioi-thieu.html">Về chúng tôi</a></li>
+                <li style="display: none">
+                  <a href="tin-tuc.html">Tin tức</a>
+                </li>
+                <li><a href="lien-he.html">Liên hệ</a></li>
+              </ul>
+            </div>
+            <div>
+              <div class="footer__title uk-margin">Miễn phí tải về</div>
+              <div class="box-logo-f__txt uk-margin-small">
+                Phần mềm học cho bé & phụ huynh
+              </div>
+              <div class="uk-child-width-auto uk-grid-small" uk-grid>
                 <div>
-                  <svg
-                    width="20"
-                    height="21"
-                    viewBox="0 0 20 21"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g clip-path="url(#clip0_2004_20445)">
-                      <path
-                        d="M4.5693 13.0615C6.37756 15.2231 8.55431 16.925 11.0388 18.1292C11.9847 18.5775 13.2497 19.1093 14.6591 19.2005C14.7465 19.2043 14.83 19.2081 14.9174 19.2081C15.8633 19.2081 16.6231 18.8814 17.2423 18.209C17.2461 18.2052 17.2537 18.1976 17.2575 18.19C17.4778 17.9241 17.7286 17.6847 17.9907 17.4302C18.1692 17.2593 18.3516 17.0807 18.5263 16.8984C19.3355 16.055 19.3355 14.9837 18.5187 14.167L16.2356 11.8839C15.8481 11.4812 15.3847 11.2685 14.8984 11.2685C14.4122 11.2685 13.9449 11.4812 13.546 11.8801L12.186 13.2401C12.0607 13.1679 11.9315 13.1033 11.8099 13.0425C11.658 12.9665 11.5174 12.8944 11.3921 12.8146C10.1536 12.0282 9.02917 11.0025 7.95409 9.68433C7.41085 8.99673 7.04616 8.41931 6.79164 7.83048C7.14873 7.50758 7.48303 7.16948 7.80594 6.83898C7.9199 6.72121 8.03767 6.60345 8.15543 6.48568C8.56571 6.0754 8.78604 5.60055 8.78604 5.11809C8.78604 4.63563 8.56951 4.16078 8.15543 3.7505L7.02337 2.61844C6.89041 2.48548 6.76505 2.35631 6.63588 2.22335C6.38516 1.96503 6.12304 1.69911 5.86471 1.45978C5.47343 1.0761 5.01377 0.874756 4.52751 0.874756C4.04506 0.874756 3.5816 1.0761 3.17512 1.46358L1.75434 2.88436C1.23769 3.401 0.945182 4.02782 0.8844 4.7534C0.812222 5.66133 0.979372 6.62624 1.41244 7.79249C2.07724 9.59695 3.08015 11.2723 4.5693 13.0615ZM1.81132 4.83318C1.85691 4.32793 2.05065 3.90625 2.41534 3.54156L3.82852 2.12838C4.04886 1.91565 4.29198 1.80548 4.52751 1.80548C4.75924 1.80548 4.99477 1.91565 5.21131 2.13598C5.46583 2.37151 5.70516 2.61844 5.96349 2.88056C6.09265 3.01352 6.22561 3.14648 6.35857 3.28324L7.49063 4.4153C7.72616 4.65083 7.84772 4.89016 7.84772 5.12569C7.84772 5.36122 7.72616 5.60055 7.49063 5.83608C7.37286 5.95384 7.2551 6.0754 7.13733 6.19317C6.78404 6.55026 6.45354 6.88836 6.08885 7.21127C6.08125 7.21886 6.07745 7.22266 6.06985 7.23026C5.75455 7.54557 5.80393 7.84568 5.87991 8.07361C5.88371 8.085 5.88751 8.0926 5.89131 8.104C6.18382 8.80679 6.5903 9.47539 7.22471 10.2732C8.36437 11.6787 9.56481 12.769 10.8868 13.6086C11.0502 13.7149 11.2249 13.7985 11.3883 13.8821C11.5402 13.9581 11.6808 14.0302 11.8061 14.11C11.8213 14.1176 11.8327 14.1252 11.8479 14.1328C11.9733 14.1974 12.0949 14.2278 12.2164 14.2278C12.5203 14.2278 12.7179 14.034 12.7825 13.9695L14.2032 12.5487C14.4236 12.3283 14.6629 12.2106 14.8984 12.2106C15.1871 12.2106 15.4227 12.3891 15.5708 12.5487L17.8615 14.8356C18.3174 15.2915 18.3136 15.7853 17.8501 16.2678C17.6906 16.4387 17.5234 16.6021 17.3449 16.773C17.079 17.0313 16.8017 17.2973 16.5509 17.5974C16.1141 18.0684 15.5936 18.2888 14.9212 18.2888C14.8566 18.2888 14.7883 18.285 14.7237 18.2812C13.4776 18.2014 12.319 17.7151 11.449 17.3011C9.08615 16.1576 7.01197 14.5355 5.29109 12.4765C3.87411 10.7708 2.92059 9.18288 2.28998 7.48099C1.8987 6.4363 1.75054 5.59675 1.81132 4.83318Z"
-                        fill="black"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_2004_20445">
-                        <rect
-                          width="20"
-                          height="20"
-                          fill="white"
-                          transform="translate(0 0.0415039)"
-                        />
-                      </clipPath>
-                    </defs>
-                  </svg>
                   <a
-                    class="footer-desc uk-link-reset"
-                    style="color: black !important"
-                    href="tel:1900066818"
-                    >1900 066 818</a
+                    href="https://apps.apple.com/app/id1482612826"
+                    target="_blank"
                   >
+                    <img src="images/appstore.png" alt=""
+                  /></a>
                 </div>
-              </div>
-              <div>
-                <div class="footer-sub-title">Địa chỉ</div>
                 <div>
-                  <svg
-                    width="20"
-                    height="21"
-                    viewBox="0 0 20 21"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <a
+                    href="https://play.google.com/store/apps/details?id=vn.edu.chipchip.parentapp&hl=en"
+                    target="_blank"
                   >
-                    <g clip-path="url(#clip0_2004_20072)">
-                      <path
-                        d="M10.0004 0.0415039C5.92652 0.0415039 2.6123 3.35571 2.6123 7.4296C2.6123 8.77075 3.21378 10.2132 3.23899 10.274C3.43325 10.7351 3.81656 11.4513 4.09297 11.8711L9.15859 19.5465C9.36589 19.8611 9.67271 20.0415 10.0004 20.0415C10.3281 20.0415 10.6349 19.8611 10.8422 19.5469L15.9083 11.8711C16.1851 11.4513 16.568 10.7351 16.7622 10.274C16.7874 10.2136 17.3885 8.77119 17.3885 7.4296C17.3885 3.35571 14.0743 0.0415039 10.0004 0.0415039ZM15.9608 9.93677C15.7874 10.3501 15.4306 11.0163 15.1825 11.3927L10.1164 19.0684C10.0165 19.2201 9.98475 19.2201 9.88479 19.0684L4.81874 11.3927C4.57058 11.0163 4.21378 10.3496 4.04038 9.93633C4.03299 9.91851 3.48149 8.59083 3.48149 7.4296C3.48149 3.83507 6.40587 0.910691 10.0004 0.910691C13.5949 0.910691 16.5193 3.83507 16.5193 7.4296C16.5193 8.59257 15.9665 9.92373 15.9608 9.93677Z"
-                        fill="#363D61"
-                      />
-                      <path
-                        d="M10.0004 3.51869C7.84351 3.51869 6.08905 5.27358 6.08905 7.43003C6.08905 9.58648 7.84351 11.3414 10.0004 11.3414C12.1573 11.3414 13.9117 9.58648 13.9117 7.43003C13.9117 5.27358 12.1573 3.51869 10.0004 3.51869ZM10.0004 10.4722C8.3233 10.4722 6.95824 9.10756 6.95824 7.43003C6.95824 5.7525 8.3233 4.38788 10.0004 4.38788C11.6775 4.38788 13.0426 5.7525 13.0426 7.43003C13.0426 9.10756 11.6775 10.4722 10.0004 10.4722Z"
-                        fill="#363D61"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_2004_20072">
-                        <rect
-                          width="20"
-                          height="20"
-                          fill="white"
-                          transform="translate(0 0.0415039)"
-                        />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                  <span class="footer-desc"
-                    >Tầng 5 nhà D, số 15 Lê Văn Thiêm, Thanh Xuân, Hà Nội</span
-                  >
+                    <img src="images/googleplay.png" alt=""
+                  /></a>
                 </div>
               </div>
+              <div class="footer__title uk-margin-small">Điện thoại</div>
+              <div class="box-logo-f__txt" style="font-weight: 600">
+                1900 066 818
+              </div>
+              <div class="footer__title uk-margin-small">Địa chỉ</div>
+              <div class="box-logo-f__txt">
+                Tầng 5 nhà D, số 15 Lê Văn Thiêm, Thanh Xuân, Hà Nội
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-15 section-30-m uk-background-muted">
+        <div class="uk-container">
+          <div
+            class="uk-child-width-auto@s uk-text-center uk-flex-middle uk-flex-between@s uk-grid-small"
+            uk-grid
+          >
+            <div>
+              <ul
+                class="uk-subnav uk-subnav-divider site-link uk-flex-center uk-flex-left@s"
+                uk-margin
+              >
+                <li>
+                  <a href="#">© 2022 Chip Chip. All rights reserved</a>
+                </li>
+                <li class="uk-visible@s">
+                  <a href="chinh-sach-bao-mat.html">Chính sách bảo mật</a>
+                </li>
+                <li class="uk-visible@s">
+                  <a href="phuong-thuc-thanh-toan.html"
+                    >Phương thức thanh toán</a
+                  >
+                </li>
+                <li class="uk-visible@s">
+                  <a href="hoan-hoc-phi.html">Chính sách hoàn học phí</a>
+                </li>
+                <li class="uk-visible@s" style="padding: 0px">
+                  <a
+                    target="_blank"
+                    href="http://online.gov.vn/Home/WebDetails/70907"
+                  >
+                    <img style="width: 120px" src="/img/logoSaleNoti.png"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <!--   <img src="images/bct.png" alt=""> -->
             </div>
           </div>
         </div>
@@ -984,159 +832,21 @@
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit-icons.min.js"></script>
     <script>
-      class Carousel {
-        constructor(el) {
-          this.el = el;
-          this.carouselOptions = ["previous", "next"];
-          this.carouselData = [
-            {
-              id: "1",
-              src: "public/7.3.jpg",
-            },
-            {
-              id: "2",
-              src: "public/7.2.jpg",
-            },
-            {
-              id: "3",
-              src: "public/7.1.jpg",
-            },
-            {
-              id: "4",
-              src: "public/7.4.jpg",
-            },
-            {
-              id: "5",
-              src: "public/7.5.jpg",
-            },
-          ];
-          this.carouselInView = [1, 2, 3, 4, 5];
-          this.carouselContainer;
-          this.carouselPlayState;
-        }
+      function playEmbed(embedId) {
+        var videoEmbed = document.getElementById(embedId);
+        var thumbnailDiv = videoEmbed.querySelector("div");
+        var iframe = videoEmbed.querySelector("iframe");
+        if (thumbnailDiv.style.display !== "none") {
+          thumbnailDiv.style.display = "none";
+          iframe.style.display = "block";
 
-        mounted() {
-          this.setupCarousel();
-        }
-
-        // Build carousel html
-        setupCarousel() {
-          const container = document.createElement("div");
-          const controls = document.createElement("div");
-
-          // Add container for carousel items and controls
-          this.el.append(container, controls);
-          container.className = "carousel-container";
-          controls.className = "carousel-controls";
-
-          // Take dataset array and append items to container
-          this.carouselData.forEach((item, index) => {
-            const carouselItem = item.src
-              ? document.createElement("img")
-              : document.createElement("div");
-
-            container.append(carouselItem);
-
-            // Add item attributes
-            carouselItem.className = `carousel-item carousel-item-${index + 1}`;
-            carouselItem.src = item.src;
-            carouselItem.setAttribute("loading", "lazy");
-            // Used to keep track of carousel items, infinite items possible in carousel however min 5 items required
-            carouselItem.setAttribute("data-index", `${index + 1}`);
-          });
-
-          this.carouselOptions.forEach((option) => {
-            const btn = document.createElement("button");
-            const axSpan = document.createElement("span");
-
-            // Add accessibilty spans to button
-            axSpan.innerText = option;
-            axSpan.className = "ax-hidden";
-            btn.append(axSpan);
-
-            // Add button attributes
-            btn.className = `carousel-control carousel-control-${option}`;
-            btn.setAttribute("data-name", option);
-
-            // Add carousel control options
-            controls.append(btn);
-          });
-
-          // After rendering carousel to our DOM, setup carousel controls' event listeners
-          this.setControls([...controls.children]);
-
-          // Set container property
-          this.carouselContainer = container;
-        }
-
-        setControls(controls) {
-          controls.forEach((control) => {
-            control.onclick = (event) => {
-              event.preventDefault();
-
-              // Manage control actions, update our carousel data first then with a callback update our DOM
-              this.controlManager(control.dataset.name);
-            };
-          });
-        }
-
-        controlManager(control) {
-          if (control === "previous") return this.previous();
-          if (control === "next") return this.next();
-
-          return;
-        }
-
-        previous() {
-          // Update order of items in data array to be shown in carousel
-          this.carouselData.unshift(this.carouselData.pop());
-
-          // Push the first item to the end of the array so that the previous item is front and center
-          this.carouselInView.push(this.carouselInView.shift());
-
-          // Update the css class for each carousel item in view
-          this.carouselInView.forEach((item, index) => {
-            this.carouselContainer.children[
-              index
-            ].className = `carousel-item carousel-item-${item}`;
-          });
-
-          // Using the first 5 items in data array update content of carousel items in view
-          this.carouselData.slice(0, 5).forEach((data, index) => {
-            document.querySelector(`.carousel-item-${index + 1}`).src =
-              data.src;
-          });
-        }
-
-        next() {
-          // Update order of items in data array to be shown in carousel
-          this.carouselData.push(this.carouselData.shift());
-
-          // Take the last item and add it to the beginning of the array so that the next item is front and center
-          this.carouselInView.unshift(this.carouselInView.pop());
-
-          // Update the css class for each carousel item in view
-          this.carouselInView.forEach((item, index) => {
-            this.carouselContainer.children[
-              index
-            ].className = `carousel-item carousel-item-${item}`;
-          });
-
-          // Using the first 5 items in data array update content of carousel items in view
-          this.carouselData.slice(0, 5).forEach((data, index) => {
-            document.querySelector(`.carousel-item-${index + 1}`).src =
-              data.src;
-          });
+          var videoSrc =
+            iframe.getAttribute("data-src") + "?autoplay=1&controls=0";
+          iframe.setAttribute("src", videoSrc);
         }
       }
-
-      // Refers to the carousel root element you want to target, use specific class selectors if using multiple carousels
-      const el = document.querySelector(".carousel");
-      // Create a new carousel object
-      const exampleCarousel = new Carousel(el);
-      // Setup carousel and methods
-      exampleCarousel.mounted();
     </script>
+
     <script>
       var myVideo = document.getElementById("my-video");
       var btnPlay = document.getElementById("btn-play");

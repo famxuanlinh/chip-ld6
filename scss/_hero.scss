@@ -1,0 +1,101 @@
+.hero {
+  margin-top: 80px;
+  background-image: url(/public/hero-bg.svg);
+  background-repeat: repeat-y;
+  width: 100%;
+  background-size: contain;
+
+  @include maxw(768) {
+    margin-top: 64px;
+  }
+  &-container {
+    display: flex;
+    align-items: center;
+
+    @include maxw(768) {
+      flex-direction: column-reverse;
+    }
+  }
+  &-content {
+    flex: 1 1 0%;
+    max-width: 653px;
+    width: 100%;
+
+    &-sub-title {
+      font-size: 28.58px;
+      font-weight: 600;
+      line-height: 41.45px;
+      color: black;
+      @include maxw(1180) {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 23.2px;
+        text-align: center;
+      }
+    }
+    &-title {
+      font-size: 76.22px;
+      font-weight: 700;
+      line-height: 87.66px;
+      color: #3db54a;
+      margin: 14px 0 28px 0;
+      position: relative;
+
+      @include maxw(1180) {
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 46px;
+        text-align: center;
+        margin: 0 0 12px 0;
+      }
+    }
+
+    &-lines {
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+      max-width: 595px;
+      width: 100%;
+      z-index: -1;
+
+      @include maxw(1180) {
+        bottom: -12px;
+      }
+    }
+    &-desc {
+      font-size: 28.58px;
+      font-weight: 400;
+      line-height: 47.16px;
+      color: #000000;
+
+      @include maxw(1180) {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26.4px;
+        text-align: center;
+      }
+    }
+
+    &-btn {
+      margin-top: 42px;
+      @include maxw(1180) {
+        margin: 20px 0;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+
+  &-image {
+    flex: 1 1 0%;
+    aspect-ratio: 1/1;
+    margin-top: 12px;
+    margin-bottom: 0;
+
+    @include minw(768) {
+      margin-left: -60px;
+      margin-top: 20px;
+      margin-bottom: -20px;
+    }
+  }
+}
