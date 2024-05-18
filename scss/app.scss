@@ -770,3 +770,43 @@ p {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+// box chat
+.box-chat {
+  position: fixed;
+  z-index: 99;
+  right: 90px;
+  width: 56px;
+  bottom: 60px;
+
+  & > :not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  @include maxw(960) {
+    right: 15px;
+    bottom: 30px;
+  }
+
+  &-item {
+    width: 56px;
+    aspect-ratio: 1 / 1;
+    border-radius: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+      0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+    @include maxw(960) {
+      width: 40px;
+      aspect-ratio: 1 / 1;
+
+      & > img {
+        width: 20px;
+        aspect-ratio: 1 / 1;
+      }
+    }
+  }
+}

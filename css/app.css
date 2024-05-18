@@ -1680,4 +1680,41 @@ p {
   }
 }
 
+.box-chat {
+  position: fixed;
+  z-index: 99;
+  right: 90px;
+  width: 56px;
+  bottom: 60px;
+}
+.box-chat > :not(:last-child) {
+  margin-bottom: 16px;
+}
+@media screen and (max-width: 960px) {
+  .box-chat {
+    right: 15px;
+    bottom: 30px;
+  }
+}
+.box-chat-item {
+  width: 56px;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+@media screen and (max-width: 960px) {
+  .box-chat-item {
+    width: 40px;
+    aspect-ratio: 1/1;
+  }
+  .box-chat-item > img {
+    width: 20px;
+    aspect-ratio: 1/1;
+  }
+}
+
 /*# sourceMappingURL=app.css.map */
