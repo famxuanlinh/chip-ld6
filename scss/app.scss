@@ -8,6 +8,9 @@
 @import "platform";
 @import "review";
 @import "feedback";
+@import "footer";
+@import "student";
+@import "roadmap";
 
 html {
   scroll-behavior: smooth;
@@ -582,7 +585,7 @@ p {
   &-wrapper {
     z-index: 9;
     padding: 100px 0;
-    background: linear-gradient(96.41deg, #6fca14 5.05%, #32ca14 96.09%);
+    background: #0aa807;
 
     @include maxw(768) {
       padding: 24px 0;
@@ -600,7 +603,7 @@ p {
     overflow: hidden;
     object-fit: cover;
     z-index: -1;
-    background: linear-gradient(96.41deg, #6fca14 5.05%, #32ca14 96.09%);
+    background: #0aa807;
   }
   background-color: white;
   border-radius: 8px;

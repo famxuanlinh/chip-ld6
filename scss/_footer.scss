@@ -1,0 +1,97 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0;
+  @include maxw(768) {
+    display: block;
+    padding: 24px 0;
+  }
+
+  &-logo {
+    height: 86px;
+    @include maxw(768) {
+      height: 72px;
+    }
+  }
+  &-name {
+    padding: 12px 0;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 39.6px;
+    color: black;
+    @include maxw(768) {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 26.4px;
+    }
+  }
+  &-desc {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23.2px;
+    color: #000000a6;
+    display: flex;
+    align-items: center;
+    @include maxw(768) {
+      & > :not(:last-child) {
+        margin-bottom: 8px;
+      }
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20.3px;
+      display: block;
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+    }
+
+    &-icon {
+      height: 20px;
+      width: 20px;
+      margin-right: 6px;
+      @include maxw(768) {
+        height: 16px;
+        width: 16px;
+        margin-right: 6px;
+      }
+    }
+  }
+}
+
+.footer-sub {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0aa807;
+  overflow: hidden;
+
+  height: 60px;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20.3px;
+
+  &-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.1;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    scale: 1.1;
+    background: #0aa807;
+  }
+
+  @include maxw(768) {
+    height: 40px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 17.4px;
+  }
+}
