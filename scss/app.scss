@@ -138,11 +138,16 @@ p {
   background: radial-gradient(100% 100% at 0% 0%, #ffc007 0%, #ff5723 100%);
   border-radius: 1000px;
   cursor: pointer;
+  font-size: 20px;
   flex: none;
   order: 1;
   flex-grow: 0;
   text-decoration: none;
   animation: crescendo 1s alternate infinite ease-in;
+
+  @include maxw(768) {
+    font-size: 16px;
+  }
 
   &-big {
     height: 86px;
@@ -194,7 +199,7 @@ p {
 
   @include maxw(500) {
     background-image: url(/public/static-mobile-bg.svg);
-    background-size: contain;
+    background-size: cover;
   }
 
   &-background {
@@ -216,6 +221,10 @@ p {
     justify-content: space-between;
     max-width: 871px;
     width: 100%;
+
+    @include max-md {
+      padding: 0 34px;
+    }
   }
 
   &-title {
@@ -382,6 +391,7 @@ p {
       padding: 100px 0;
       background-image: url(/public/commit-bg.svg);
       width: 100%;
+
       background-size: cover;
     }
   }
@@ -638,7 +648,6 @@ p {
     font-weight: 700;
     line-height: 57.5px;
     letter-spacing: -0.025em;
-    text-align: center;
     color: black;
 
     @include max-md {

@@ -29,9 +29,10 @@
   }
 
   &-container {
+    @extend .container;
     padding: 100px 0;
     @include maxw(768) {
-      padding: 24px 0 !important;
+      padding: 24px 0 24px 16px !important;
     }
   }
   &-title {
