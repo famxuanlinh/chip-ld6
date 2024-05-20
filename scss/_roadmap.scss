@@ -175,7 +175,7 @@
 }
 
 .data-txt.item {
-  padding: 0 30px;
+  padding: 0 8px;
 }
 
 .uk-child-width-1-7 > * {
@@ -185,12 +185,12 @@
 
 .uk-width-1-7 {
   width: calc(100% / 7) !important;
-  min-width: 172px;
+  min-width: 142px;
 }
 
 .uk-width-2-7 {
   width: calc(100% * 2 / 7) !important;
-  min-width: 334px;
+  min-width: 284px;
 }
 
 .uk-child-margin-bottom > :not(:last-child) {
