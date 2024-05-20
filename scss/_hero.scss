@@ -4,6 +4,7 @@
   background-repeat: repeat-y;
   width: 100%;
   background-size: contain;
+  overflow: hidden;
 
   @include maxw(768) {
     margin-top: 64px;
@@ -20,6 +21,9 @@
     flex: 1 1 0%;
     max-width: 653px;
     width: 100%;
+    @include minw(1180) {
+      padding: 40px 0;
+    }
 
     &-sub-title {
       font-size: 28.58px;
@@ -34,7 +38,7 @@
       }
     }
     &-title {
-      font-size: 76.22px;
+      font-size: 74px;
       font-weight: 700;
       line-height: 87.66px;
       color: #3db54a;

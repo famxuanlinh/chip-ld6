@@ -76,6 +76,7 @@ a {
   background-repeat: repeat-y;
   width: 100%;
   background-size: contain;
+  overflow: hidden;
 }
 @media screen and (max-width: 768px) {
   .hero {
@@ -96,6 +97,11 @@ a {
   max-width: 653px;
   width: 100%;
 }
+@media screen and (min-width: 1180px) {
+  .hero-content {
+    padding: 40px 0;
+  }
+}
 .hero-content-sub-title {
   font-size: 28.58px;
   font-weight: 600;
@@ -111,7 +117,7 @@ a {
   }
 }
 .hero-content-title {
-  font-size: 76.22px;
+  font-size: 74px;
   font-weight: 700;
   line-height: 87.66px;
   color: #3db54a;
