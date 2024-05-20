@@ -1027,7 +1027,7 @@ p {
 .header {
   height: 80px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
 }
@@ -1042,6 +1042,33 @@ p {
 @media screen and (max-width: 768px) {
   .header-logo {
     height: 48px;
+  }
+}
+.header-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 24px;
+  gap: 4px;
+  width: fit-content;
+  height: 48px;
+  color: white;
+  background: radial-gradient(100% 100% at 0% 0%, #ffc007 0%, #ff5723 100%);
+  border-radius: 1000px;
+  cursor: pointer;
+  font-size: 20px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  text-decoration: none;
+}
+.header-button:hover {
+  text-decoration: none;
+  color: #f7f7f7;
+}
+@media screen and (max-width: 768px) {
+  .header-button {
+    font-size: 16px;
   }
 }
 
