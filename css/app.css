@@ -739,6 +739,7 @@ p {
   font-weight: 500;
   line-height: 34.8px;
   padding: 16px 16px 16px 0;
+  cursor: pointer;
 }
 @media screen and (max-width: 768px) {
   .platform-card-desc {
@@ -751,6 +752,7 @@ p {
 .platform-card-desc.active {
   color: #4ab749;
   background-color: #fbfbfb;
+  cursor: default;
   border-radius: 8px;
 }
 .platform-card-desc.active::before {

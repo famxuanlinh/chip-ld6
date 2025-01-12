@@ -24,7 +24,6 @@
   </head>
   <body>
     <!----Header, menu -->
-
     <div id="header" uk-sticky style="z-index: 11" class="header-new">
       <div class="uk-container">
         <nav
@@ -1112,28 +1111,26 @@
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit-icons.min.js"></script>
 
     <script>
-      // Get the header element
+      // Start header
       const header = document.getElementById("header");
 
-      // Add scroll event listener
       window.addEventListener("scroll", () => {
         if (window.scrollY > 100) {
-          header.classList.add("scrolled"); // Add background when scrolled
+          header.classList.add("scrolled");
         } else {
-          header.classList.remove("scrolled"); // Reset to transparent when at the top
+          header.classList.remove("scrolled");
         }
       });
+      // End header
 
       document.addEventListener("DOMContentLoaded", () => {
-        const dropdownTrigger = document.querySelector("[uk-dropdown]"); // Select dropdown trigger element
+        const dropdownTrigger = document.querySelector("[uk-dropdown]");
         const body = document.body;
 
-        // Add class to disable scroll when dropdown opens
         dropdownTrigger.addEventListener("beforeshow", () => {
           body.classList.add("no-scroll");
         });
 
-        // Remove class to re-enable scroll when dropdown closes
         dropdownTrigger.addEventListener("hide", () => {
           body.classList.remove("no-scroll");
         });
@@ -1142,9 +1139,19 @@
       const dropdownHeader = document.getElementById("dropdown-header");
 
       const handleNavigate = () => {
-        // Hide the dropdown with a delay of 100ms
         UIkit.dropdown(dropdownHeader).hide(0);
       };
+
+      // Start platform
+      const cardDescriptions = document.querySelectorAll(".platform-card-desc");
+
+      cardDescriptions.forEach((desc) => {
+        desc.addEventListener("click", () => {
+          cardDescriptions.forEach((item) => item.classList.remove("active"));
+          desc.classList.add("active");
+        });
+      });
+      // End platform
     </script>
   </body>
 </html>
