@@ -1693,6 +1693,42 @@ p {
   color: rgba(0, 0, 0, 0.6);
 }
 
+@font-face {
+  font-family: "SF Pro Rounded";
+  src: url("../fonts/SF-Pro-Rounded-Regular.otf") format("opentype");
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
+@font-face {
+  font-family: "SF Pro Rounded";
+  src: url("../fonts/SF-Pro-Rounded-Medium.otf") format("opentype");
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+@font-face {
+  font-family: "SF Pro Rounded";
+  src: url("../fonts/SF-Pro-Rounded-Semibold.otf") format("opentype");
+  font-weight: 600; /* Semibold */
+  font-style: normal;
+}
+@font-face {
+  font-family: "SF Pro Rounded";
+  src: url("../fonts/SF-Pro-Rounded-Bold.otf") format("opentype");
+  font-weight: 700; /* Bold */
+  font-style: normal;
+}
+@font-face {
+  font-family: "SF Pro Rounded";
+  src: url("../fonts/SF-Pro-Rounded-Heavy.otf") format("opentype");
+  font-weight: 800; /* Heavy */
+  font-style: normal;
+}
+@font-face {
+  font-family: "SF Pro Rounded";
+  src: url("../fonts/SF-Pro-Rounded-Black.otf") format("opentype");
+  font-weight: 900; /* Black */
+  font-style: normal;
+}
 html {
   scroll-behavior: smooth;
   font-family: "SF Pro Rounded", sans-serif;
@@ -1716,6 +1752,10 @@ html {
 
 .no-scroll {
   overflow: hidden !important; /* Prevent scrolling */
+}
+
+#header > div > nav > div > ul > li > a {
+  color: #272b30;
 }
 
 .header-new {
