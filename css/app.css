@@ -275,7 +275,7 @@ p {
     margin-top: 4px;
   }
 }
-.commit-title, .communication-title, .celebrity-title, .feedback-title, .student-title {
+.commit-title, .celebrity-title, .feedback-title, .student-title {
   font-size: 48px;
   font-weight: 700;
   line-height: 64.8px;
@@ -283,7 +283,7 @@ p {
   color: #000000;
 }
 @media screen and (max-width: 768px) {
-  .commit-title, .communication-title, .celebrity-title, .feedback-title, .student-title {
+  .commit-title, .celebrity-title, .feedback-title, .student-title {
     margin-top: 12px;
     font-size: 22px;
     font-weight: 700;
@@ -1297,7 +1297,7 @@ p {
     margin-top: 4px;
   }
 }
-.commit-title, .communication-title {
+.commit-title {
   font-size: 48px;
   font-weight: 700;
   line-height: 64.8px;
@@ -1305,7 +1305,7 @@ p {
   color: #000000;
 }
 @media screen and (max-width: 768px) {
-  .commit-title, .communication-title {
+  .commit-title {
     margin-top: 12px;
     font-size: 22px;
     font-weight: 700;
@@ -1868,107 +1868,6 @@ ul {
     transform: scale(1.03);
   }
 }
-.reasons {
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  position: relative;
-}
-.reasons-wrapper {
-  position: relative;
-}
-.reasons-title {
-  display: flex;
-  justify-content: center;
-}
-.reasons-title-wrapper {
-  max-width: 880px;
-  padding: 80px 0 46px;
-}
-.reasons-title-wrapper > :not(:last-child) {
-  margin-bottom: 12px;
-}
-@media (max-width: 767px) {
-  .reasons-title-wrapper {
-    padding: 32px 0 16px;
-  }
-}
-.reasons-image, .communication-image {
-  margin: 0 28px;
-}
-.reasons-desc {
-  font-size: 28px;
-  font-weight: 600;
-  line-height: 40.6px;
-  text-align: center;
-  color: black;
-}
-@media (max-width: 767px) {
-  .reasons-desc {
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 26.1px;
-    text-align: center;
-    color: rgba(0, 0, 0, 0.8);
-  }
-}
-.reasons-card {
-  background-color: white;
-  border-radius: 8px;
-  height: 100%;
-}
-.reasons-card-img {
-  max-height: 253px;
-  border-top-right-radius: 8px;
-  border-top-left-radius: 8px;
-  width: 100%;
-  object-fit: cover;
-}
-@media (max-width: 767px) {
-  .reasons-card-img {
-    max-height: 204px;
-  }
-}
-.reasons-card-title {
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 34.8px;
-  letter-spacing: -0.02em;
-  min-height: 70px;
-  background: radial-gradient(100% 100% at 0% 0%, #ffc007 0%, #ff5723 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-@media (max-width: 767px) {
-  .reasons-card-title {
-    color: rgba(0, 0, 0, 0.8);
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 29px;
-    letter-spacing: -0.02em;
-    min-height: 26px;
-  }
-}
-.reasons-card-desc {
-  margin-top: 22px;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 33px;
-  letter-spacing: -0.02em;
-}
-.reasons-card-desc :not(:last-child) {
-  margin-bottom: 16px;
-}
-@media (max-width: 767px) {
-  .reasons-card-desc {
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 21.75px;
-    letter-spacing: -0.02em;
-  }
-}
-
 .icon-max-md {
   z-index: 10;
 }
@@ -1983,93 +1882,6 @@ ul {
   background-repeat: repeat-y;
   width: 100%;
   background-size: contain;
-}
-
-.communication-circle {
-  position: absolute;
-  bottom: -40px;
-  right: -40px;
-  z-index: -1;
-}
-.communication-wrapper {
-  padding: 100px 0;
-  background: linear-gradient(103.71deg, rgba(253, 221, 174, 0.1) 4.11%, rgba(249, 160, 45, 0.1) 90.92%);
-  overflow: hidden;
-  position: relative;
-}
-@media screen and (max-width: 768px) {
-  .communication-wrapper {
-    padding: 24px 0;
-  }
-}
-.communication-title {
-  padding-bottom: 48px;
-}
-@media screen and (max-width: 768px) {
-  .communication-title {
-    padding-bottom: 18px;
-  }
-}
-.communication-image {
-  width: 100%;
-}
-.communication-brands {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-.communication-brands > :not(:last-child) {
-  margin-right: 26px;
-}
-@media (min-width: 768px) {
-  .communication-brands > :not(:last-child) {
-    margin-right: 48px;
-  }
-}
-@media (max-width: 767px) {
-  .communication-brands-item {
-    height: 21px;
-  }
-}
-.communication-content {
-  width: 100%;
-  padding-top: 48px;
-}
-@media screen and (max-width: 768px) {
-  .communication-content {
-    padding-top: 24px;
-  }
-}
-.communication-btn {
-  height: 74px;
-  padding: 0 32px;
-  position: absolute;
-  bottom: 0;
-  color: white;
-  left: 0;
-  background-color: rgb(63, 165, 3);
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 26.1px;
-}
-@media (max-width: 767px) {
-  .communication-btn {
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 17.4px;
-    padding: 0 16px;
-    height: 41px;
-  }
-}
-
-.bg-bottom {
-  color: white;
-  margin-left: auto;
-  margin-right: auto;
-  background: linear-gradient(96.41deg, #6fca14 5.05%, #32ca14 96.09%);
-  padding: 100px 0;
-  position: relative;
 }
 
 .footer__list-link > li > a {
@@ -2109,43 +1921,6 @@ ul {
 @media (min-width: 768px) {
   .is-max-md {
     display: none;
-  }
-}
-
-.box-chat {
-  position: fixed;
-  z-index: 99;
-  right: 90px;
-  width: 56px;
-  bottom: 60px;
-}
-.box-chat > :not(:last-child) {
-  margin-bottom: 16px;
-}
-@media screen and (max-width: 960px) {
-  .box-chat {
-    right: 15px;
-    bottom: 30px;
-  }
-}
-.box-chat-item {
-  width: 56px;
-  aspect-ratio: 1/1;
-  border-radius: 100%;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-}
-@media screen and (max-width: 960px) {
-  .box-chat-item {
-    width: 40px;
-    aspect-ratio: 1/1;
-  }
-  .box-chat-item > img {
-    width: 20px;
-    aspect-ratio: 1/1;
   }
 }
 
