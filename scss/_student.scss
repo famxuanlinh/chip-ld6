@@ -1,16 +1,11 @@
+@use "mixin" as *;
+@use "common";
+
 .student {
   position: relative;
-  background: linear-gradient(
-    103.71deg,
-    rgba(253, 221, 174, 0.1) 4.11%,
-    rgba(249, 160, 45, 0.1) 90.92%
-  );
-
-  @include maxw(768) {
-    margin: 24px 0;
-  }
 
   &-content {
+    margin: 40px 0 24px 0;
     @include maxw(768) {
       margin: 24px 0;
     }
@@ -30,9 +25,9 @@
 
   &-container {
     @extend .container;
-    padding: 100px 0;
+    // padding: 100px 0;
     @include maxw(768) {
-      padding: 24px 0 24px 16px !important;
+      padding: 0 0 0 16px !important;
     }
   }
   &-title {
@@ -45,7 +40,48 @@
     }
   }
   &-card {
-    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &-img {
+      width: 320px;
+      height: 320px;
+      border-radius: 100%;
+      aspect-ratio: 1/1;
+
+      @include maxw(768) {
+        width: 240px;
+        height: 240px;
+      }
+    }
+
+    &-content {
+      margin-top: 24px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    &-name {
+      color: #272b30;
+      text-align: center;
+
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 24px; /* 133.333% */
+    }
+
+    &-desc {
+      color: #57595c;
+      text-align: center;
+
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px; /* 150% */
+    }
 
     &-width {
       & > * {

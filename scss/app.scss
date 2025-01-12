@@ -1,83 +1,56 @@
-@import "reset";
-@import "base";
-@import "global";
-@import "mixin";
-@import "variables";
-@import "hero";
-@import "choose";
-@import "platform";
-@import "review";
-@import "feedback";
-@import "footer";
-@import "student";
-@import "roadmap";
+@use "reset";
+@use "global";
+@use "mixin" as *;
+@use "variables";
+@use "hero";
+@use "footer";
+@use "chip-chip";
+@use "common";
+@use "student";
+@use "feedback";
+@use "platform";
+@use "teacher";
+@use "online-class";
+@use "program";
+@use "commit";
+@use "celebrity";
+@use "register";
 
 html {
   scroll-behavior: smooth;
+  font-family: "SF Pro Rounded", sans-serif;
 }
 
-$xs-width: 391px;
-$sm-width: 640px;
-$md-width: 768px;
-$lg-width: 1024px;
-$xl-width: 1280px;
-$xxl-width: 1410px;
+.header {
+  z-index: 1000;
+  &-item {
+    &-mobile {
+      font-size: 16px;
+      font-weight: 600;
+      color: #272b30;
+      text-decoration: none;
+      text-decoration: inherit;
 
-@mixin max-xs {
-  @media (max-width: #{$xs-width - 1px}) {
-    @content;
+      &:focus {
+        color: #272b30;
+        text-decoration: none;
+        text-decoration: inherit;
+      }
+    }
   }
 }
 
-@mixin sm {
-  @media (max-width: #{$sm-width - 1px}) {
-    @content;
-  }
+.no-scroll {
+  overflow: hidden !important; /* Prevent scrolling */
 }
 
-@mixin md {
-  @media (min-width: #{$md-width}) and (max-width: #{$lg-width - 1px}) {
-    @content;
-  }
-}
-@mixin min-md {
-  @media (min-width: #{$md-width}) {
-    @content;
-  }
-}
-@mixin max-md {
-  @media (max-width: #{$md-width - 1px}) {
-    @content;
-  }
-}
-@mixin lg {
-  @media (min-width: #{$lg-width}) and (max-width: #{$xl-width - 1px}) {
-    @content;
-  }
-}
-@mixin max-lg {
-  @media (max-width: #{$lg-width - 1px}) {
-    @content;
-  }
-}
-@mixin min-lg {
-  @media (min-width: #{$lg-width - 1px}) {
-    @content;
-  }
-}
-@mixin xl {
-  @media (min-width: #{$xl-width}) and (max-width: #{$xxl-width - 1px}) {
-    @content;
-  }
-}
-@mixin max-xl {
-  @media (max-width: #{$xl-width - 1px}) {
-    @content;
-  }
-}
-@mixin xxl {
-  @media (min-width: #{$xxl-width}) {
-    @content;
+.header-new {
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+
+  &.scrolled {
+    background-color: white;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   }
 }
 
@@ -91,16 +64,24 @@ svg:not(#other-icon) > path {
   fill: currentColor;
 }
 
+.uk-modal-close-default svg {
+  color: white; /* Changes the color of the SVG */
+}
+
 p {
   margin: 0;
+}
+
+ul {
+  list-style: none;
 }
 
 .container {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 24px;
+  padding-right: 24px;
   @include min-md {
     padding-left: 16px;
     padding-right: 16px;
@@ -163,7 +144,7 @@ p {
   width: fit-content;
   height: 72px;
   color: white;
-  background: radial-gradient(100% 100% at 0% 0%, #ffc007 0%, #ff5723 100%);
+  background: #4ab749;
   border-radius: 1000px;
   cursor: pointer;
   font-size: 20px;
@@ -212,78 +193,78 @@ p {
   }
 }
 
-// component 3
-.static {
-  display: flex;
-  justify-content: center;
-  color: white;
-  margin-left: auto;
-  margin-right: auto;
-  background-image: url(/public/static-bg.svg);
-  background-repeat: no-repeat;
-  width: 100%;
-  background-size: cover;
-  padding: 100px 0;
+// // component 3
+// .static {
+//   display: flex;
+//   justify-content: center;
+//   color: white;
+//   margin-left: auto;
+//   margin-right: auto;
+//   background-image: url(/public/static-bg.svg);
+//   background-repeat: no-repeat;
+//   width: 100%;
+//   background-size: cover;
+//   padding: 100px 0;
 
-  @include maxw(500) {
-    background-image: url(/public/static-mobile-bg.svg);
-    background-size: cover;
-  }
+//   @include maxw(500) {
+//     background-image: url(/public/static-mobile-bg.svg);
+//     background-size: cover;
+//   }
 
-  &-background {
-    position: absolute;
-    top: 0;
-    left: 0%;
-    opacity: 0.1;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    object-fit: cover;
-  }
-  @include max-md {
-    padding: 20px 0;
-  }
+//   &-background {
+//     position: absolute;
+//     top: 0;
+//     left: 0%;
+//     opacity: 0.1;
+//     height: 100%;
+//     width: 100%;
+//     overflow: hidden;
+//     object-fit: cover;
+//   }
+//   @include max-md {
+//     padding: 20px 0;
+//   }
 
-  &-content {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1100px;
-    width: 100%;
+//   &-content {
+//     display: flex;
+//     justify-content: space-between;
+//     max-width: 1100px;
+//     width: 100%;
 
-    @include max-md {
-      padding: 0 34px;
-    }
-  }
+//     @include max-md {
+//       padding: 0 34px;
+//     }
+//   }
 
-  &-title {
-    color: #ff7324;
+//   &-title {
+//     color: #ff7324;
 
-    font-size: 64px;
-    font-weight: 800;
-    line-height: 92.8px;
-    text-align: center;
+//     font-size: 64px;
+//     font-weight: 800;
+//     line-height: 92.8px;
+//     text-align: center;
 
-    @include max-md {
-      font-size: 24px;
-      font-weight: 800;
-      line-height: 34.8px;
-    }
-  }
-  &-desc {
-    font-size: 30px;
-    font-weight: 600;
-    line-height: 43.5px;
-    text-align: center;
-    color: #000000;
+//     @include max-md {
+//       font-size: 24px;
+//       font-weight: 800;
+//       line-height: 34.8px;
+//     }
+//   }
+//   &-desc {
+//     font-size: 30px;
+//     font-weight: 600;
+//     line-height: 43.5px;
+//     text-align: center;
+//     color: #000000;
 
-    @include max-md {
-      font-size: 11px;
-      font-weight: 600;
-      line-height: 15.95px;
-      text-align: center;
-    }
-  }
-}
+//     @include max-md {
+//       font-size: 11px;
+//       font-weight: 600;
+//       line-height: 15.95px;
+//       text-align: center;
+//     }
+//   }
+// }
 
 // Components 3
 .reasons {
@@ -399,139 +380,6 @@ p {
   background-size: contain;
 }
 
-// Chip Chip cam kết
-.commit {
-  width: 100%;
-  @include min-lg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  &-wrapper {
-    padding: 24px 0;
-    background-image: url(/public/commit-mobile-bg.svg);
-    width: 100%;
-    background-size: cover;
-
-    width: 100%;
-    @include minw(694) {
-      padding: 100px 0;
-      background-image: url(/public/commit-bg.svg);
-      width: 100%;
-
-      background-size: cover;
-    }
-  }
-  &-image {
-    width: 100%;
-    max-height: 764px;
-    height: 100%;
-    object-fit: contain;
-
-    @include min-md {
-      max-width: 562px;
-      margin-right: 30px;
-      width: 100%;
-    }
-  }
-
-  &-desc {
-    font-size: 28px;
-    font-weight: 500;
-    line-height: 40.6px;
-    text-align: center;
-    color: #000000cc;
-    margin-top: 11px;
-    margin-bottom: 12px;
-
-    @include max-md {
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 23.2px;
-      text-align: center;
-      margin-top: 4px;
-    }
-  }
-
-  &-title {
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 64.8px;
-    text-align: center;
-    color: #000000;
-
-    @include maxw(768) {
-      margin-top: 12px;
-      font-size: 22px;
-      font-weight: 700;
-      line-height: 29.7px;
-      text-align: center;
-    }
-  }
-
-  &-content {
-    &-item {
-      display: flex;
-      align-items: center;
-      padding: 6px 32px;
-      @include max-md {
-        padding: 9px 12px;
-      }
-    }
-    &-icon {
-      width: 48px;
-      height: 48px;
-      margin-left: -6px;
-
-      @include max-md {
-        margin-left: 8px;
-        width: 32px;
-        height: 32px;
-      }
-    }
-    &-desc {
-      font-size: 24px;
-      font-weight: 600;
-      line-height: 34.8px;
-      color: rgba(0, 0, 0, 0.9);
-      margin-left: 24px;
-
-      @include max-md {
-        margin-left: 8px;
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 23.2px;
-        color: rgba(0, 0, 0, 1);
-      }
-    }
-    &-number {
-      font-family: "Lato";
-      font-style: normal;
-      font-weight: 900;
-      display: flex;
-      align-items: center;
-      text-align: center;
-      font-size: 86px;
-      line-height: 124.7px;
-      text-align: center;
-      background: radial-gradient(
-        100% 100% at 0% 0%,
-        rgba(255, 192, 7, 0.2) 0%,
-        #ff5723 100%
-      );
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-
-      @include max-md {
-        font-size: 36px;
-        line-height: 52.2px;
-      }
-    }
-  }
-}
-
 // Component 6 Truyền thông đưa tin về
 .communication {
   &-circle {
@@ -618,135 +466,6 @@ p {
   }
 }
 
-// component 8 register
-.register {
-  &-wrapper {
-    z-index: 9;
-    padding: 100px 0;
-    background: #0aa807;
-
-    @include maxw(768) {
-      padding: 24px 0;
-    }
-  }
-  z-index: 1;
-
-  &-background {
-    position: absolute;
-    top: 0;
-    left: 0%;
-    opacity: 0.1;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    object-fit: cover;
-    z-index: -1;
-    background: #0aa807;
-  }
-  background-color: white;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  width: 100%;
-
-  @include max-lg {
-    display: block;
-  }
-
-  &-content {
-    flex: 1 1 0%;
-    flex: none;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 48px;
-    @include md {
-      width: 100%;
-      padding: 48px;
-    }
-    @include max-md {
-      width: 100%;
-      padding: 20px;
-    }
-  }
-
-  &-title {
-    font-size: 46px;
-    font-weight: 700;
-    line-height: 57.5px;
-    letter-spacing: -0.025em;
-    color: black;
-
-    @include max-md {
-      font-size: 23px;
-      font-weight: 700;
-      line-height: 33.35px;
-    }
-  }
-  &-img {
-    flex: 1 1 0%;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-    flex: none;
-    width: 50%;
-
-    @include max-lg {
-      width: 100%;
-      border-bottom-left-radius: none;
-      border-top-right-radius: 8px;
-      max-height: 400px;
-      object-fit: cover;
-    }
-  }
-  &-form {
-    margin-top: 30px;
-    @include maxw(768) {
-      margin-top: 24px;
-    }
-    background-color: white;
-    & > :not(:last-child) {
-      margin-bottom: 14px;
-    }
-    & > :last-child {
-      margin-top: 25px !important;
-    }
-    &-select {
-      display: flex;
-      width: 100%;
-      align-items: center;
-      padding: 0 24px;
-      height: 60px;
-      justify-content: space-between;
-      background-color: transparent;
-      border: 1px solid rgba(235, 236, 240, 1);
-      color: rgba(0, 0, 0, 0.6);
-    }
-
-    &-label {
-      font-size: 14px;
-      font-weight: 500;
-      line-height: 22px;
-      margin-bottom: 6px;
-      color: #13161a;
-
-      /* Inside auto layout */
-      flex: none;
-      order: 0;
-      flex-grow: 0;
-    }
-    &-input {
-      padding: 0 24px;
-      height: 60px;
-      border-radius: 9999px;
-      border: 1px solid rgba(235, 236, 240, 1);
-      ::placeholder {
-        color: rgba(0, 0, 0, 0.6);
-      }
-    }
-  }
-}
-
 .bg-bottom {
   color: white;
   margin-left: auto;
@@ -767,7 +486,6 @@ p {
 }
 
 .footer__title {
-  font-family: "iCiel Graphik Medium", sans-serif;
   color: #171717;
   font-size: 0.875rem;
 }
@@ -789,14 +507,14 @@ p {
 }
 
 .is-max-md {
-  @include min-md {
-    display: none;
-  }
-
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  @include min-md {
+    display: none;
+  }
 }
 
 // box chat
@@ -836,5 +554,11 @@ p {
         aspect-ratio: 1 / 1;
       }
     }
+  }
+}
+
+.uk-child-width-1-1-5 > * {
+  @include maxw(640) {
+    width: 75%;
   }
 }

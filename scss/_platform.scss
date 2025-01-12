@@ -1,30 +1,99 @@
+@use "mixin" as *;
+@use "common";
+
 .platform {
   position: relative;
+  background-image: url(/public/c5-bg.png);
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+
+  @include maxw(780) {
+    padding: 40px 0 83px 0;
+
+    background-image: url(/public/c5-bg-mobile.svg);
+    background-size: cover;
+    background-position: bottom;
+  }
+
   &-container {
-    display: flex;
-    align-items: center;
-    & > :not(:last-child) {
-      margin-right: 14px;
-    }
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    // align-items: center;
     margin: 72px 0 100px 0;
+    gap: 14px;
+
+    // & > :not(:last-child) {
+    //   margin-right: 14px;
+    // }
 
     @include maxw(768) {
-      display: block;
-      margin: 16px 0 24px 0;
+      display: flex;
+      flex-direction: column-reverse;
+      margin: 16px 0 0 0;
+
+      & > :not(:last-child) {
+        margin: 24px 16px 0;
+      }
     }
   }
   &-title {
-    @extend .commit-title;
-    margin-top: 100px;
+    color: #ff9914;
+    text-align: center;
 
-    @include maxw(768) {
-      margin-top: 32px !important;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 64px; /* 160% */
+
+    @include maxw(1180) {
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 48px; /* 150% */
+      padding: 0 16px;
+    }
+
+    &-line {
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 320px;
+
+      @include maxw(1180) {
+        position: absolute;
+        top: 32px;
+        left: 0;
+        width: 190px;
+      }
     }
   }
+
+  &-desc {
+    color: #5f8d52;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 133.333% */
+    margin: 16px 0 26px 0;
+    text-align: center;
+
+    @include maxw(1180) {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 24px; /* 150% */
+      text-align: center;
+      padding: 0 16px;
+    }
+  }
+
   &-img {
-    width: 50%;
+    // width: 50%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     @include maxw(768) {
       width: 100%;
       padding: 0 16px;
@@ -32,63 +101,71 @@
   }
 
   &-content {
-    max-width: 690px;
+    background-color: white;
+    padding: 16px;
+    border-radius: 12px;
+    max-width: 520px;
     width: 100%;
-    padding: 0 16px;
 
     & > :not(:last-child) {
-      margin-bottom: 24px;
+      margin-bottom: 32px;
     }
 
     @include maxw(768) {
-      margin-top: 24px;
-      & > :not(:last-child) {
-        margin-bottom: 12px;
+      margin-right: 32px;
+    }
+  }
+
+  &-break {
+    @include minw(1180) {
+      display: none;
+    }
+
+    &-desktop {
+      @include maxw(1180) {
+        display: none;
       }
     }
   }
-  &-dots {
-    position: absolute;
-    top: 100px;
-    right: 60px;
-    z-index: -1;
 
-    @include maxw(1024) {
-      top: -20px;
-      right: 0;
-      height: 111px;
-      aspect-ratio: 1 / 1;
-    }
-  }
   &-card {
     display: flex;
-    padding: 32px 24px 24px;
-    background-color: #fbfbfb;
-    border-radius: 8px;
 
-    @include maxw(768) {
-      padding: 20px 12px;
-    }
-
-    &-icon {
-      height: 36px;
-      width: 36px;
-      margin-right: 16px;
-      @include maxw(768) {
-        height: 26px;
-        width: 26px;
-        margin-right: 12px;
-      }
-    }
     &-desc {
-      color: #000000;
+      color: #9fa59e;
       font-size: 24px;
+      display: flex;
       font-weight: 500;
       line-height: 34.8px;
+      padding: 16px 16px 16px 0;
+
       @include maxw(768) {
         font-size: 16px;
-        font-weight: 600;
+        font-weight: 500;
         line-height: 23.2px;
+        padding: 16px 16px 16px 0;
+      }
+
+      &.active {
+        color: #4ab749;
+        background-color: #fbfbfb;
+
+        border-radius: 8px;
+
+        &::before {
+          background-color: #4ab749;
+        }
+      }
+
+      &::before {
+        content: "";
+        width: 6px;
+        flex: none;
+        margin-right: 24px;
+        height: 100%;
+        background-color: #9fa59e;
+        border-radius: 24px;
+        display: block;
       }
     }
   }

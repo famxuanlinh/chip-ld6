@@ -1,3 +1,6 @@
+@use "mixin" as *;
+@use "common";
+
 .feedback {
   position: relative;
 

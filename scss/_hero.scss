@@ -1,20 +1,26 @@
+@use "mixin" as *;
+
 .hero {
-  margin-top: 80px;
-  background-image: url(/public/hero-bg.svg);
-  background-repeat: repeat-y;
+  background-image: url(/public/c1-bg.svg);
+  background-repeat: no-repeat;
   width: 100%;
-  background-size: contain;
+  background-size: cover;
   overflow: hidden;
+  margin-top: -80px;
 
   @include maxw(768) {
-    margin-top: 64px;
+    background-image: url(/public/c1-bg-mobile.svg);
+    background-size: cover;
+    background-position: bottom;
+    padding-top: 80px;
+    // margin-top: 64px;
   }
   &-container {
     display: flex;
     align-items: center;
 
     @include maxw(768) {
-      flex-direction: column-reverse;
+      flex-direction: column;
     }
   }
   &-content {
@@ -34,23 +40,38 @@
         font-size: 16px;
         font-weight: 600;
         line-height: 23.2px;
-        text-align: center;
+        text-align: left;
+        padding-top: 24px;
       }
     }
     &-title {
-      font-size: 74px;
-      font-weight: 700;
-      line-height: 87.66px;
-      color: #3db54a;
-      margin: 14px 0 28px 0;
-      position: relative;
+      color: #339316;
+      font-family: "SF Pro Rounded", sans-serif;
+
+      font-size: 62px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 64px;
 
       @include maxw(1180) {
-        font-size: 40px;
+        font-size: 32px;
+        font-style: normal;
         font-weight: 700;
-        line-height: 46px;
-        text-align: center;
-        margin: 0 0 12px 0;
+        line-height: 48px;
+      }
+
+      &-img {
+        width: 295px;
+        @include maxw(1180) {
+          width: 167px;
+        }
+      }
+
+      &-item {
+        background: linear-gradient(90deg, #ef673a 0.1%, #ffba1a 184.62%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
     }
 
@@ -77,6 +98,22 @@
         font-weight: 400;
         line-height: 26.4px;
         text-align: center;
+        padding-top: 16px;
+      }
+
+      &-item {
+        color: #272b30;
+        text-align: left;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px;
+        @include maxw(1180) {
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 24px;
+        }
       }
     }
 
@@ -98,8 +135,8 @@
 
     @include minw(768) {
       margin-left: -60px;
-      margin-top: 20px;
-      margin-bottom: -20px;
+      margin-top: 164px;
+      margin-bottom: 0;
     }
   }
 }
