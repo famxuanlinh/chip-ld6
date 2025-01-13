@@ -78,6 +78,7 @@ img {
   font-weight: 600;
   line-height: 41.45px;
   color: black;
+  margin-bottom: 12px;
 }
 @media screen and (max-width: 1180px) {
   .hero-content-sub-title {
@@ -86,6 +87,7 @@ img {
     line-height: 23.2px;
     text-align: left;
     padding-top: 24px;
+    margin-bottom: 0px;
   }
 }
 .hero-content-title {
@@ -109,7 +111,7 @@ img {
 }
 @media screen and (max-width: 1180px) {
   .hero-content-title-img {
-    width: 167px;
+    width: 148px;
   }
 }
 .hero-content-title-item {
@@ -645,7 +647,7 @@ p {
   }
 }
 .platform-title {
-  color: #ff9914;
+  color: #4ab749;
   text-align: center;
   font-size: 40px;
   font-style: normal;
@@ -663,20 +665,20 @@ p {
 }
 .platform-title-line {
   position: absolute;
-  bottom: -10px;
+  bottom: 0px;
   left: 0;
-  width: 320px;
+  width: 200px;
 }
 @media screen and (max-width: 1180px) {
   .platform-title-line {
     position: absolute;
     top: 32px;
     left: 0;
-    width: 190px;
+    width: 120px;
   }
 }
 .platform-desc {
-  color: #5f8d52;
+  color: #57595c;
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
@@ -940,17 +942,16 @@ p {
 .online-class-title {
   color: #ff9914;
   text-align: center;
-  /* h3 */
   font-size: 40px;
   font-style: normal;
   font-weight: 700;
-  line-height: 64px; /* 160% */
+  line-height: 64px;
 }
 @media screen and (max-width: 1180px) {
   .online-class-title {
     margin-top: 36px;
     text-align: center;
-    font-size: 24px;
+    font-size: 28px;
     font-style: normal;
     font-weight: 700;
     line-height: 40px;
@@ -1758,6 +1759,7 @@ html {
 
 #header > div > nav > div > ul > li > a {
   color: #272b30;
+  text-transform: none;
 }
 
 .header-new {

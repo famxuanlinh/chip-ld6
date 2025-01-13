@@ -42,11 +42,10 @@
             <ul class="uk-navbar-nav">
               <li><a href="giao-vien.html">Giáo viên</a></li>
               <li><a href="chuong-trinh-hoc.html">Chương trình học</a></li>
-              <li><a href="nen-tang-hoc.html">Nền tảng học</a></li>
-              <li><a href="gioi-thieu.html">Về chúng tôi</a></li>
-              <li><a href="tro-giup.html">Hỗ trợ</a></li>
-              <li><a href="/blog/">Ba mẹ cần biết</a></li>
-              <li><a href="lien-he.html">Liên hệ</a></li>
+              <li><a href="nen-tang-hoc.html">Về Chip Chip</a></li>
+              <li><a href="gioi-thieu.html">Trợ giúp</a></li>
+              <li><a href="tro-giup.html">Blog</a></li>
+              <li><a href="/blog/">Liên hệ</a></li>
             </ul>
           </div>
           <div class="uk-inline uk-hidden@l">
@@ -131,7 +130,7 @@
         <div class="hero-container">
           <div class="hero-content">
             <div class="hero-content-sub-title">
-              Học tiếng Anh Online theo nhóm
+              Tiếng Anh Online cho bé 4-12 tuổi
             </div>
             <div class="hero-content-title">
               Thỏa sức thực hành
@@ -395,20 +394,23 @@
         <div class="w-full flex" style="justify-content: end">
           <div class="platform-content">
             <div class="platform-card">
-              <div class="platform-card-desc active">
+              <div
+                class="platform-card-desc active"
+                data-img="public/c5-class.png"
+              >
                 Nền tảng Smartclass 5.0 dành riêng cho trẻ em với giao diện dễ
                 sử dụng
               </div>
             </div>
             <div class="platform-card">
-              <div class="platform-card-desc">
+              <div class="platform-card-desc" data-img="public/c5-class.png">
                 Phong phú nội dung học thú vị, sử dụng nhiều bài hát, trò chơi
                 tương tác, câu chuyện, vè, câu đố, thể hiện bằng các hình ảnh,
                 âm thanh sinh động, bắt mắt đối với trẻ em
               </div>
             </div>
             <div class="platform-card">
-              <div class="platform-card-desc">
+              <div class="platform-card-desc" data-img="public/c5-class.png">
                 Tương tác và luyện tập tiếng Anh hăng say để tích điểm đổi quà
                 tặng
               </div>
@@ -486,13 +488,10 @@
         <div class="platform-title">
           <div class="flex-center">
             <div style="position: relative">
-              Chương trình học <br class="platform-break" />
-              vui nhộn, tương tác <br class="platform-break-desktop" />
-              theo <br class="platform-break" />
-              phương pháp game hóa
+              Chip Chip cam kết
               <img
                 class="platform-title-line"
-                src="public/c2-line.svg"
+                src="public/c2-line-orange-normal.svg"
                 alt="line"
               />
             </div>
@@ -500,9 +499,8 @@
         </div>
         <div class="flex-justify-center platform-desc">
           <p class="" style="max-width: 700px">
-            Chip Chip đề cao triết lý học tập phải dựa trên sự vui vẻ, hứng khởi
-            của trẻ em nhằm duy trì khả năng tập trung, từ đó mang lại hiệu quả
-            học tập một cách lâu dài, bền vững.
+            Chip Chip luôn đặt ra tiêu chuẩn phục vụ cao nhất đối với học sinh
+            và phụ huynh
           </p>
         </div>
         <div class="container commit">
@@ -702,7 +700,8 @@
           <div class="platform-title">
             <div class="flex-center">
               <div style="position: relative">
-                Người nổi tiếng chọn Chip Chip
+                Người nổi tiếng chọn <br class="platform-break" />
+                Chip Chip
                 <img
                   class="platform-title-line"
                   src="public/c2-line.svg"
@@ -1143,14 +1142,24 @@
       };
 
       // Start platform
+      // Select all the elements with the class 'platform-card-desc'
       const cardDescriptions = document.querySelectorAll(".platform-card-desc");
+      // Select the image element
+      const platformImage = document.querySelector(".platform-img");
 
+      // Add click event listeners to each card description
       cardDescriptions.forEach((desc) => {
         desc.addEventListener("click", () => {
+          // Remove the 'active' class from all card descriptions
           cardDescriptions.forEach((item) => item.classList.remove("active"));
+          // Add the 'active' class to the clicked card description
           desc.classList.add("active");
+          // Update the image source based on the data-img attribute
+          const newImageSrc = desc.getAttribute("data-img");
+          platformImage.setAttribute("src", newImageSrc);
         });
       });
+
       // End platform
     </script>
   </body>

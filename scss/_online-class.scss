@@ -6,16 +6,15 @@
     color: #ff9914;
     text-align: center;
 
-    /* h3 */
     font-size: 40px;
     font-style: normal;
     font-weight: 700;
-    line-height: 64px; /* 160% */
+    line-height: 64px;
 
     @include maxw(1180) {
       margin-top: 36px;
       text-align: center;
-      font-size: 24px;
+      font-size: 28px;
       font-style: normal;
       font-weight: 700;
       line-height: 40px;

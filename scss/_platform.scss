@@ -40,7 +40,7 @@
     }
   }
   &-title {
-    color: #ff9914;
+    color: #4ab749;
     text-align: center;
 
     font-size: 40px;
@@ -58,21 +58,21 @@
 
     &-line {
       position: absolute;
-      bottom: -10px;
+      bottom: 0px;
       left: 0;
-      width: 320px;
+      width: 200px;
 
       @include maxw(1180) {
         position: absolute;
         top: 32px;
         left: 0;
-        width: 190px;
+        width: 120px;
       }
     }
   }
 
   &-desc {
-    color: #5f8d52;
+    color: #57595c;
     font-size: 18px;
     font-style: normal;
     font-weight: 600;

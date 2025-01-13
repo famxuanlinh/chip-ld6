@@ -36,12 +36,15 @@
       font-weight: 600;
       line-height: 41.45px;
       color: black;
+      margin-bottom: 12px;
+
       @include maxw(1180) {
         font-size: 16px;
         font-weight: 600;
         line-height: 23.2px;
         text-align: left;
         padding-top: 24px;
+        margin-bottom: 0px;
       }
     }
     &-title {
@@ -63,7 +66,7 @@
       &-img {
         width: 295px;
         @include maxw(1180) {
-          width: 167px;
+          width: 148px;
         }
       }
 
