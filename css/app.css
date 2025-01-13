@@ -82,7 +82,7 @@ img {
 }
 @media screen and (max-width: 1180px) {
   .hero-content-sub-title {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
     line-height: 23.2px;
     text-align: left;
@@ -1593,6 +1593,9 @@ p {
     line-height: 40px; /* 166.667% */
   }
 }
+.register-title.modal {
+  margin-bottom: 24px;
+}
 .register-title-line {
   position: absolute;
   bottom: 0px;
@@ -1610,7 +1613,7 @@ p {
 .register-title-line-modal {
   position: absolute;
   bottom: 0px;
-  left: 0;
+  right: 0;
   width: 133px;
 }
 @media screen and (max-width: 1180px) {

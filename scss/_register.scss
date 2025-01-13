@@ -83,6 +83,10 @@
       line-height: 40px; /* 166.667% */
     }
 
+    &.modal {
+      margin-bottom: 24px;
+    }
+
     &-line {
       position: absolute;
       bottom: 0px;
@@ -99,7 +103,7 @@
       &-modal {
         position: absolute;
         bottom: 0px;
-        left: 0;
+        right: 0;
         width: 133px;
 
         @include maxw(1180) {
