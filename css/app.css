@@ -1743,6 +1743,11 @@ html {
 .header {
   z-index: 1000;
 }
+@media screen and (max-width: 768px) {
+  .header-logo {
+    width: 131px;
+  }
+}
 .header-item-mobile {
   font-size: 16px;
   font-weight: 600;

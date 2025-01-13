@@ -65,6 +65,12 @@ html {
 
 .header {
   z-index: 1000;
+
+  &-logo {
+    @include maxw(768) {
+      width: 131px;
+    }
+  }
   &-item {
     &-mobile {
       font-size: 16px;
