@@ -235,7 +235,7 @@ p {
   margin: 0;
 }
 
-.container, .celebrity-container, .program-body, .online-class-body, .teacher-body, .student-container, .chip-body {
+.container, .proud-body, .celebrity-container, .program-body, .online-class-body, .teacher-body, .student-container, .chip-body {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -243,7 +243,7 @@ p {
   padding-right: 24px;
 }
 @media (min-width: 768px) {
-  .container, .celebrity-container, .program-body, .online-class-body, .teacher-body, .student-container, .chip-body {
+  .container, .proud-body, .celebrity-container, .program-body, .online-class-body, .teacher-body, .student-container, .chip-body {
     padding-left: 24px;
     padding-right: 24px;
   }
@@ -1824,6 +1824,7 @@ p {
   font-weight: 700;
   line-height: 24px;
   color: #57595c;
+  width: 100%;
 }
 .level-stair-item.active {
   color: #fff;
@@ -2123,14 +2124,12 @@ p {
 .capacity-evaluation-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin: 72px 0 0 0;
   gap: 14px;
 }
 @media screen and (max-width: 768px) {
   .capacity-evaluation-container {
     display: flex;
     flex-direction: column;
-    margin: 16px 0 0 0;
   }
   .capacity-evaluation-container > :not(:last-child) {
     margin: 24px 16px 0;
@@ -2224,6 +2223,210 @@ p {
     font-style: normal;
     font-weight: 700;
     line-height: 48px; /* 150% */
+  }
+}
+
+.proud {
+  position: relative;
+  background-image: url(/public/teacher/2-bg.svg);
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+  background-position: bottom;
+  overflow: hidden;
+  padding: 80px 0 120px 0;
+}
+@media screen and (max-width: 780px) {
+  .proud {
+    padding: 40px 0 88px 0;
+    background-image: url(/public/teacher/2-bg-mobile.svg);
+    background-size: cover;
+    background-position: bottom;
+  }
+}
+.proud-container {
+  display: flex;
+  align-items: end;
+  gap: 54px;
+}
+@media screen and (max-width: 768px) {
+  .proud-container {
+    flex-direction: column-reverse;
+    margin: 16px 0 0 0;
+    gap: 24px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .proud-container.top {
+    flex-direction: column;
+  }
+}
+.proud-title {
+  color: #339316;
+  text-align: center;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 64px; /* 160% */
+}
+@media screen and (max-width: 1180px) {
+  .proud-title {
+    color: #339316;
+    text-align: center;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px; /* 150% */
+  }
+}
+.proud-desc {
+  margin-top: 24px;
+  margin-bottom: 76px;
+  color: #57595c;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 133.333% */
+}
+@media screen and (max-width: 1180px) {
+  .proud-desc {
+    margin-bottom: 49px;
+    color: #57595c;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px; /* 177.778% */
+    padding: 0 16px;
+  }
+}
+.proud-body {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 16px;
+}
+@media screen and (max-width: 780px) {
+  .proud-body {
+    display: block;
+    gap: 16px;
+  }
+}
+.proud-body > :not(:last-child) {
+  margin-bottom: 16px;
+}
+.proud-card {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 24px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 780px) {
+  .proud-card {
+    padding: 16px;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+.proud-card > :not(:last-child) {
+  margin-bottom: 8px;
+}
+@media screen and (max-width: 780px) {
+  .proud-card > :not(:last-child) {
+    margin-bottom: 0px;
+  }
+}
+.proud-card-icon {
+  width: 80px;
+  height: 80px;
+}
+@media screen and (max-width: 780px) {
+  .proud-card-icon {
+    width: 48px;
+    height: 48px;
+  }
+}
+.proud-card-title {
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px; /* 100% */
+  color: #4ab749;
+}
+@media screen and (max-width: 1180px) {
+  .proud-card-title {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px; /* 150% */
+  }
+}
+.proud-card-desc {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 133.333% */
+  color: #272b30;
+}
+@media screen and (max-width: 1180px) {
+  .proud-card-desc {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 150% */
+  }
+}
+.proud-teacher-card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 12px;
+  background-color: white;
+}
+.proud-teacher-card-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+.proud-teacher-card-content {
+  width: 100%;
+}
+.proud-teacher-card-name {
+  color: #272b30;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px; /* 160% */
+}
+.proud-teacher-card-desc {
+  color: #57595c;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+}
+.proud-teacher-card-role {
+  padding-top: 8px;
+  color: #57595c;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 133.333% */
+  min-height: 48px;
+}
+.proud-teacher-card-width > * {
+  width: 21.7391304348%;
+}
+@media screen and (max-width: 768px) {
+  .proud-teacher-card-width > * {
+    width: 76.9230769231%;
   }
 }
 
