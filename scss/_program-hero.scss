@@ -1,0 +1,87 @@
+@use "mixin" as *;
+
+.program-hero {
+  background-image: url(/public/program/1-bg.svg);
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+  overflow: hidden;
+  margin-top: -80px;
+
+  @include maxw(768) {
+    background-image: url(/public/program/1-bg-mobile.svg);
+    background-size: cover;
+    background-position: bottom;
+    padding-top: 80px;
+  }
+  &-container {
+    display: flex;
+    align-items: center;
+
+    @include maxw(768) {
+      flex-direction: column;
+    }
+  }
+  &-content {
+    flex: 1 1 0%;
+    max-width: 500px;
+    width: 100%;
+    @include minw(1180) {
+      padding: 40px 0;
+    }
+
+    &-title {
+      color: #ff9914;
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 64px;
+
+      @include maxw(768) {
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 48px;
+      }
+    }
+
+    &-desc {
+      color: #272b30;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 36px; /* 180% */
+      margin-top: 12px;
+
+      @include maxw(768) {
+        margin-top: 12px;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 32px; /* 177.778% */
+      }
+    }
+
+    &-btn {
+      margin-top: 42px;
+      @include maxw(1180) {
+        margin: 20px 0;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+
+  &-image {
+    flex: 1 1 0%;
+    aspect-ratio: 1/1;
+    margin-top: 12px;
+    margin-bottom: 0;
+
+    @include minw(768) {
+      margin-left: -60px;
+      margin-top: 80px;
+      margin-bottom: 0;
+    }
+  }
+}

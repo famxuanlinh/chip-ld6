@@ -40,12 +40,12 @@
           </div>
           <div class="uk-visible@l">
             <ul class="uk-navbar-nav">
-              <li><a href="giao-vien.html">Giáo viên</a></li>
-              <li><a href="chuong-trinh-hoc.html">Chương trình học</a></li>
-              <li><a href="nen-tang-hoc.html">Về Chip Chip</a></li>
-              <li><a href="gioi-thieu.html">Trợ giúp</a></li>
-              <li><a href="tro-giup.html">Blog</a></li>
-              <li><a href="/blog/">Liên hệ</a></li>
+              <li><a href="/giao-vien.html">Giáo viên</a></li>
+              <li><a href="/chuong-trinh-hoc.html">Chương trình học</a></li>
+              <li><a href="/ve-chip-chip.html">Về Chip Chip</a></li>
+              <li><a href="/tro-giup.html">Trợ giúp</a></li>
+              <li><a href="/blocg.html">Blog</a></li>
+              <li><a href="/lien-he">Liên hệ</a></li>
             </ul>
           </div>
           <div class="uk-inline uk-hidden@l">
@@ -1107,58 +1107,6 @@
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit-icons.min.js"></script>
 
-    <script>
-      // Start header
-      const header = document.getElementById("header");
-
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 100) {
-          header.classList.add("scrolled");
-        } else {
-          header.classList.remove("scrolled");
-        }
-      });
-      // End header
-
-      document.addEventListener("DOMContentLoaded", () => {
-        const dropdownTrigger = document.querySelector("[uk-dropdown]");
-        const body = document.body;
-
-        dropdownTrigger.addEventListener("beforeshow", () => {
-          body.classList.add("no-scroll");
-        });
-
-        dropdownTrigger.addEventListener("hide", () => {
-          body.classList.remove("no-scroll");
-        });
-      });
-
-      const dropdownHeader = document.getElementById("dropdown-header");
-
-      const handleNavigate = () => {
-        UIkit.dropdown(dropdownHeader).hide(0);
-      };
-
-      // Start platform
-      // Select all the elements with the class 'platform-card-desc'
-      const cardDescriptions = document.querySelectorAll(".platform-card-desc");
-      // Select the image element
-      const platformImage = document.querySelector(".platform-img");
-
-      // Add click event listeners to each card description
-      cardDescriptions.forEach((desc) => {
-        desc.addEventListener("click", () => {
-          // Remove the 'active' class from all card descriptions
-          cardDescriptions.forEach((item) => item.classList.remove("active"));
-          // Add the 'active' class to the clicked card description
-          desc.classList.add("active");
-          // Update the image source based on the data-img attribute
-          const newImageSrc = desc.getAttribute("data-img");
-          platformImage.setAttribute("src", newImageSrc);
-        });
-      });
-
-      // End platform
-    </script>
+    <script src="/main.js"></script>
   </body>
 </html>

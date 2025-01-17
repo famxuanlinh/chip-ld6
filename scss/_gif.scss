@@ -1,0 +1,36 @@
+@use "mixin" as *;
+@use "common";
+
+.gif {
+  position: relative;
+  background-image: url(/public/program/5-bg.svg);
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+  background-position: bottom;
+  overflow: hidden;
+  padding: 56px 0;
+
+  @include maxw(780) {
+    padding: 40px 0;
+    background-image: url(/public/program/5-bg-mobile.svg);
+    background-size: cover;
+  }
+
+  &-title {
+    color: #ff9914;
+    text-align: center;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 64px; /* 160% */
+
+    @include maxw(1180) {
+      text-align: center;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 48px; /* 150% */
+    }
+  }
+}
