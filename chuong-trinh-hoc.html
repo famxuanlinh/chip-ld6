@@ -222,91 +222,103 @@
               provident omnis nam nihil harum.
             </div>
             <div class="level-bottom-content-left-title">Con sẽ học được</div>
-            <div class="hero-content-desc space-y-4">
-              <div class="flex-items-center space-x-3">
-                <img
-                  class=""
-                  width="24"
-                  height="24"
-                  src="public/icon/c1-check.svg"
-                  alt=""
-                />
-                <p class="hero-content-desc-item">
-                  Fundamental questions about name, age, family member, etc.
-                </p>
+            <div class="hero-content-desc-wrapper">
+              <div class="hero-content-desc space-y-4">
+                <div class="flex-items-center space-x-3">
+                  <img
+                    class=""
+                    width="24"
+                    height="24"
+                    src="public/icon/c1-check.svg"
+                    alt=""
+                  />
+                  <p class="hero-content-desc-item">
+                    Fundamental questions about name, age, family member, etc.
+                  </p>
+                </div>
+                <div class="flex-items-center space-x-3">
+                  <img
+                    class=""
+                    width="24"
+                    height="24"
+                    src="public/icon/c1-check.svg"
+                    alt=""
+                  />
+                  <p class="hero-content-desc-item">
+                    How to indentity essential subject words, such as numbers,
+                    colors, fruits, and animals
+                  </p>
+                </div>
+                <div class="flex-items-center space-x-3">
+                  <img
+                    class=""
+                    width="24"
+                    height="24"
+                    src="public/icon/c1-check.svg"
+                    alt=""
+                  />
+                  <p class="hero-content-desc-item">
+                    How to answer simple questions with set words or phrases
+                  </p>
+                </div>
+                <div class="flex-items-center space-x-3">
+                  <img
+                    class=""
+                    width="24"
+                    height="24"
+                    src="public/icon/c1-check.svg"
+                    alt=""
+                  />
+                  <p class="hero-content-desc-item">
+                    How to rea short picture books
+                  </p>
+                </div>
+                <div class="flex-items-center space-x-3">
+                  <img
+                    class=""
+                    width="24"
+                    height="24"
+                    src="public/icon/c1-check.svg"
+                    alt=""
+                  />
+                  <p class="hero-content-desc-item">
+                    How to recognize all 26 letters & their sounds
+                  </p>
+                </div>
+                <div class="flex-items-center space-x-3">
+                  <img
+                    class=""
+                    width="24"
+                    height="24"
+                    src="public/icon/c1-check.svg"
+                    alt=""
+                  />
+                  <p class="hero-content-desc-item">
+                    How to identify uppercase & lowercase letters
+                  </p>
+                </div>
+                <div class="flex-items-center space-x-3">
+                  <img
+                    class=""
+                    width="24"
+                    height="24"
+                    src="public/icon/c1-check.svg"
+                    alt=""
+                  />
+                  <p class="hero-content-desc-item">
+                    How to understand classroom instructions
+                  </p>
+                </div>
               </div>
-              <div class="flex-items-center space-x-3">
-                <img
-                  class=""
-                  width="24"
-                  height="24"
-                  src="public/icon/c1-check.svg"
-                  alt=""
-                />
-                <p class="hero-content-desc-item">
-                  How to indentity essential subject words, such as numbers,
-                  colors, fruits, and animals
-                </p>
-              </div>
-              <div class="flex-items-center space-x-3">
-                <img
-                  class=""
-                  width="24"
-                  height="24"
-                  src="public/icon/c1-check.svg"
-                  alt=""
-                />
-                <p class="hero-content-desc-item">
-                  How to answer simple questions with set words or phrases
-                </p>
-              </div>
-              <div class="flex-items-center space-x-3">
-                <img
-                  class=""
-                  width="24"
-                  height="24"
-                  src="public/icon/c1-check.svg"
-                  alt=""
-                />
-                <p class="hero-content-desc-item">
-                  How to rea short picture books
-                </p>
-              </div>
-              <div class="flex-items-center space-x-3">
-                <img
-                  class=""
-                  width="24"
-                  height="24"
-                  src="public/icon/c1-check.svg"
-                  alt=""
-                />
-                <p class="hero-content-desc-item">
-                  How to recognize all 26 letters & their sounds
-                </p>
-              </div>
-              <div class="flex-items-center space-x-3">
-                <img
-                  class=""
-                  width="24"
-                  height="24"
-                  src="public/icon/c1-check.svg"
-                  alt=""
-                />
-                <p class="hero-content-desc-item">
-                  How to identify uppercase & lowercase letters
-                </p>
-              </div>
-              <div class="flex-items-center space-x-3">
-                <img
-                  class=""
-                  width="24"
-                  height="24"
-                  src="public/icon/c1-check.svg"
-                  alt=""
-                />
-                <p class="hero-content-desc-item">
-                  How to understand classroom instructions
-                </p>
+              <div class="button-see">
+                <button id="toggle-button" class="text-blue-500">
+                  Xem thêm
+                  <img
+                    id="toggle-icon"
+                    src="/public/icon/chevron-down.svg"
+                    alt=""
+                  />
+                </button>
               </div>
             </div>
           </div>
@@ -820,6 +832,30 @@
 
       // Initialize with Level 0 content
       updateLevelContent(currentLevel);
+
+      // see more see less
+      document.addEventListener("DOMContentLoaded", () => {
+        const toggleButton = document.getElementById("toggle-button");
+        const seeMoreButton = document.querySelector(".button-see");
+        const contentWrapper = document.querySelector(
+          ".hero-content-desc-wrapper"
+        );
+        const toggleIcon = document.getElementById("toggle-icon");
+
+        toggleButton.addEventListener("click", () => {
+          contentWrapper.classList.toggle("expanded");
+
+          toggleIcon.classList.toggle("rotated");
+
+          if (contentWrapper.classList.contains("expanded")) {
+            toggleButton.innerHTML = `Bớt <img id="toggle-icon"  style="transform: rotate(180deg);margin-right: 8px" src="/public/icon/chevron-down.svg" alt="Arrow icon" />`;
+            seeMoreButton.classList.add("less");
+          } else {
+            toggleButton.innerHTML = `Xem thêm <img style="margin-bottom: 6px; margin-right: 8px id="toggle-icon" src="/public/icon/chevron-down.svg" alt="Arrow icon" />`;
+            seeMoreButton.classList.remove("less");
+          }
+        });
+      });
     </script>
   </body>
 </html>

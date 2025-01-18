@@ -1927,7 +1927,7 @@ p {
   }
   .level-bottom-content-left-tag > :not(:last-child) {
     margin-right: 0px;
-    margin-top: 8px;
+    margin-bottom: 8px;
   }
 }
 .level-bottom-content-left-desc {
@@ -1944,7 +1944,6 @@ p {
   font-style: normal;
   font-weight: 600;
   line-height: 32px; /* 160% */
-  padding-bottom: 16px;
 }
 .level-bottom-content-right {
   flex: 1 1 0%;
@@ -1980,6 +1979,63 @@ p {
 .prev-level {
   background-color: transparent;
   border: none;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-content-desc-wrapper {
+    position: relative;
+    overflow: hidden;
+    max-height: 200px; /* Initial height of the content */
+    transition: max-height 0.3s ease-in-out;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-content-desc-wrapper.expanded {
+    max-height: max-content; /* Enough height to show all content */
+  }
+}
+
+#toggle-button img {
+  transition: transform 0.3s ease;
+}
+
+#toggle-button img.rotated {
+  transform: rotate(180deg);
+}
+
+.button-see {
+  display: block; /* Ensure the button is a block-level element */
+  margin-top: 10px; /* Adjust spacing */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 64px;
+  width: 100%;
+  background: linear-gradient(0deg, #fff 0%, rgba(255, 255, 255, 0.98) 55%, rgba(255, 255, 255, 0.8) 82.5%, rgba(255, 255, 255, 0) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button-see.less {
+  margin-top: 0px;
+  position: relative;
+}
+.button-see > button {
+  display: flex;
+  align-items: center;
+  color: #4ab749;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  background-color: transparent;
+  border: none;
+}
+@media screen and (min-width: 768px) {
+  .button-see {
+    display: none;
+  }
 }
 
 .activity {
