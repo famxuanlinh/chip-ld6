@@ -21,6 +21,9 @@
 @use "capacity-evaluation";
 @use "gif";
 @use "proud";
+@use "about-us";
+@use "story";
+@use "value";
 
 @font-face {
   font-family: "SF Pro Rounded";
@@ -101,6 +104,10 @@ html {
 #header > div > nav > div > ul > li > a {
   color: #272b30;
   text-transform: none;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 133.333% */
 }
 
 .header-new {

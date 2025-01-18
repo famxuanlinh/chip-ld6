@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Về Chip Chip</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/css/uikit.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="/public/icon/logo.svg" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap"
+    />
+  </head>
+  <body style="background-color: #f7f7f7">
+    <!----Header, menu -->
+    <div id="header" uk-sticky style="z-index: 11" class="header-new">
+      <div class="uk-container">
+        <nav
+          class="uk-navbar-container uk-navbar-transparent"
+          style="display: flex; justify-content: space-between"
+        >
+          <div class="uk-flex uk-flex-middle">
+            <a
+              class="uk-navbar-item pl-0 uk-logo"
+              href="https://chipchip.edu.vn"
+            >
+              <img class="header-logo" src="/public/logo.svg" alt=""
+            /></a>
+          </div>
+          <div class="uk-visible@l">
+            <ul class="uk-navbar-nav">
+              <li>
+                <a href="/giao-vien.html">Giáo viên</a>
+              </li>
+              <li><a href="/chuong-trinh-hoc.html">Chương trình học</a></li>
+              <li>
+                <a style="color: #4ab749" href="/ve-chip-chip.html"
+                  >Về Chip Chip</a
+                >
+              </li>
+              <li><a href="/tro-giup.html">Trợ giúp</a></li>
+              <li><a href="/blocg.html">Blog</a></li>
+              <li><a href="/lien-he">Liên hệ</a></li>
+            </ul>
+          </div>
+          <div class="uk-inline uk-hidden@l">
+            <button
+              class="h-full"
+              style="border: none; background-color: transparent"
+              type="button"
+            >
+              <img src="public/icon/c-menu.svg" alt="" />
+            </button>
+            <div
+              id="dropdown-header"
+              class="uk-card uk-card-body uk-card-default rounded-3 uk-box-shadow-small"
+              uk-dropdown="mode: click ; offset: 10; boundary-align: true;"
+              style="
+                width: max-content;
+                padding: 24px;
+                background-color: rgba(255, 255, 255);
+                gap: 32px;
+              "
+            >
+              <ul class="w-full p-0 space-y-8" style="list-style: none">
+                <li>
+                  <a
+                    onclick="handleNavigate()"
+                    class="header-item-mobile"
+                    href="/giao-vien.html"
+                    style="color: #4ab749"
+                    >Giáo viên</a
+                  >
+                </li>
+                <li style="width: 100vw">
+                  <a
+                    onclick="handleNavigate()"
+                    class="header-item-mobile"
+                    href="/chuong-trinh-hoc.html"
+                    >Chương trình học</a
+                  >
+                </li>
+                <li>
+                  <a
+                    onclick="handleNavigate()"
+                    class="header-item-mobile"
+                    href="#"
+                    >Về Chip Chip</a
+                  >
+                </li>
+                <li>
+                  <a
+                    onclick="handleNavigate()"
+                    class="header-item-mobile"
+                    href="#"
+                    >Trợ giúp</a
+                  >
+                </li>
+                <li>
+                  <a
+                    onclick="handleNavigate()"
+                    class="header-item-mobile"
+                    href="#"
+                    >Blog</a
+                  >
+                </li>
+                <li>
+                  <a
+                    onclick="handleNavigate()"
+                    class="header-item-mobile"
+                    href="#"
+                    >Liên hệ</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!----End header, menu-->
+
+    <!-- Main banner -->
+    <div class="program-hero">
+      <div class="container">
+        <div class="program-hero-container">
+          <div class="program-hero-content">
+            <div class="program-hero-content-title" style="color: #339316">
+              Trang bị cho trẻ em những năng lực cần thiết của tương lai
+            </div>
+            <div class="program-hero-content-desc">
+              Chip Chip là nền tảng học tiếng Anh trực tuyến dành cho trẻ em từ
+              4-12 tuổi. Chúng tôi nỗ lực tạo ra một môi trường học tương tác
+              hoàn toàn bằng tiếng Anh với những giáo viên nước ngoài giỏi nhất,
+              xây dựng chương trình học thú vị để giúp các con khơi gợi niềm yêu
+              thích tiếng Anh, tự tin sử dụng tiếng Anh để giao tiếp thành thạo
+              và phát âm giọng chuẩn bản xứ.
+            </div>
+          </div>
+          <div class="program-hero-image" style="margin-left: 0">
+            <img src="public/about-us/1-right-image.png" alt="title 1" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-proud">
+      <div class="about-proud-body">
+        <div class="about-proud-card">
+          <img
+            class="about-proud-card-icon"
+            src="public/icon/t2-book.svg"
+            alt="teacher"
+          />
+
+          <p class="about-proud-card-title">600.000+</p>
+          <p class="about-proud-card-desc">Lớp đã được dạy</p>
+        </div>
+        <div class="about-proud-card">
+          <img
+            class="about-proud-card-icon"
+            src="public/icon/t2-teacher.svg"
+            alt="teacher"
+          />
+
+          <p class="about-proud-card-title">620</p>
+          <p class="about-proud-card-desc">Giáo viên Quốc tế</p>
+        </div>
+        <div class="about-proud-card">
+          <img
+            class="about-proud-card-icon"
+            src="public/icon/t2-thumbs.svg"
+            alt="teacher"
+          />
+
+          <p class="about-proud-card-title">4.900</p>
+          <p class="about-proud-card-desc">Đánh giá 5 sao từ phụ huynh</p>
+        </div>
+      </div>
+    </div>
+    <div class="about-proof">
+      <div class="about-proof-body">
+        <div class="about-proof-card">
+          <p class="about-proof-card-title">Sứ mệnh</p>
+          <p class="about-proof-card-desc">
+            Mang đến cho mọi trẻ em, dù ở hoàn cảnh nào, những năng lực cần
+            thiết cho tương lai thông qua các chương trình giáo dục trực tuyến
+            chất lượng cao.
+          </p>
+        </div>
+        <div class="about-proof-card">
+          <p class="about-proof-card-title" style="color: #ff9914">Tầm nhìn</p>
+          <p class="about-proof-card-desc">
+            Trở thành công ty Edtech hàng đầu Đông nam Á, mang lại cơ hội giáo
+            dục bình đẳng cho mọi trẻ em.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chip Chip nâng chuẩn chất lượng giáo viên lên tầm cao mới -->
+    <div class="story">
+      <div class="story-container container" style="gap: 32px">
+        <div class="flex-justify-center" style="flex-direction: column">
+          <p class="story-title">Câu chuyện của Chip Chip</p>
+          <div class="story-desc">
+            Thành lập từ 2018 bởi những cá nhân giàu kinh nghiệm & đam mê về
+            công nghệ giáo dục, Chip Chip tự hào được đầu tư bởi Quỹ đầu tư
+            REAPRA từ Singapore. Chúng tôi cam kết xây dựng một doanh nghiệp
+            phát triển bền vững, tạo ra giá trị tốt đẹp tới nhiều người bằng
+            việc cung cấp những giải pháp công nghệ giáo dục chất lượng cao.
+          </div>
+        </div>
+        <img
+          class="story-img"
+          src="public/about-us/3-right-image.png"
+          alt="check"
+        />
+      </div>
+    </div>
+
+    <div class="value">
+      <div class="container">
+        <div class="value-title">6 giá trị cốt lõi</div>
+        <div class="value-body">
+          <div>
+            <p class="value-card-number">
+              <img src="public/about-us/5-01.svg" alt="01" />
+            </p>
+            <div class="value-card">
+              <img
+                class="value-card-icon"
+                src="public/icon/5-01-icon.svg"
+                alt="teacher"
+              />
+
+              <p class="value-card-title">Lấy học sinh làm trung tâm</p>
+              <p class="value-card-desc">
+                Mọi quyết định tập trung vào lợi ích, trải nghiệm tốt nhất cho
+                học sinh.
+              </p>
+            </div>
+          </div>
+          <div>
+            <p class="value-card-number">
+              <img src="public/about-us/5-02.svg" alt="01" />
+            </p>
+            <div class="value-card" style="background-color: #fddccc">
+              <img
+                class="value-card-icon"
+                src="public/icon/5-02-icon.svg"
+                alt="teacher"
+              />
+
+              <p class="value-card-title">Chính trực</p>
+              <p class="value-card-desc">
+                Hành động minh bạch, trung thực, đặt đạo đức làm nền tảng.
+              </p>
+            </div>
+          </div>
+          <div>
+            <p class="value-card-number">
+              <img src="public/about-us/5-03.svg" alt="01" />
+            </p>
+            <div class="value-card" style="background-color: #b9f6d7">
+              <img
+                class="value-card-icon"
+                src="public/icon/5-03-icon.svg"
+                alt="teacher"
+              />
+
+              <p class="value-card-title">Sáng tạo không ngừng</p>
+              <p class="value-card-desc">
+                Không ngại thử nghiệm và đổi mới để nâng cao chất lượng giáo
+                dục.
+              </p>
+            </div>
+          </div>
+          <div>
+            <p class="value-card-number">
+              <img src="public/about-us/5-04.svg" alt="01" />
+            </p>
+            <div class="value-card" style="background-color: #e5dbfa">
+              <img
+                class="value-card-icon"
+                src="public/icon/5-04-icon.svg"
+                alt="teacher"
+              />
+
+              <p class="value-card-title">Hành động nhanh, quyết liệt</p>
+              <p class="value-card-desc">
+                Nắm bắt cơ hội, xử lý linh hoạt, không ngại thay đổi để tạo đột
+                phá.
+              </p>
+            </div>
+          </div>
+          <div>
+            <p class="value-card-number">
+              <img src="public/about-us/5-05.svg" alt="01" />
+            </p>
+            <div class="value-card" style="background-color: #cddffa">
+              <img
+                class="value-card-icon"
+                src="public/icon/5-05-icon.svg"
+                alt="teacher"
+              />
+
+              <p class="value-card-title">Luôn học hỏi để phát triển</p>
+              <p class="value-card-desc">
+                Liên tục cải thiện và cập nhật, sẵn sàng tiếp thu mọi ý kiến xây
+                dựng.
+              </p>
+            </div>
+          </div>
+          <div>
+            <p class="value-card-number">
+              <img src="public/about-us/5-06.svg" alt="01" />
+            </p>
+            <div class="value-card" style="background-color: #feecca">
+              <img
+                class="value-card-icon"
+                src="public/icon/5-06-icon.svg"
+                alt="teacher"
+              />
+
+              <p class="value-card-title">Hỗ trợ đồng đội</p>
+              <p class="value-card-desc">
+                Hợp tác và sẻ chia để cùng nhau vươn tới mục tiêu chung.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chương trình học vui nhộn, tương tác theo phương pháp game hóa -->
+    <div class="gif about-us">
+      <div class="container">
+        <div class="flex-center space-y-4" style="flex-direction: column">
+          <div class="gif-title">Bạn muốn gia nhập Chip Chip?</div>
+          <p class="gif-desc">
+            Chip Chip sẽ là nơi làm việc mà ở đó bạn thấy hạnh phúc và hiệu quả.
+          </p>
+        </div>
+
+        <div class="flex-center">
+          <div class="program-hero-content-btn">
+            <a
+              href="#modal-center"
+              uk-toggle
+              class="button-primary button-primary-big"
+              >Đăng ký học thử
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div class="container footer">
+      <div>
+        <p class="footer-name">
+          Bản quyền 2025 thuộc về Công ty Cổ phần Công Nghệ & Giáo Dục Chip Chip
+        </p>
+        <p class="mt-2 mb-6">MST: 0109088958</p>
+        <div class="flex-items-center space-x-3 footer-desc">
+          <img
+            src="public/icon/c11-address.svg"
+            width="24"
+            height="24"
+            alt="address"
+          />
+          <p>
+            Tầng 5, nhà D, Khách sạn Thể Thao, 15 Lê Văn Thiêm, Thanh Xuân, Hà
+            Nội
+          </p>
+        </div>
+        <div class="footer-desc flex-items-center space-x-3 mt-4">
+          <img
+            src="public/icon/c11-phone.svg"
+            width="24"
+            height="24"
+            alt="address"
+          />
+          <p>0965 901 801</p>
+        </div>
+      </div>
+      <div class="space-x-6 flex-items-center" style="height: fit-content">
+        <a href="#">
+          <img
+            src="public/icon/c11-fb.svg"
+            width="24"
+            class="footer-icon"
+            height="24"
+            alt="address"
+          />
+        </a>
+        <a href="#">
+          <img
+            src="public/icon/c11-youtube.svg"
+            width="24"
+            class="footer-icon"
+            height="24"
+            alt="address"
+          />
+        </a>
+        <a href="#">
+          <img
+            src="public/icon/c11-tiktok.svg"
+            width="24"
+            class="footer-icon"
+            height="24"
+            alt="address"
+          />
+        </a>
+      </div>
+    </div>
+
+    <!-- Modal register -->
+    <div id="modal-center" class="uk-flex-top" uk-modal>
+      <div
+        style="width: auto"
+        class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical register-modal"
+      >
+        <div class="flex">
+          <div class="register-title modal">
+            <div class="flex-center">
+              <div style="position: relative; text-align: left">
+                Tặng suất học trải <br class="platform-break" />
+                nghiệm và đánh giá <br class="platform-break" />
+                trình độ miễn phí
+                <img
+                  class="register-title-line-modal"
+                  src="public/c2-line-orange.svg"
+                  alt="line"
+                />
+              </div>
+            </div>
+            <p style="width: 32px; flex: none"></p>
+          </div>
+          <button
+            class="uk-modal-close-default"
+            type="button"
+            style="top: 32px; right: 32px"
+            uk-close
+          ></button>
+        </div>
+
+        <div class="register">
+          <img
+            src="public/c10-img.png"
+            alt="register"
+            class="register-img modal"
+          />
+          <div class="register-content" style="padding: 0">
+            <form class="text-left register-form">
+              <div>
+                <label for="name" class="register-form-label"
+                  >Tên của con <span style="color: red">*</span></label
+                >
+                <input
+                  class="uk-input register-form-input"
+                  type="text"
+                  placeholder="Nhập tên của con"
+                  aria-label="Input"
+                  name="name"
+                  id="name"
+                />
+              </div>
+              <div>
+                <label for="name" class="register-form-label"
+                  >Năm sinh <span style="color: red">*</span></label
+                >
+                <div
+                  uk-form-custom="target: > * > span:first-child"
+                  style="
+                    border-radius: 999px;
+                    width: 100%;
+                    background-color: #fff;
+                  "
+                >
+                  <select
+                    class="w-full"
+                    aria-label="Custom controls"
+                    style="color: #535557; height: 44px; border-radius: 9999px"
+                  >
+                    <option value="">Chọn năm sinh</option>
+                    <option value="2010">2010</option>
+                    <option value="2011">2011</option>
+                    <option value="2012">2012</option>
+                    <option value="2013">2013</option>
+                    <option value="2014">2014</option>
+                    <option value="2015">2015</option>
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2019">2020</option>
+                    <option value="2019">2021</option>
+                  </select>
+                  <button
+                    class="register-form-select"
+                    type="button"
+                    tabindex="-1"
+                    style="border-radius: 999px; text-transform: none"
+                  >
+                    <span class="uk-margin-remove"></span>
+                    <span uk-icon="icon: chevron-down"></span>
+                  </button>
+                </div>
+              </div>
+              <div>
+                <label for="name" class="register-form-label"
+                  >Số điện thoại <span style="color: red">*</span></label
+                >
+                <input
+                  class="uk-input register-form-input"
+                  type="text"
+                  placeholder="Số điện thoại của phụ huynh"
+                  aria-label="Input"
+                  name="name"
+                  id="name"
+                />
+              </div>
+              <div
+                class="uk-flex uk-flex-center"
+                style="margin-top: 12px; height: 60px"
+              >
+                <button
+                  class="button-primary"
+                  style="
+                    height: 100%;
+                    width: 100%;
+                    background-color: #fff;
+                    color: #339316;
+                    border-color: transparent;
+                    margin-bottom: 8px;
+                  "
+                >
+                  Đăng ký ngay
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit-icons.min.js"></script>
+
+    <script src="/main.js"></script>
+  </body>
+</html>

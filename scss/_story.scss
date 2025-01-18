@@ -1,0 +1,74 @@
+@use "mixin" as *;
+@use "common";
+
+.story {
+  position: relative;
+  background-image: url(/public/about-us/4-bg.svg);
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+  background-position: bottom;
+  overflow: hidden;
+  padding: 183px 0 163px 0;
+  margin-top: -120px;
+
+  @include maxw(780) {
+    padding: 120px 0 184px 0;
+    background-image: url(/public/about-us/4-bg-mobile.svg);
+    background-size: cover;
+    background-position: bottom;
+    margin-top: -40px;
+    margin-bottom: -40px;
+  }
+
+  &-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+
+    @include maxw(768) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &-title {
+    color: #339316;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 64px; /* 160% */
+
+    @include maxw(768) {
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 48px; /* 150% */
+    }
+  }
+
+  &-desc {
+    color: #57595c;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36px; /* 180% */
+    margin-top: 24px;
+
+    @include maxw(768) {
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 32px; /* 177.778% */
+    }
+  }
+
+  &-img {
+    // width: 50%;
+    height: 100%;
+    object-fit: contain;
+    @include maxw(768) {
+      width: 100%;
+    }
+  }
+}

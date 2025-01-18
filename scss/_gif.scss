@@ -7,9 +7,16 @@
   background-repeat: no-repeat;
   width: 100%;
   background-size: cover;
-  background-position: bottom;
   overflow: hidden;
   padding: 56px 0;
+
+  &.about-us {
+    background-image: url(/public/about-us/6-bg.svg);
+
+    @include maxw(780) {
+      background-image: url(/public/about-us/6-bg-mobile.svg);
+    }
+  }
 
   @include maxw(780) {
     padding: 40px 0;
@@ -31,6 +38,23 @@
       font-style: normal;
       font-weight: 700;
       line-height: 48px; /* 150% */
+    }
+  }
+
+  &-desc {
+    color: #57595c;
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36px; /* 180% */
+
+    @include maxw(1180) {
+      text-align: center;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 36px; /* 200% */
     }
   }
 }
