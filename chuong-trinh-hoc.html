@@ -159,13 +159,31 @@
     <!-- Level -->
     <div class="level container">
       <div class="level-stair mb-10">
-        <div class="level-stair-item active" style="height: 56px">Level 0</div>
-        <div class="level-stair-item" style="height: 64px">Level 1</div>
-        <div class="level-stair-item" style="height: 72px">Level 2</div>
-        <div class="level-stair-item" style="height: 80px">Level 3</div>
-        <div class="level-stair-item" style="height: 88px">Level 4</div>
-        <div class="level-stair-item" style="height: 96px">Level 5</div>
-        <div class="level-stair-item" style="height: 102px">Level 6</div>
+        <div
+          class="level-stair-item active"
+          style="height: 56px"
+          data-level="0"
+        >
+          Level 0
+        </div>
+        <div class="level-stair-item" style="height: 64px" data-level="1">
+          Level 1
+        </div>
+        <div class="level-stair-item" style="height: 72px" data-level="2">
+          Level 2
+        </div>
+        <div class="level-stair-item" style="height: 80px" data-level="3">
+          Level 3
+        </div>
+        <div class="level-stair-item" style="height: 88px" data-level="4">
+          Level 4
+        </div>
+        <div class="level-stair-item" style="height: 96px" data-level="5">
+          Level 5
+        </div>
+        <div class="level-stair-item" style="height: 102px" data-level="6">
+          Level 6
+        </div>
       </div>
       <div class="level-bottom">
         <div class="level-bottom-header space-x-3">
@@ -297,6 +315,22 @@
             <img class="" src="public/program/2-right-image.png" alt="line" />
           </div>
         </div>
+      </div>
+      <div
+        class="level-navigation flex my-6"
+        style="justify-content: space-between"
+      >
+        <button class="prev-level">
+          <img src="/public/icon/chevron-left.svg" alt="" />
+        </button>
+        <span class="active-level-name">Level 0</span>
+        <button class="next-level">
+          <img
+            style="transform: rotate(180deg)"
+            src="/public/icon/chevron-left.svg"
+            alt=""
+          />
+        </button>
       </div>
     </div>
 
@@ -659,5 +693,133 @@
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit-icons.min.js"></script>
 
     <script src="/main.js"></script>
+    <script>
+      const levels = [
+        {
+          title: "Level 0",
+          subtitle: "Cambridge Starters - Pre A1",
+          lessons: "60 buổi học",
+          projects: "8 dự án cá nhân",
+          description:
+            "Level 0 focuses on introducing basic English skills, including speaking, listening, and recognizing common words and phrases.",
+          image: "/public/program/2-right-image.png",
+        },
+        {
+          title: "Level 1",
+          subtitle: "Cambridge Movers - A1",
+          lessons: "70 buổi học",
+          projects: "10 dự án cá nhân",
+          description:
+            "Level 1 develops vocabulary and grammar with more structured lessons and interactive exercises.",
+          image: "/public/program/2-right-image.png",
+        },
+        {
+          title: "Level 2",
+          subtitle: "Cambridge Flyers - A2",
+          lessons: "80 buổi học",
+          projects: "12 dự án cá nhân",
+          description:
+            "Level 2 expands on sentence structure, reading comprehension, and basic writing skills.",
+          image: "/public/program/2-right-image.png",
+        },
+        {
+          title: "Level 3",
+          subtitle: "KET - A2 Key English Test",
+          lessons: "90 buổi học",
+          projects: "15 dự án cá nhân",
+          description:
+            "Level 3 prepares students for the A2 Key English Test with a focus on practical communication skills.",
+          image: "/public/program/2-right-image.png",
+        },
+        {
+          title: "Level 4",
+          subtitle: "PET - B1 Preliminary English Test",
+          lessons: "100 buổi học",
+          projects: "18 dự án cá nhân",
+          description:
+            "Level 4 introduces intermediate-level English, helping students to discuss everyday topics confidently.",
+          image: "/public/program/2-right-image.png",
+        },
+        {
+          title: "Level 5",
+          subtitle: "FCE - B2 First Certificate in English",
+          lessons: "110 buổi học",
+          projects: "20 dự án cá nhân",
+          description:
+            "Level 5 strengthens advanced grammar and vocabulary, preparing students for higher-level certifications.",
+          image: "/public/program/2-right-image.png",
+        },
+        {
+          title: "Level 6",
+          subtitle: "CAE - C1 Advanced",
+          lessons: "120 buổi học",
+          projects: "25 dự án cá nhân",
+          description:
+            "Level 6 focuses on mastering English fluency and understanding complex texts and topics.",
+          image: "/public/program/2-right-image.png",
+        },
+      ];
+
+      let currentLevel = 0;
+
+      const stairItems = document.querySelectorAll(".level-stair-item");
+      const activeLevelName = document.querySelector(".active-level-name");
+      const titleTag = document.querySelector(".level-bottom-title-tag");
+      const subtitleTag = document.querySelector(".level-bottom-title p");
+      const lessonsTag = document.querySelector(
+        ".level-bottom-content-left-tag img[src='/public/icon/p2-video.svg'] + p"
+      );
+      const projectsTag = document.querySelector(
+        ".level-bottom-content-left-tag img[src='/public/icon/p2-book.svg'] + p"
+      );
+      const descriptionTag = document.querySelector(
+        ".level-bottom-content-left-desc"
+      );
+      const rightImage = document.querySelector(
+        ".level-bottom-content-right img"
+      );
+
+      const prevButton = document.querySelector(".prev-level");
+      const nextButton = document.querySelector(".next-level");
+
+      function updateLevelContent(level) {
+        // Update text and image content
+        titleTag.textContent = levels[level].title;
+        subtitleTag.textContent = levels[level].subtitle;
+        lessonsTag.textContent = levels[level].lessons;
+        projectsTag.textContent = levels[level].projects;
+        descriptionTag.textContent = levels[level].description;
+        rightImage.setAttribute("src", levels[level].image);
+        activeLevelName.textContent = levels[level].title;
+
+        // Update active class
+        stairItems.forEach((item) => item.classList.remove("active"));
+        stairItems[level].classList.add("active");
+      }
+
+      stairItems.forEach((item, index) => {
+        item.addEventListener("click", () => {
+          currentLevel = index;
+          updateLevelContent(currentLevel);
+        });
+      });
+
+      prevButton.addEventListener("click", () => {
+        if (currentLevel > 0) {
+          currentLevel--;
+          updateLevelContent(currentLevel);
+        }
+      });
+
+      nextButton.addEventListener("click", () => {
+        if (currentLevel < levels.length - 1) {
+          currentLevel++;
+          updateLevelContent(currentLevel);
+        }
+      });
+
+      // Initialize with Level 0 content
+      updateLevelContent(currentLevel);
+    </script>
   </body>
 </html>
