@@ -2351,7 +2351,6 @@ p {
 @media screen and (max-width: 780px) {
   .proud {
     padding: 40px 0 88px 0;
-    background-image: url(/public/teacher/2-bg-mobile.svg);
     background-size: cover;
     background-position: bottom;
   }
@@ -2541,6 +2540,15 @@ p {
 @media screen and (max-width: 768px) {
   .proud-teacher-card-width > * {
     width: 76.9230769231%;
+  }
+}
+
+.teacher-padding {
+  padding-top: 90px;
+}
+@media screen and (max-width: 768px) {
+  .teacher-padding {
+    padding-top: 70px;
   }
 }
 

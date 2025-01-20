@@ -13,7 +13,7 @@
 
   @include maxw(780) {
     padding: 40px 0 88px 0;
-    background-image: url(/public/teacher/2-bg-mobile.svg);
+    // background-image: url(/public/teacher/2-bg-mobile.svg);
     background-size: cover;
     background-position: bottom;
   }
@@ -216,5 +216,12 @@
         }
       }
     }
+  }
+}
+
+.teacher-padding {
+  padding-top: 90px;
+  @include maxw(768) {
+    padding-top: 70px;
   }
 }
