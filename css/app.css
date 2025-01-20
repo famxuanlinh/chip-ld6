@@ -2125,6 +2125,16 @@ p {
     width: 100%;
   }
 }
+.activity-img2 {
+  height: 100%;
+  object-fit: contain;
+  max-width: 540px;
+}
+@media screen and (max-width: 768px) {
+  .activity-img2 {
+    width: 100%;
+  }
+}
 .activity-content {
   background-color: white;
   padding: 32px;
