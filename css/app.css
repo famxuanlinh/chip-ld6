@@ -2351,6 +2351,7 @@ p {
 @media screen and (max-width: 780px) {
   .proud {
     padding: 40px 0 88px 0;
+    background-image: url(/public/teacher/2-bg-mobile.png);
     background-size: cover;
     background-position: bottom;
   }
