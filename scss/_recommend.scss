@@ -120,6 +120,7 @@
 .second {
   padding: 64px 0;
   background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(30px);
   border-radius: 12px;
 
   @include maxw(960) {
@@ -243,6 +244,7 @@
   }
 
   &-card {
+    backdrop-filter: blur(30px);
     background: rgba(255, 255, 255, 0.75);
   }
 
@@ -287,6 +289,7 @@
 
 .fourth {
   padding: 64px 156px;
+  backdrop-filter: blur(30px);
   background: rgba(255, 255, 255, 0.75);
   border-radius: 12px;
 
