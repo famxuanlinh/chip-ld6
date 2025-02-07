@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chương trình học</title>
+    <title>Liên hệ</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/css/uikit.min.css"
@@ -40,14 +40,14 @@
             <ul class="uk-navbar-nav">
               <li><a href="/giao-vien.html">Giáo viên</a></li>
               <li>
-                <a style="color: #4ab749" href="/chuong-trinh-hoc.html"
-                  >Chương trình học</a
-                >
+                <a href="/chuong-trinh-hoc.html">Chương trình học</a>
               </li>
               <li><a href="/ve-chip-chip.html">Về Chip Chip</a></li>
               <li><a href="/tro-giup.html">Trợ giúp</a></li>
               <li><a href="/blocg.html">Blog</a></li>
-              <li><a href="/lien-he.html">Liên hệ</a></li>
+              <li>
+                <a style="color: #4ab749" href="/lien-he.html">Liên hệ</a>
+              </li>
             </ul>
           </div>
           <div class="uk-inline uk-hidden@l">
@@ -83,7 +83,6 @@
                     onclick="handleNavigate()"
                     class="header-item-mobile"
                     href="#"
-                    style="color: #4ab749"
                     >Chương trình học</a
                   >
                 </li>
@@ -116,6 +115,7 @@
                     onclick="handleNavigate()"
                     class="header-item-mobile"
                     href="#"
+                    style="color: #4ab749"
                     >Liên hệ</a
                   >
                 </li>
@@ -128,359 +128,178 @@
     <!----End header, menu-->
 
     <!-- Main banner -->
-    <div class="program-hero">
+    <div class="contact-hero">
       <div class="container">
-        <div class="program-hero-container">
-          <div class="program-hero-content">
-            <div class="program-hero-content-title">
-              Chương trình học tiếng Anh online trẻ em toàn diện
+        <div class="contact-hero-container">
+          <div class="contact-hero-content">
+            <div class="contact-hero-content-title">
+              Bạn gọi, Chip Chip trả lời
             </div>
-            <div class="program-hero-content-desc">
-              Với sự kết hợp giữa việc học online cùng giáo viên nước ngoài hạng
-              A và hoạt động tự học game hóa, Chip Chip xây nền vững chắc tiếng
-              Anh cho bé ngay từ nhỏ.
+            <div class="contact-hero-content-desc">
+              Chip Chip sẵn sàng trả lời bất kỳ câu hỏi nào của bạn trong thời
+              gian sớm nhất.
             </div>
-            <div class="program-hero-content-btn">
+            <!-- <div class="contact-hero-content-btn">
               <a
                 href="#modal-center"
                 uk-toggle
                 class="button-primary button-primary-big"
                 >Đăng ký học thử
               </a>
-            </div>
-          </div>
-          <div class="program-hero-image">
-            <img src="public/program/1-right-image.png" alt="title 1" />
-          </div>
-        </div>
-      </div>
-    </div>
+            </div> -->
 
-    <!-- Level -->
-    <div class="level container">
-      <div class="level-stair mb-10">
-        <div
-          class="level-stair-item active"
-          style="height: 56px"
-          data-level="0"
-        >
-          Level 0
-        </div>
-        <div class="level-stair-item" style="height: 64px" data-level="1">
-          Level 1
-        </div>
-        <div class="level-stair-item" style="height: 72px" data-level="2">
-          Level 2
-        </div>
-        <div class="level-stair-item" style="height: 80px" data-level="3">
-          Level 3
-        </div>
-        <div class="level-stair-item" style="height: 88px" data-level="4">
-          Level 4
-        </div>
-        <div class="level-stair-item" style="height: 96px" data-level="5">
-          Level 5
-        </div>
-        <div class="level-stair-item" style="height: 102px" data-level="6">
-          Level 6
-        </div>
-      </div>
-      <div class="level-bottom">
-        <div class="level-bottom-header space-x-3">
-          <div
-            class="rounded-full"
-            style="height: 16px; width: 16px; background-color: #dc583d"
-          ></div>
-          <div
-            class="rounded-full"
-            style="height: 16px; width: 16px; background-color: #f6b212"
-          ></div>
-          <div
-            class="rounded-full"
-            style="height: 16px; width: 16px; background-color: #4ec252"
-          ></div>
-        </div>
-        <div class="level-bottom-title">
-          <div class="level-bottom-title-tag">Level 0</div>
-          <p>Cambridge Starters - Pre A1</p>
-        </div>
-        <div class="level-bottom-content">
-          <div class="level-bottom-content-left">
-            <div class="level-bottom-content-left-tag">
-              <div class="flex-items-center space-x-2">
-                <img src="/public/icon/p2-video.svg" alt="video" />
-                <p>60 buổi học</p>
+            <form class="text-left contact-form desktop">
+              <div class="w-full">
+                <label for="name" class="contact-form-label"
+                  >Tên đầy đủ của bạn</label
+                >
+                <input
+                  class="uk-input contact-form-input"
+                  type="text"
+                  placeholder="Nhập tên"
+                  aria-label="Input"
+                  name="name"
+                  id="name"
+                />
               </div>
-              <div class="flex-items-center space-x-2">
-                <img src="/public/icon/p2-book.svg" alt="book" />
-                <p>8 dự án cá nhân</p>
+
+              <div class="w-full">
+                <label for="name" class="contact-form-label"
+                  >Email của bạn</label
+                >
+                <input
+                  class="uk-input contact-form-input"
+                  type="text"
+                  placeholder="Nhập email"
+                  aria-label="Input"
+                  name="name"
+                  id="name"
+                />
               </div>
-            </div>
-            <div class="level-bottom-content-left-desc">
-              Ipsum et harum est ut ut. Dolores est et libero. Dignissimos
-              cumque voluptatem eum vitae. Tenetur cumque aut id beatae
-              provident omnis nam nihil harum.
-            </div>
-            <div class="level-bottom-content-left-title">Con sẽ học được</div>
-            <div class="hero-content-desc-wrapper">
-              <div class="hero-content-desc space-y-4">
-                <div class="flex-items-center space-x-3">
-                  <img
-                    class=""
-                    width="24"
-                    height="24"
-                    src="public/icon/c1-check.svg"
-                    alt=""
-                  />
-                  <p class="hero-content-desc-item">
-                    Fundamental questions about name, age, family member, etc.
-                  </p>
-                </div>
-                <div class="flex-items-center space-x-3">
-                  <img
-                    class=""
-                    width="24"
-                    height="24"
-                    src="public/icon/c1-check.svg"
-                    alt=""
-                  />
-                  <p class="hero-content-desc-item">
-                    How to indentity essential subject words, such as numbers,
-                    colors, fruits, and animals
-                  </p>
-                </div>
-                <div class="flex-items-center space-x-3">
-                  <img
-                    class=""
-                    width="24"
-                    height="24"
-                    src="public/icon/c1-check.svg"
-                    alt=""
-                  />
-                  <p class="hero-content-desc-item">
-                    How to answer simple questions with set words or phrases
-                  </p>
-                </div>
-                <div class="flex-items-center space-x-3">
-                  <img
-                    class=""
-                    width="24"
-                    height="24"
-                    src="public/icon/c1-check.svg"
-                    alt=""
-                  />
-                  <p class="hero-content-desc-item">
-                    How to rea short picture books
-                  </p>
-                </div>
-                <div class="flex-items-center space-x-3">
-                  <img
-                    class=""
-                    width="24"
-                    height="24"
-                    src="public/icon/c1-check.svg"
-                    alt=""
-                  />
-                  <p class="hero-content-desc-item">
-                    How to recognize all 26 letters & their sounds
-                  </p>
-                </div>
-                <div class="flex-items-center space-x-3">
-                  <img
-                    class=""
-                    width="24"
-                    height="24"
-                    src="public/icon/c1-check.svg"
-                    alt=""
-                  />
-                  <p class="hero-content-desc-item">
-                    How to identify uppercase & lowercase letters
-                  </p>
-                </div>
-                <div class="flex-items-center space-x-3">
-                  <img
-                    class=""
-                    width="24"
-                    height="24"
-                    src="public/icon/c1-check.svg"
-                    alt=""
-                  />
-                  <p class="hero-content-desc-item">
-                    How to understand classroom instructions
-                  </p>
-                </div>
+              <div class="w-full">
+                <label for="note" class="contact-form-label">Lời nhắn</label>
+                <textarea
+                  class="uk-textarea contact-form-text-area"
+                  rows="5"
+                  placeholder="Nhập lời nhắn"
+                  aria-label="Textarea"
+                ></textarea>
               </div>
-              <div class="button-see">
-                <button id="toggle-button" class="text-blue-500">
-                  Xem thêm
-                  <img
-                    id="toggle-icon"
-                    src="/public/icon/chevron-down.svg"
-                    alt=""
-                  />
+              <div
+                class="uk-flex uk-flex-center w-full"
+                style="margin-top: 12px; height: 60px"
+              >
+                <button
+                  class="button-primary"
+                  style="height: 56px; padding: 24px; border: none; width: 100%"
+                >
+                  Gửi
                 </button>
               </div>
+            </form>
+          </div>
+          <div class="contact-hero-image">
+            <img src="public/contact/1-right-image.png" alt="title 1" />
+          </div>
+          <form class="text-left contact-form mobile space-y-4">
+            <div class="w-full">
+              <label for="name" class="contact-form-label"
+                >Tên đầy đủ của bạn</label
+              >
+              <input
+                class="uk-input contact-form-input"
+                type="text"
+                placeholder="Nhập tên"
+                aria-label="Input"
+                name="name"
+                id="name"
+              />
             </div>
-          </div>
 
-          <div class="level-bottom-content-right">
-            <img class="" src="public/program/2-right-image.png" alt="line" />
-          </div>
+            <div class="w-full">
+              <label for="name" class="contact-form-label">Email của bạn</label>
+              <input
+                class="uk-input contact-form-input"
+                type="text"
+                placeholder="Nhập email"
+                aria-label="Input"
+                name="name"
+                id="name"
+              />
+            </div>
+            <div class="w-full">
+              <label for="note" class="contact-form-label">Lời nhắn</label>
+              <textarea
+                class="uk-textarea contact-form-text-area"
+                rows="5"
+                placeholder="Nhập lời nhắn"
+                aria-label="Textarea"
+              ></textarea>
+            </div>
+            <div
+              class="uk-flex uk-flex-center w-full"
+              style="margin-top: 12px; height: 60px"
+            >
+              <button
+                class="button-primary"
+                style="height: 56px; padding: 24px; border: none; width: 100%"
+              >
+                Gửi
+              </button>
+            </div>
+          </form>
         </div>
       </div>
-      <div
-        class="level-navigation flex my-6"
-        style="justify-content: space-between"
-      >
-        <button class="prev-level">
-          <img src="/public/icon/chevron-left.svg" alt="" />
-        </button>
-        <span class="active-level-name">Level 0</span>
-        <button class="next-level">
+    </div>
+
+    <div class="contact">
+      <div class="contact-body">
+        <div class="contact-card">
           <img
-            style="transform: rotate(180deg)"
-            src="/public/icon/chevron-left.svg"
-            alt=""
+            class="contact-card-icon"
+            src="public/icon/lpush-pin.svg"
+            alt="teacher"
           />
-        </button>
-      </div>
-    </div>
 
-    <!--  Những hoạt động học -->
-    <div class="activity">
-      <div class="activity-title">
-        <div class="flex-center">
-          <div style="position: relative">
-            Những hoạt động học <br class="activity-break" />
-            tập <br class="activity-break-desktop" />
-            siêu thú vị <br class="activity-break" />
-            và hào hứng
-          </div>
+          <p class="contact-card-title">Địa chỉ</p>
+          <p class="contact-card-desc">
+            Tầng 5 nhà D, số 15 Lê Văn Thiêm, Thanh Xuân, Hà Nội
+          </p>
         </div>
-      </div>
-      <div class="flex-justify-center activity-desc">
-        <p style="max-width: 700px">
-          Chương trình học của Chip Chip là sự kết hợp nhuần nhuyễn giữa các
-          hoạt động học tập trên lớp với giáo viên online và hoạt động tự học cố
-          định hướng theo phương pháp game hóa giúp bé trang bị toàn diện 4 kỹ
-          năng nghe, nói, đọc, viết và thúc đẩy năng lực tự học của học sinh.
-        </p>
-      </div>
-      <div class="activity-container top container">
-        <div class="w-full" style="max-width: 520px; width: 100%">
-          <div class="flex-center" style="margin-bottom: -24px">
-            <img class="" src="public/program/3-in-class.svg" alt="check" />
-          </div>
-          <div class="activity-content space-y-8">
-            <div class="space-x-6 flex" style="align-items: start">
-              <img src="/public/icon/p3-alphabet.svg" alt="" />
-              <p
-                style="
-                  font-size: 18px;
-                  font-style: normal;
-                  font-weight: 500;
-                  line-height: 24px;
-                  color: #57595c;
-                "
-              >
-                Được giới thiệu các kiến thức phong phú về chủ đề, từ vựng mới
-                và các mẫu câu.
-              </p>
-            </div>
-            <div class="space-x-6 flex" style="align-items: start">
-              <img src="/public/icon/p3-music.svg" alt="" />
-              <p
-                style="
-                  font-size: 18px;
-                  font-style: normal;
-                  font-weight: 500;
-                  line-height: 24px;
-                  color: #57595c;
-                "
-              >
-                Con thực hành luyện giao tiếp nghe nói thông qua các hoạt động
-                role play, trò chơi, bài hát, bài vè, câu chuyện với hình ảnh
-                sinh động.
-              </p>
-            </div>
-            <div class="space-x-6 flex" style="align-items: start">
-              <img src="/public/icon/p3-magnifying.svg" alt="" />
-              <p
-                style="
-                  font-size: 18px;
-                  font-style: normal;
-                  font-weight: 500;
-                  line-height: 24px;
-                  color: #57595c;
-                "
-              >
-                Được giáo viên chỉnh sửa kỹ về phát âm, ngữ điệu để nói tự tin,
-                chuẩn bản ngữ.
-              </p>
-            </div>
-          </div>
-        </div>
-        <img class="activity-img2" src="public/c5-class.png" alt="check" />
-      </div>
-      <div style="margin-top: 56px" class="activity-container container">
-        <img class="activity-img" src="public/c5-class.png" alt="check" />
-        <div class="w-full">
-          <div class="flex-center" style="margin-bottom: -24px">
-            <img class="" src="public/program/3-out-class.svg" alt="check" />
-          </div>
+        <div class="contact-card second">
+          <img
+            class="contact-card-icon"
+            src="public/icon/lmail.svg"
+            alt="teacher"
+          />
 
-          <div class="activity-content">
-            <div class="activity-card">
-              <div
-                class="activity-card-desc active"
-                data-img="public/c5-class.png"
-              >
-                Tiếp tục ôn luyện kiến thức đã học với hơn 20 dạng trò chơi
-                tiếng Anh tương tác trên ứng dụng học tập Chip Chip.
-              </div>
-            </div>
-            <div class="activity-card">
-              <div
-                class="activity-card-desc"
-                data-img="public/program/2-right-image2.png"
-              >
-                Hoàn thiện kỹ năng đọc, viết ngữ pháp thông qua các bài tập
-                worksheets được cung cấp trong từng buổi học.
-              </div>
-            </div>
-            <div class="activity-card">
-              <div class="activity-card-desc" data-img="public/c5-class.png">
-                Sau mỗi 2 đơn vị bài học, con được tham gia dự án cá nhân để
-                sáng tạo các sản phẩm và thuyết trình bằng tiếng Anh tới giáo
-                viên.
-              </div>
-            </div>
-          </div>
+          <p class="contact-card-title">Email</p>
+          <p class="contact-card-desc">contact@chipchip.edu.vn</p>
+        </div>
+        <div class="contact-card">
+          <img
+            class="contact-card-icon"
+            src="public/icon/lphone.svg"
+            alt="teacher"
+          />
+
+          <p class="contact-card-title">Hotline</p>
+          <p class="contact-card-desc">0965 901 801</p>
         </div>
       </div>
     </div>
 
-    <!--   Kiểm tra đánh giá năng lực định kỳ thường xuyên -->
-    <div class="capacity-evaluation">
-      <div class="capacity-evaluation-container">
-        <div class="flex" style="justify-content: end">
-          <div class="capacity-evaluation-content">
-            <p class="capacity-evaluation-title">
-              Kiểm tra đánh giá năng lực định kỳ thường xuyên
-            </p>
-            <p class="capacity-evaluation-desc">
-              Học sinh Chip Chip được đánh giá năng lực định kỳ qua các bài kiểm
-              tra giữa cấp độ và cuối độ. Các bài kiểm tra được thiết kế mô
-              phỏng theo định dạng đề thi quốc tế Cambridge YLE.
-            </p>
-          </div>
-        </div>
-        <img
-          class="capacity-evaluation-img"
-          src="public/program/4-right-image.png"
-          alt="check"
-        />
-      </div>
+    <div class="container contact-map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.998881851017!2d105.82715358347336!3d20.992681939135824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac6233454527%3A0x526c22c3654cef93!2zVG_DoCBOaMOgIEFDQ0k!5e0!3m2!1svi!2s!4v1738826256934!5m2!1svi!2s"
+        width="100%"
+        height="418"
+        class="rounded-5"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
     </div>
 
     <!-- Tặng con suất học trải nghiệm miễn phí -->
@@ -494,12 +313,12 @@
           </div>
         </div>
         <div class="flex-center">
-          <div class="program-hero-content-btn">
+          <div class="contact-hero-content-btn">
             <a
               href="#modal-center"
               uk-toggle
               class="button-primary button-primary-big"
-              >Đăng ký học thử
+              >Đăng ký ngay
             </a>
           </div>
         </div>
