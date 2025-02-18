@@ -4,7 +4,8 @@
 .advisory {
   box-sizing: border-box;
   position: fixed;
-  top: 240px;
+  top: 50%;
+  transform: translateY(-50%);
   right: 0;
   z-index: 100;
   width: 88px;
