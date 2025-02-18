@@ -67,14 +67,18 @@
     }
 
     &.phone {
+      & > img {
+        width: 40px;
+        height: 40px;
+      }
       @include maxw(768) {
         display: none;
       }
     }
 
     & > img {
-      width: 40px;
-      height: 40px;
+      width: 46px;
+      height: 46px;
       -o-object-fit: contain;
       object-fit: contain;
       display: block;

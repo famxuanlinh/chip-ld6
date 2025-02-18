@@ -4121,14 +4121,18 @@ p {
 .advisory-item:hover {
   text-decoration: none;
 }
+.advisory-item.phone > img {
+  width: 40px;
+  height: 40px;
+}
 @media screen and (max-width: 768px) {
   .advisory-item.phone {
     display: none;
   }
 }
 .advisory-item > img {
-  width: 40px;
-  height: 40px;
+  width: 46px;
+  height: 46px;
   -o-object-fit: contain;
   object-fit: contain;
   display: block;
