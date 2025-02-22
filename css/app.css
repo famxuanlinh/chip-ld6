@@ -1280,6 +1280,7 @@ p {
     max-width: 562px;
     margin-right: 30px;
     width: 100%;
+    height: fit-content;
   }
 }
 .commit-desc {
@@ -1462,6 +1463,7 @@ p {
 }
 .celebrity-card-img {
   flex: 1 1 0%;
+  object-fit: cover;
 }
 .celebrity-card-content {
   flex: 1 1 0%;
@@ -4177,18 +4179,6 @@ p {
   font-family: "SF Pro Rounded";
   src: url("../fonts/SF-Pro-Rounded-Bold.otf") format("opentype");
   font-weight: 700; /* Bold */
-  font-style: normal;
-}
-@font-face {
-  font-family: "SF Pro Rounded";
-  src: url("../fonts/SF-Pro-Rounded-Heavy.otf") format("opentype");
-  font-weight: 800; /* Heavy */
-  font-style: normal;
-}
-@font-face {
-  font-family: "SF Pro Rounded";
-  src: url("../fonts/SF-Pro-Rounded-Black.otf") format("opentype");
-  font-weight: 900; /* Black */
   font-style: normal;
 }
 html {
