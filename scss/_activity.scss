@@ -22,7 +22,6 @@
 
   &-container {
     display: flex;
-    align-items: end;
     gap: 54px;
 
     @include maxw(768) {
@@ -78,22 +77,30 @@
   }
 
   &-img {
-    height: 100%;
+    // height: 100%;
     object-fit: contain;
     max-width: 540px;
 
     @include maxw(768) {
       width: 100%;
+      height: 100%;
     }
   }
 
   &-video {
-    height: 100%;
+    // height: 100%;
     object-fit: contain;
     max-width: 540px;
 
     @include maxw(768) {
       width: 100%;
+      height: 100%;
+    }
+  }
+
+  &-media {
+    @include minw(768) {
+      margin-top: 134px;
     }
   }
 
