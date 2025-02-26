@@ -62,7 +62,7 @@
 
     &-img {
       flex: 1 1 0%;
-      object-fit: cover;
+      object-fit: contain;
     }
     &-content {
       flex: 1 1 0%;

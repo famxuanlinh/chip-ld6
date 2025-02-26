@@ -1463,7 +1463,7 @@ p {
 }
 .celebrity-card-img {
   flex: 1 1 0%;
-  object-fit: cover;
+  object-fit: contain;
 }
 .celebrity-card-content {
   flex: 1 1 0%;
