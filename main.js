@@ -50,6 +50,35 @@ const handleCardClick = (cardSelector, imgSelector) => {
   });
 };
 
-handleCardClick(".platform-card-desc", ".platform-img");
 handleCardClick(".activity-card-desc", ".activity-img");
+
+const handleCardClick1 = (cardSelector, videoClass, sourceClass) => {
+  const cardDescriptions = document.querySelectorAll(cardSelector);
+  const videoElement = document.querySelector(`.${videoClass}`);
+  const sourceElement = videoElement.querySelector(`.${sourceClass}`);
+
+  cardDescriptions.forEach((desc) => {
+    desc.addEventListener("click", () => {
+      // Xóa "active" khỏi tất cả mô tả
+      cardDescriptions.forEach((item) => item.classList.remove("active"));
+      desc.classList.add("active");
+
+      // Cập nhật video source
+      const newVideoSrc = desc.getAttribute("data-img");
+      if (newVideoSrc && sourceElement) {
+        sourceElement.setAttribute("src", newVideoSrc);
+        videoElement.load(); // Nạp video mới
+        videoElement.play(); // Phát video
+      }
+    });
+  });
+};
+
+handleCardClick1(
+  ".platform-card-desc",
+  "platform-video",
+  "platform-video-source"
+);
+
+// handleCardClick(".platform-card-desc", ".platform-img");
 // End handling cards and images

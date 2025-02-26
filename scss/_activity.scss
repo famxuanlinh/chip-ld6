@@ -87,6 +87,16 @@
     }
   }
 
+  &-video {
+    height: 100%;
+    object-fit: contain;
+    max-width: 540px;
+
+    @include maxw(768) {
+      width: 100%;
+    }
+  }
+
   &-img2 {
     height: 100%;
     object-fit: contain;

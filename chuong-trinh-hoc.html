@@ -307,7 +307,7 @@
         </p>
       </div>
       <div class="activity-container top container">
-        <div class="w-full" style="max-width: 520px; width: 100%">
+        <div class="w-full flex-none" style="max-width: 520px; width: 100%">
           <div class="flex-center" style="margin-bottom: -24px">
             <img class="" src="public/program/3-in-class.svg" alt="check" />
           </div>
@@ -360,10 +360,41 @@
             </div>
           </div>
         </div>
-        <img class="activity-img2" src="public/c5-class.png" alt="check" />
+        <!-- <img class="activity-img2" src="public/c5-class.png" alt="check" /> -->
+        <video
+          class="platform-video1"
+          autoplay
+          loop
+          muted
+          style="border-radius: 36px; max-height: 392px"
+        >
+          <source
+            class="platform-video-source"
+            src="public/chipchip_classroom.mp4"
+            type="video/mp4"
+          />
+        </video>
       </div>
       <div style="margin-top: 56px" class="activity-container container">
-        <img class="activity-img" src="public/c5-class.png" alt="check" />
+        <!-- <img class="activity-img" src="public/c5-class.png" alt="check" /> -->
+        <div class="activity-media">
+          <img
+            style="display: none; border-radius: 16px"
+            class="activity-img"
+            src="public/c5-class.png"
+            alt="check"
+          />
+          <video
+            class="activity-video"
+            autoplay
+            loop
+            muted
+            playsinline
+            style="border-radius: 16px"
+          >
+            <source src="public/interactive-games.mp4" type="video/mp4" />
+          </video>
+        </div>
         <div class="w-full">
           <div class="flex-center" style="margin-bottom: -24px">
             <img class="" src="public/program/3-out-class.svg" alt="check" />
@@ -373,7 +404,7 @@
             <div class="activity-card">
               <div
                 class="activity-card-desc active"
-                data-img="public/c5-class.png"
+                data-img="public/interactive-games.mp4"
               >
                 Tiếp tục ôn luyện kiến thức đã học với hơn 20 dạng trò chơi
                 tiếng Anh tương tác trên ứng dụng học tập Chip Chip.
@@ -870,6 +901,39 @@
           } else {
             toggleButton.innerHTML = `Xem thêm <img style="margin-bottom: 6px; margin-right: 8px id="toggle-icon" src="/public/icon/chevron-down.svg" alt="Arrow icon" />`;
             seeMoreButton.classList.remove("less");
+          }
+        });
+      });
+
+      document.querySelectorAll(".activity-card-desc").forEach((card) => {
+        card.addEventListener("click", () => {
+          // Remove 'active' class from all descriptions
+          document
+            .querySelectorAll(".activity-card-desc")
+            .forEach((desc) => desc.classList.remove("active"));
+          card.classList.add("active");
+
+          const newSrc = card.getAttribute("data-img");
+          const imgElement = document.querySelector(
+            ".activity-media img.activity-img"
+          );
+          const videoElement = document.querySelector(
+            ".activity-media video.activity-video"
+          );
+          const videoSource = videoElement.querySelector("source");
+
+          if (newSrc.endsWith(".mp4")) {
+            // Switch to video
+            imgElement.style.display = "none";
+            videoElement.style.display = "block";
+            videoSource.src = newSrc;
+            videoElement.load();
+            videoElement.play();
+          } else {
+            // Switch to image
+            videoElement.style.display = "none";
+            imgElement.style.display = "block";
+            imgElement.src = newSrc;
           }
         });
       });
