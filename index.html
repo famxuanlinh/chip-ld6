@@ -15,7 +15,35 @@
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/app.css" />
   </head>
-  <body>
+  <body style="position: relative">
+    <div class="register-to-try">
+      <div
+        class="flex-center w-full"
+        style="flex-direction: column; position: relative"
+      >
+        <img src="public/registerToTry.png" width="260" alt="" />
+
+        <div
+          class="uk-position-bottom-center w-full flex-center"
+          style="bottom: 16px"
+        >
+          <a
+            style="
+              height: 40px;
+              font-size: 12px;
+              padding: 0 16px;
+              width: fit-content;
+              background: #f57032;
+            "
+            href="#modal-try"
+            uk-toggle
+            class="button-primary button-primary-big flex-center"
+          >
+            ĐĂNG KÝ TRẢI NGHIỆM MIỄN PHÍ VÀ NHẬN SIÊU ƯU ĐÃI
+          </a>
+        </div>
+      </div>
+    </div>
     <div class="advisory">
       <a
         class="advisory-item zalo"
@@ -1161,9 +1189,296 @@
       </div>
     </div>
 
+    <!-- Modal trải nhgiệm miễn phí -->
+    <div id="modal-try" class="uk-flex-top" style="z-index: 99999" uk-modal>
+      <div
+        style="width: auto"
+        class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical register-modal"
+      >
+        <div class="flex">
+          <div class="register-title modal">
+            <div class="flex-center">
+              <div style="position: relative; text-align: left">
+                Tặng suất trải nghiệm và nhận siêu ưu đãi
+                <img
+                  class="register-title-line-modal"
+                  src="public/c2-line-orange.svg"
+                  alt="line"
+                />
+              </div>
+            </div>
+            <p style="width: 32px; flex: none"></p>
+          </div>
+          <button
+            class="uk-modal-close-default"
+            type="button"
+            style="top: 32px; right: 32px"
+            uk-close
+          ></button>
+        </div>
+
+        <div class="register">
+          <img
+            src="public/c10-img.png"
+            alt="register"
+            class="register-img modal"
+          />
+          <div class="register-content" style="padding: 0">
+            <form class="text-left register-form">
+              <div>
+                <label for="name" class="register-form-label"
+                  >Tên của con <span style="color: red">*</span></label
+                >
+                <input
+                  class="uk-input register-form-input"
+                  type="text"
+                  placeholder="Nhập tên của con"
+                  aria-label="Input"
+                  name="name"
+                  id="name"
+                />
+              </div>
+              <div>
+                <label for="name" class="register-form-label"
+                  >Năm sinh <span style="color: red">*</span></label
+                >
+                <div
+                  uk-form-custom="target: > * > span:first-child"
+                  style="
+                    border-radius: 999px;
+                    width: 100%;
+                    background-color: #fff;
+                  "
+                >
+                  <select
+                    class="w-full"
+                    aria-label="Custom controls"
+                    style="color: #535557; height: 44px; border-radius: 9999px"
+                  >
+                    <option value="">Chọn năm sinh</option>
+                    <option value="2010">2010</option>
+                    <option value="2011">2011</option>
+                    <option value="2012">2012</option>
+                    <option value="2013">2013</option>
+                    <option value="2014">2014</option>
+                    <option value="2015">2015</option>
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2019">2020</option>
+                    <option value="2019">2021</option>
+                  </select>
+                  <button
+                    class="register-form-select"
+                    type="button"
+                    tabindex="-1"
+                    style="border-radius: 999px; text-transform: none"
+                  >
+                    <span class="uk-margin-remove"></span>
+                    <span uk-icon="icon: chevron-down"></span>
+                  </button>
+                </div>
+              </div>
+              <div>
+                <label for="name" class="register-form-label"
+                  >Số điện thoại <span style="color: red">*</span></label
+                >
+                <input
+                  class="uk-input register-form-input"
+                  type="text"
+                  placeholder="Số điện thoại của phụ huynh"
+                  aria-label="Input"
+                  name="name"
+                  id="name"
+                />
+              </div>
+              <div
+                class="uk-flex uk-flex-center"
+                style="margin-top: 12px; height: 60px"
+              >
+                <button
+                  type="button"
+                  uk-toggle="target: #modal-success"
+                  class="button-primary"
+                  style="
+                    height: 100%;
+                    width: 100%;
+                    background: #f57032;
+                    color: #fff;
+                    border-color: transparent;
+                    margin-bottom: 8px;
+                  "
+                >
+                  Đăng ký ngay
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal nhận ưu đãi -->
+    <div id="modal-voucher" class="uk-flex-top" style="z-index: 99999" uk-modal>
+      <div
+        style="
+          width: auto;
+          padding: 0;
+          background: #2c8e5f;
+          border-radius: 34px;
+        "
+        class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical register-modal"
+      >
+        <div class="register-try">
+          <div class="" style="padding: 0; zoom: 0.85">
+            <form class="text-left register-form">
+              <div>
+                <label for="name" class="register-form-label"
+                  >Tên của con <span style="color: red">*</span></label
+                >
+                <input
+                  class="uk-input register-form-input"
+                  type="text"
+                  placeholder="Nhập tên của con"
+                  aria-label="Input"
+                  name="name"
+                  id="name"
+                />
+              </div>
+              <div>
+                <label for="name" class="register-form-label"
+                  >Năm sinh <span style="color: red">*</span></label
+                >
+                <div
+                  uk-form-custom="target: > * > span:first-child"
+                  style="
+                    border-radius: 999px;
+                    width: 100%;
+                    background-color: #fff;
+                  "
+                >
+                  <select
+                    class="w-full"
+                    aria-label="Custom controls"
+                    style="color: #535557; height: 44px; border-radius: 9999px"
+                  >
+                    <option value="">Chọn năm sinh</option>
+                    <option value="2010">2010</option>
+                    <option value="2011">2011</option>
+                    <option value="2012">2012</option>
+                    <option value="2013">2013</option>
+                    <option value="2014">2014</option>
+                    <option value="2015">2015</option>
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2019">2020</option>
+                    <option value="2019">2021</option>
+                  </select>
+                  <button
+                    class="register-form-select"
+                    type="button"
+                    tabindex="-1"
+                    style="border-radius: 999px; text-transform: none"
+                  >
+                    <span class="uk-margin-remove"></span>
+                    <span uk-icon="icon: chevron-down"></span>
+                  </button>
+                </div>
+              </div>
+              <div>
+                <label for="name" class="register-form-label"
+                  >Số điện thoại <span style="color: red">*</span></label
+                >
+                <input
+                  class="uk-input register-form-input"
+                  type="text"
+                  placeholder="Số điện thoại của phụ huynh"
+                  aria-label="Input"
+                  name="name"
+                  id="name"
+                />
+              </div>
+              <div
+                class="uk-flex uk-flex-center"
+                style="margin-top: 12px; height: 60px"
+              >
+                <button
+                  class="button-primary"
+                  style="
+                    height: 100%;
+                    width: 100%;
+                    background: #f57032;
+                    color: #fff;
+                    border-color: transparent;
+                    margin-bottom: 8px;
+                  "
+                >
+                  Đăng ký ngay
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal success -->
+    <div id="modal-success" class="uk-flex-top" style="z-index: 99999" uk-modal>
+      <div
+        style="width: auto; border-radius: 34px; background: white"
+        class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical register-modal"
+      >
+        <div class="">
+          <div class="space-y-10" style="">
+            <div class="flex-center">
+              <img
+                src="public/success.png"
+                alt="register"
+                width="120"
+                class=""
+              />
+            </div>
+            <p style="text-align: center">
+              Chip Chip cảm ơn và sẽ liên hệ ba mẹ trong thời gian sớm nhất!
+            </p>
+            <div
+              class="uk-flex uk-flex-center"
+              style="margin-top: 12px; height: 60px"
+            >
+              <button
+                class="button-primary"
+                onclick="closeModal()"
+                style="
+                  height: 36px;
+                  width: fit-content;
+                  background: #f57032;
+                  color: #fff;
+                  border-color: transparent;
+                  margin-bottom: 8px;
+                "
+              >
+                Đóng
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit-icons.min.js"></script>
+    <script>
+      setTimeout(() => {
+        UIkit.modal("#modal-voucher").show();
+      }, 30000);
 
+      function closeModal() {
+        UIkit.modal("#modal-success").hide();
+      }
+    </script>
     <script src="/main.js"></script>
   </body>
 </html>

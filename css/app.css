@@ -1674,6 +1674,7 @@ p {
   align-items: center;
   padding: 0 24px;
   height: 60px;
+  font-size: 16px;
   justify-content: space-between;
   background-color: transparent;
   border: 1px solid rgb(235, 236, 240);
@@ -1699,6 +1700,26 @@ p {
 }
 .register-form-input ::placeholder {
   color: rgba(0, 0, 0, 0.6);
+}
+.register-try {
+  padding: 30px;
+  padding-top: 180px;
+  background-image: url(/public/modal-img.webp);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.register-to-try {
+  position: fixed;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 99;
+}
+@media screen and (max-width: 768px) {
+  .register-to-try {
+    zoom: 0.75;
+  }
 }
 
 .program-hero {

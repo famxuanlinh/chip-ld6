@@ -160,6 +160,7 @@
       align-items: center;
       padding: 0 24px;
       height: 60px;
+      font-size: 16px;
       justify-content: space-between;
       background-color: transparent;
       border: 1px solid rgba(235, 236, 240, 1);
@@ -187,6 +188,27 @@
       ::placeholder {
         color: rgba(0, 0, 0, 0.6);
       }
+    }
+  }
+
+  &-try {
+    padding: 30px;
+    padding-top: 180px;
+    background-image: url(/public/modal-img.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &-to-try {
+    position: fixed;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 99;
+
+    @include maxw(768) {
+      zoom: 0.75;
     }
   }
 }
