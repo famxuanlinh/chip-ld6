@@ -197,6 +197,9 @@
     background-image: url(/public/modal-img.webp);
     background-size: contain;
     background-repeat: no-repeat;
+    @include maxw(768) {
+      padding-top: 220px;
+    }
   }
 
   &-to-try {

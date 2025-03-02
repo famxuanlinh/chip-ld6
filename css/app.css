@@ -1708,6 +1708,11 @@ p {
   background-size: contain;
   background-repeat: no-repeat;
 }
+@media screen and (max-width: 768px) {
+  .register-try {
+    padding-top: 220px;
+  }
+}
 .register-to-try {
   position: fixed;
   bottom: 0px;
