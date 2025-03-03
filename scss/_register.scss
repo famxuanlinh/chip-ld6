@@ -213,5 +213,17 @@
     @include maxw(768) {
       zoom: 0.75;
     }
+
+    &-mobile {
+      @include minw(768) {
+        display: none;
+      }
+    }
+
+    &-destop {
+      @include maxw(768) {
+        display: none;
+      }
+    }
   }
 }
