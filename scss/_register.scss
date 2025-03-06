@@ -221,8 +221,20 @@
     }
 
     &-destop {
+      -webkit-filter: drop-shadow(1px 1px 1px #aaaaaa);
+      filter: drop-shadow(0 0 0.55rem #c6c6c6);
       @include maxw(768) {
         display: none;
+        max-height: 100px;
+      }
+      @include minw(960) {
+        max-height: 100px;
+      }
+      @include minw(1280) {
+        max-height: 120px;
+      }
+      @include minw(1650) {
+        max-height: 160px !important;
       }
     }
   }

@@ -1731,9 +1731,29 @@ p {
     display: none;
   }
 }
+.register-to-try-destop {
+  -webkit-filter: drop-shadow(1px 1px 1px #aaaaaa);
+  filter: drop-shadow(0 0 0.55rem #c6c6c6);
+}
 @media screen and (max-width: 768px) {
   .register-to-try-destop {
     display: none;
+    max-height: 100px;
+  }
+}
+@media screen and (min-width: 960px) {
+  .register-to-try-destop {
+    max-height: 100px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .register-to-try-destop {
+    max-height: 120px;
+  }
+}
+@media screen and (min-width: 1650px) {
+  .register-to-try-destop {
+    max-height: 160px !important;
   }
 }
 
