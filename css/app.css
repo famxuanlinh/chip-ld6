@@ -1720,9 +1720,11 @@ p {
   transform: translateX(-50%);
   width: 100%;
   z-index: 99;
+  transition-duration: 1s;
 }
 .register-to-try.hide {
   display: none;
+  transition-duration: 1s;
 }
 @media screen and (max-width: 768px) {
   .register-to-try {
