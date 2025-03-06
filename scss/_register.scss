@@ -210,6 +210,10 @@
     width: 100%;
     z-index: 99;
 
+    &.hide {
+      display: none;
+    }
+
     @include maxw(768) {
       zoom: 0.75;
     }

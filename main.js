@@ -10,6 +10,16 @@ window.addEventListener("scroll", () => {
 });
 // End header
 
+const banner = document.getElementById("register-to-try");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 200) {
+    banner.classList.remove("hide");
+  } else {
+    banner.classList.add("hide");
+  }
+});
+
 document.addEventListener("DOMContentLoaded", () => {
   const dropdownTrigger = document.querySelector("[uk-dropdown]");
   const body = document.body;

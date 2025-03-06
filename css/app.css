@@ -1721,6 +1721,9 @@ p {
   width: 100%;
   z-index: 99;
 }
+.register-to-try.hide {
+  display: none;
+}
 @media screen and (max-width: 768px) {
   .register-to-try {
     zoom: 0.75;
